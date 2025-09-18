@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>home</title>
+    </head>
+    <body>
+        <h1>Enrollment Trend Dashboard</h1>
+        <form>
+            {% csrf_token %}
+            <select id="dropdown" name="selected_option">
+                <option value="" disabled selected>Select a course</option>
+                <option value="Option 1">Option 1</option> <!--Just placeholder values-->
+                <option value="Option 2">Option 2</option>
+                <option value="Option 3">Option 3</option>
+            </select>
+        </form>
+    </body>
+</html>
