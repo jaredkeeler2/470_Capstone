@@ -1,5 +1,6 @@
 import requests
 from bs4 import BeautifulSoup
+from .models import Course
 
 #Catalog CSCE page
 URL = "https://catalog.uaa.alaska.edu/undergraduateprograms/coeng/bs-computerscience/"
@@ -21,5 +22,10 @@ def csce_courses(url=URL):
         if "/" in parts[0] and len(parts) > 1:
             text = "CSCE " + " ".join(parts[1:])
         codes.add(text)    #adds and saves the new text to the course codes
-
+        
+        saved_courses = []  #creating an empty lists
+        for code in sorted(codes): #Loop through the sorted(code)
+            course, created = Course.objects.get_or_create(code=code)  # skip if object exists else create in DB
+            saved_courses.append(course)
+        
     return sorted(codes)    #sorted order of the list
