@@ -4,4 +4,6 @@ from .models import Course
 
 @admin.register(Course)
 class CourseAdmin(admin.ModelAdmin):
-    list_display = ("id", "code") # show id and courses in the table, "code" name need to match model names 
+    list_display = ("id", "term", "code", "title", "enrolled")
+    search_fields = ("code", "title")
+    list_filter = ("term",)

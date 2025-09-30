@@ -1,6 +1,8 @@
 import requests
 from bs4 import BeautifulSoup
 from collections import defaultdict
+from main.models import Course
+from datetime import datetime
 import re
 
 '''
@@ -27,7 +29,7 @@ def csce_courses(url=URL):
 
     return sorted(codes)    #sorted order of the list
 '''
-    
+
 def schedule_scraper(term="202503", subj="CSCE"):
     url = "https://curric.uaa.alaska.edu/ajax/ajaxScheduleSearch.php"   #API url
     params = {"term": term, "subj": subj}
@@ -53,11 +55,60 @@ def schedule_scraper(term="202503", subj="CSCE"):
         total = item[1]     #second index is the enrollment count (e.g. 54)
         code = key[0]       #first part in the key is the course name (e.g. "CSCE A101")
         title = key[1]      #second part in the key is course title (e.g. "Intro to CS")
+        
+        Course.objects.update_or_create(
+            term=term,
+            code=code,
+            defaults={
+                "title": title,
+                "enrolled": total
+            }
+        )
 
         course_data = (code, title, total)
         results.append(course_data)     #add the data to the results list
     return results
 
+
+def generate_last_5_year_terms():
+    current_year = datetime.now().year
+    terms = []
+    for year in range(current_year - 4, current_year + 1):  # last 5 years
+        for sem in ["01", "02", "03"]:  # Spring, Summer, Fall
+            term_code = f"{year}{sem}"
+            terms.append(term_code)
+    return terms
+
+
+def save_courses_for_terms(terms=None):
+    if terms is None:
+        terms = generate_last_5_year_terms()
+
+    all_courses_list = []
+
+    for term in terms:
+        # Optional: delete existing courses for this term to avoid duplicates
+        Course.objects.filter(term=term).delete()
+        term_courses = schedule_scraper(term=term)
+        # Scrape and save
+        term_courses = schedule_scraper(term=term)
+        for code, title, enrolled in term_courses:
+            Course.objects.create(term=term, code=code, title=title, enrolled=enrolled)
+            all_courses_list.append((term, code, title, enrolled))
+
+        print(f"Saved {len(term_courses)} courses for term {term}")
+
+    return all_courses_list
+
+
+# Run directly
+if __name__ == "__main__":
+    terms = generate_last_5_year_terms()
+    courses_list = save_courses_for_terms(terms=terms)
+    print("\nAll saved courses:")
+    for course in courses_list:
+        print(course)
+"""
 #Example usage
 if __name__ == "__main__":
     terms = ["202503", "202502", "202501"]  #fall, summer, spring
@@ -71,3 +122,4 @@ if __name__ == "__main__":
         print("\n===== Term " + term + " =====")
         for course_data in results:     #prints all of the results for each term
             print(course_data)
+"""
