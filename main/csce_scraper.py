@@ -75,7 +75,11 @@ def schedule_scraper(term="202503", subj="CSCE"):
                     enrolled = int(row.get("enrolled")) 
                     totals[code, title] += enrolled  #sums up the enrollment for one course
     results = []
-    for item in sorted(totals.items()):
+    for key, total in sorted(totals.items()):
+        code, title = key
+        results.append((code, title, total))
+    
+    """for item in sorted(totals.items()):
         #current item looks like (("CSCE A101", "Intro to CS"), 54)
         key = item[0]       #first index of item is ("CSCE A101", "Intro to CS")
         total = item[1]     #second index is the enrollment count (e.g. 54)
@@ -84,9 +88,12 @@ def schedule_scraper(term="202503", subj="CSCE"):
 
         course_data = (code, title, total)
         results.append(course_data)     #add the data to the results list
+    """
     return results
 
 #Example usage
+
+"""
 if __name__ == "__main__":
     subj = "CSCE"
     terms = build_term_codes_past_years(years=5, include_current=True)
@@ -95,3 +102,5 @@ for code, label in terms:
     results = schedule_scraper(term=code, subj=subj)
     print("\n===== " + label + " (" + code + ") (" + subj + ") =====")
     print("\n".join(map(str, results)))
+    
+"""

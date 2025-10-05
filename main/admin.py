@@ -2,8 +2,10 @@ from django.contrib import admin
 from .models import Course
 # Register your models here.
 
+
 @admin.register(Course)
 class CourseAdmin(admin.ModelAdmin):
-    list_display = ("id", "term", "code", "title", "enrolled")
-    search_fields = ("code", "title")
-    list_filter = ("term",)
+    list_display = ('term', 'code', 'title', 'enrolled', 'updated_at')
+    list_filter = ('term',)
+    search_fields = ('code', 'title')
+    ordering = ('code',)

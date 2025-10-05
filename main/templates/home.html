@@ -8,7 +8,7 @@
         <h1>Enrollment Trend Dashboard</h1>
         <form>
             {% csrf_token %}
-            <select id="dropdown" name="selected_option">
+            <select id="dropdown" name="selected_course">
                 <option value="" disabled selected>Select a course</option>
                 {% for course in courses %}
                     <option value="{{ course }}">{{ course }}</option>
