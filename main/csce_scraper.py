@@ -35,7 +35,7 @@ def build_term_codes_past_years(years=5, include_current=True):
     m = now.month #determine wheter its spring/summer/fall
     if m <= 4:
         sem_now = "01" 
-    if m <= 8:
+    elif m <= 8:
         sem_now = "02"
     else:
         sem_now = "03"
