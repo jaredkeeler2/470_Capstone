@@ -3,6 +3,7 @@
     <head>
         <meta charset="utf-8">
         <title>home</title>
+        <script src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script>
     </head>
     <body>
         <h1>Enrollment Trend Dashboard</h1>
@@ -15,5 +16,26 @@
                 {% endfor %}
             </select>
         </form>
+
+        <div id="enrollmentChart" style="height:80vh;margin-top:16px;"></div>
+
+        <script>
+            const layout = {
+                title: { text: "Course Enrollments" },
+                xaxis: { title: "Term" },
+                yaxis: { title: "Enrollments" },
+                margin: { t: 80, r: 100, b: 60, l: 100 },
+                font: {size:20}
+            };
+
+            const data = [
+                { type: "scatter", mode: "lines", name: "Data", x: [], y: [] }
+            ];
+
+            Plotly.newPlot("enrollmentChart", data, layout, {
+                displayModeBar: true,
+                responsive: true
+            });
+        </script>
     </body>
 </html>

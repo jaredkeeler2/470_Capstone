@@ -28,7 +28,11 @@ def input_graduation_data():
     for i in range(5):
         year = current_year - i
         while True:
+            try:
                 grads = int(input(str(year) + ": "))
+                break
+            except ValueError:
+                print("Please enter a whole number.")
         data[year] = grads
 
     print("\nASD Graduation Data:")
