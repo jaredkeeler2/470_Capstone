@@ -25,3 +25,6 @@ def home(request):
     # Get unique course codes for dropdown
     courses = Course.objects.values_list('code', flat=True).distinct().order_by('code')
     return render(request, 'home.html', {'courses': courses})
+
+def data(request):
+    return render(request, "data.html")
