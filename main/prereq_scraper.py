@@ -5,11 +5,11 @@ import requests
 from bs4 import BeautifulSoup
 
 #Django setup
-ROOT = Path(__file__).resolve().parents[1]
-sys.path.insert(0, str(ROOT))
-os.environ.setdefault("DJANGO_SETTINGS_MODULE", "Capstone.settings")
+#ROOT = Path(__file__).resolve().parents[1]
+#sys.path.insert(0, str(ROOT))
+#os.environ.setdefault("DJANGO_SETTINGS_MODULE", "Capstone.settings")
 import django
-django.setup()
+#django.setup()
 
 from main.models import Course
 from main.csce_scraper import build_term_codes_past_years
@@ -111,9 +111,16 @@ def build_two_prereq_map():
 
 #main
 if __name__ == "__main__":
+    data = build_two_prereq_map()
+    saved_count = Prerequisite.save_prereq_data(data)
+    print(f"Saved {saved_count} prerequisites to DB.")
+
+"""
+if __name__ == "__main__":
     courses = get_csce_courses_past_5y()
     two_map = build_two_prereq_map()
     course_to_prereqs = {c: two_map.get(c.strip(), []) for c in courses}
 
     for course, prereqs in course_to_prereqs.items():
         print(f"{course}: {prereqs}")
+"""

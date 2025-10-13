@@ -46,3 +46,49 @@ class Course(models.Model):
                     term=term_code,
                     defaults={'title': title, 'enrolled': enrolled}
                 )
+
+
+############################################################################################
+############################################################################################
+#Prerequisite
+class Prerequisite(models.Model):
+    course_code = models.CharField(max_length=20, unique=True)
+    prereq_1 = models.CharField(max_length=20, null=True, blank=True)
+    prereq_2 = models.CharField(max_length=20, null=True, blank=True)
+
+    def __str__(self):
+        return f"{self.course_code} → {', '.join(filter(None, [self.prereq_1, self.prereq_2]))}"
+
+    @classmethod
+    def save_prereq_data(cls, prereq_map):
+        """
+        Save a dict of prerequisite data to the database.
+        """
+        count = 0
+        for course, prereqs in prereq_map.items():
+            prereq_1 = prereqs[0] if len(prereqs) > 0 and prereqs[0].strip() else None
+            prereq_2 = prereqs[1] if len(prereqs) > 1 and prereqs[1].strip() else None
+            cls.objects.update_or_create(
+                course_code=course,
+                defaults={
+                    "prereq_1": prereq_1,
+                    "prereq_2": prereq_2,
+                }
+            )
+            count += 1
+        return count
+
+    @classmethod
+    def scrape_if_empty(cls, scraper_func):
+        """
+        Check if table is empty. If empty, run scraper and save data.
+        """
+        if cls.objects.exists():
+            print(f"Table already has data ({cls.objects.count()} records). Skipping scrape.")
+            return 0
+
+        print("Table is empty. Running scraper...")
+        prereq_map = scraper_func()  # your scraper function returns a dict
+        count = cls.save_prereq_data(prereq_map)
+        print(f"Scraper saved {count} records at {datetime.now()}")
+        return count
