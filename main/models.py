@@ -92,3 +92,11 @@ class Prerequisite(models.Model):
         count = cls.save_prereq_data(prereq_map)
         print(f"Scraper saved {count} records at {datetime.now()}")
         return count
+
+#Highschool Graduation Model
+class GraduationData(models.Model):
+    year = models.IntegerField(unique=True)
+    graduates = models.IntegerField()
+
+    def __str__(self):
+        return f"{self.year} - {self.graduates}"
