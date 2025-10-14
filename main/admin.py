@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Course, Prerequisite
+from .models import Course, Prerequisite,GraduationData
 
 # Register your models here.
 
@@ -17,3 +17,7 @@ class PrerequisiteAdmin(admin.ModelAdmin):
     list_display = ("course_code", "prereq_1", "prereq_2")
     search_fields = ("course_code", "prereq_1", "prereq_2")
     
+@admin.register(GraduationData)
+class GraduateAdmin(admin.ModelAdmin):
+    list_display = ("year", "graduates")
+    search_fields = ("year", "graduates")

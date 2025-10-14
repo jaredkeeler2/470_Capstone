@@ -4,10 +4,6 @@ from datetime import datetime
 
 # Create your models here.
 # File: main/models.py
-from django.db import models
-from django.utils import timezone
-from datetime import datetime
-
 class Course(models.Model):
     term = models.CharField(max_length=10)
     code = models.CharField(max_length=20)
