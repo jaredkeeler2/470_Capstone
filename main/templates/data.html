@@ -1,0 +1,74 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Course Enrollment Data</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <style>
+        /* Optional: make buttons inline and spaced nicely */
+        .button-row {
+            margin-bottom: 20px;
+        }
+        .button-row a button {
+            margin-right: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<h1>Course Enrollment Data</h1>
+
+<!-- Button row -->
+<div class="button-row">
+    <a href="/"><button>Back to Dashboard</button></a>
+    <a href="{% url 'download_data' %}"><button>Download CSV</button></a>
+</div>
+
+<hr>
+
+<!-- Upload CSV form -->
+<h2>Upload Updated CSV</h2>
+<form method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    <input type="file" name="csv_file" accept=".csv" required>
+    <button type="submit">Upload CSV</button>
+</form>
+
+{% if message %}
+    <p style="color:green">{{ message }}</p>
+{% endif %}
+
+<hr>
+
+<!-- Current course data table -->
+<h2>Current Course Data</h2>
+{% if terms %}
+    {% for term, course_list in terms.items %}
+        <h3>Term: {{ term }}</h3>
+        <table border="1" cellpadding="5">
+            <tr>
+                <th>Course Code</th>
+                <th>Title</th>
+                <th>Enrolled</th>
+                <th>Last Updated</th>
+            </tr>
+            {% for course in course_list %}
+                <tr>
+                    <td>{{ course.code }}</td>
+                    <td>{{ course.title }}</td>
+                    <td>{{ course.enrolled }}</td>
+                    <td>{{ course.updated_at|date:"Y-m-d H:i" }}</td>
+                </tr>
+            {% endfor %}
+        </table>
+        <br>
+    {% endfor %}
+{% else %}
+    <p>No course data available.</p>
+{% endif %}
+
+</body>
+</html>
