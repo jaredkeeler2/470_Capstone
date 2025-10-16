@@ -53,14 +53,12 @@
                 <th>Course Code</th>
                 <th>Title</th>
                 <th>Enrolled</th>
-                <th>Last Updated</th>
             </tr>
             {% for course in course_list %}
                 <tr>
                     <td>{{ course.code }}</td>
                     <td>{{ course.title }}</td>
                     <td>{{ course.enrolled }}</td>
-                    <td>{{ course.updated_at|date:"Y-m-d H:i" }}</td>
                 </tr>
             {% endfor %}
         </table>

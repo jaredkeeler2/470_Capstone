@@ -6,7 +6,7 @@ from .models import Course, Prerequisite,GraduationData
 
 @admin.register(Course)
 class CourseAdmin(admin.ModelAdmin):
-    list_display = ('term', 'code', 'title', 'enrolled', 'updated_at') # Trying to not show update_at
+    list_display = ('term', 'code', 'title', 'enrolled') # Trying to not show update_at
     list_filter = ('term',)
     search_fields = ('code', 'title')
     ordering = ('code',)

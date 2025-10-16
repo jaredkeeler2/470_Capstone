@@ -134,9 +134,9 @@ def download_data(request):
     response['Content-Disposition'] = 'attachment; filename="course_data.csv"'
 
     writer = csv.writer(response)
-    writer.writerow(['Term', 'Code', 'Title', 'Enrolled', 'Updated At'])
+    writer.writerow(['Term', 'Code', 'Title', 'Enrolled'])
 
     for course in Course.objects.all().order_by('-term', 'code'):
-        writer.writerow([course.term, course.code, course.title, course.enrolled, course.updated_at])
+        writer.writerow([course.term, course.code, course.title, course.enrolled])
 
     return response
