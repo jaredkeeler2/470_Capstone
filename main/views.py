@@ -29,7 +29,7 @@ def home(request):
     courses = Course.objects.values_list('code', flat=True).distinct().order_by('code')
     return render(request, 'home.html', {'courses': courses})
 
-def data(request):
+def graduate_data(request):
     #auto-fill database with empty entries from 2021 → current year
     current_year = datetime.now().year
     for year in range(2021, current_year + 1):
@@ -47,7 +47,7 @@ def data(request):
                 year=year, defaults={'graduates': graduates}
             )
 
-            return redirect('data')  # reload page after submit
+            return redirect('graduates')  # reload page after submit
     else:
         form = GraduationForm()
 
@@ -55,4 +55,4 @@ def data(request):
     data = GraduationData.objects.all().order_by('-year')
 
     #render page with form and data
-    return render(request, "data.html", {'form': form, 'data': data})
+    return render(request, "graduates.html", {'form': form, 'data': data})
