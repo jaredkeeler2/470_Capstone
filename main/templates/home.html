@@ -1,54 +1,115 @@
 {% load static %}
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <title>Home</title>
-        <script src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script>
-        <link rel="stylesheet" href="{% static 'style.css' %}">
-    </head>
+  <head>
+    <meta charset="utf-8" />
+    <title>Home</title>
+    <script src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script>
+    <link rel="stylesheet" href="{% static 'style.css' %}" />
+  </head>
 
-    <body>
-        <h1>Enrollment Trend Dashboard</h1>
+  <body>
+    <h1>Enrollment Trend Dashboard</h1>
 
-        <p>
-            <a href="/data/">
-                <button>View Data</button>
-            </a>
-            <a href="/graduates/">
-                <button>Graduates Data</button>
-            </a>
-        </p>
+    <p>
+      <a href="/data/"><button>View Data</button></a>
+      <a href="/graduates/"><button>Graduates Data</button></a>
+    </p>
 
-        <form>
-            {% csrf_token %}
-            <select id="dropdown" name="selected_course">
-                <option value="" disabled selected>Select a course</option>
-                {% for course in courses %}
-                    <option value="{{ course }}">{{ course }}</option>
-                {% endfor %}
-            </select>
-        </form>
+    <form>
+      {% csrf_token %}
+      <select id="dropdown" name="selected_course">
+        <option value="" disabled selected>Select a course</option>
+        {% for course in courses %}
+          <option value="{{ course }}">{{ course }}</option>
+        {% endfor %}
+      </select>
+    </form>
 
-        <div id="enrollmentChart"></div>
+    <div id="enrollmentChart"></div>
 
-        <script>
-            const layout = {
-                title: { text: "Course Enrollments" },
-                xaxis: { title: "Term" },
-                yaxis: { title: "Enrollments" },
-                margin: { t: 80, r: 100, b: 60, l: 100 },
-                font: { size: 20 }
-            };
+    <!-- Load course + forecast data -->
+    <script id="course-data" type="application/json">
+      {{ course_data|safe }}
+    </script>
 
-            const data = [
-                { type: "scatter", mode: "lines", name: "Data", x: [], y: [] }
-            ];
+    <script>
+      // Parse forecast data
+      const courseDataRaw = JSON.parse(
+        document.getElementById("course-data").textContent
+      );
 
-            Plotly.newPlot("enrollmentChart", data, layout, {
-                displayModeBar: true,
-                responsive: true
-            });
-        </script>
-    </body>
+      // Helper: convert numeric term code to readable text
+      function termName(termCode) {
+        if (!termCode) return "Unknown";
+        const year = termCode.toString().slice(0, 4);
+        const sem = termCode.toString().slice(4);
+        if (sem === "01") return `Spring ${year}`;
+        if (sem === "02") return `Summer ${year}`;
+        if (sem === "03") return `Fall ${year}`;
+        return year;
+      }
+
+      // Group by course
+      const groupedData = {};
+      for (const entry of courseDataRaw) {
+        const code = entry.code;
+        const termLabel = entry.term_name || termName(entry.term);
+        if (!groupedData[code]) groupedData[code] = { x: [], y: [] };
+        groupedData[code].x.push(termLabel);
+        groupedData[code].y.push(entry.enrolled);
+      }
+
+      const dropdown = document.getElementById("dropdown");
+      const chartDiv = document.getElementById("enrollmentChart");
+
+      dropdown.addEventListener("change", () => {
+        const selected = dropdown.value;
+        const data = groupedData[selected];
+
+        if (!data) {
+          Plotly.purge(chartDiv);
+          return;
+        }
+
+        // Forecast point = last term
+        const lastIndex = data.x.length - 1;
+        const tracePast = {
+          type: "scatter",
+          mode: "lines+markers",
+          name: "Historical Data",
+          x: data.x.slice(0, lastIndex),
+          y: data.y.slice(0, lastIndex),
+          line: { width: 3, color: "#007bff" },
+          marker: { size: 8 }
+        };
+
+        const traceForecast = {
+          type: "scatter",
+          mode: "markers+text",
+          name: "Forecast",
+          x: [data.x[lastIndex]],
+          y: [data.y[lastIndex]],
+          text: ["Forecast"],
+          textposition: "top center",
+          marker: { size: 12, color: "#ff5733", symbol: "star" }
+        };
+
+        const layout = {
+          title: { text: selected },
+          xaxis: { title: "Term" },
+          yaxis: { title: "Enrollment Count" },
+          margin: { t: 80, r: 60, b: 60, l: 80 },
+          font: { size: 16 },
+          plot_bgcolor: "#fafafa",
+          paper_bgcolor: "#fafafa"
+        };
+
+        Plotly.newPlot(chartDiv, [tracePast, traceForecast], layout, {
+          displayModeBar: true,
+          responsive: true
+        });
+      });
+    </script>
+  </body>
 </html>

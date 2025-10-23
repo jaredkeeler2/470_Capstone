@@ -8,28 +8,45 @@ from .csce_scraper import build_term_codes_past_years
 from .forms import GraduationForm
 from .models import GraduationData
 from datetime import datetime
+import json
+import os
 
 #homepage
 def home(request):
-    # Get all terms for the past 5 years
+    #get all terms for the past 5 years
     all_terms = [term for term, label in build_term_codes_past_years(years=5)]
 
-    # Determine which terms are already in the database
+    #determine which terms are already in the database
     existing_terms = set(Course.objects.values_list('term', flat=True))
 
-    # Find missing terms
+    #find missing terms
     missing_terms = [term for term in all_terms if term not in existing_terms]
 
-    # Only scrape missing terms
+    #only scrape missing terms
     if missing_terms:
         print(f"Scraping missing terms: {missing_terms}")
         Course.save_courses(subj="CSCE")
     else:
         print("All terms already present. No scraping needed.")
 
-    # Get unique course codes for dropdown
+    #get unique course codes for dropdown
     courses = Course.objects.values_list('code', flat=True).distinct().order_by('code')
-    return render(request, 'home.html', {'courses': courses})
+
+    #load ARIMA forecast data for Plotly ---
+    forecast_path = os.path.join("main", "forecast_data.json")
+    if os.path.exists(forecast_path):
+        with open(forecast_path, "r") as f:
+            raw_data = json.load(f)
+            course_data = json.dumps(raw_data)  #convert to JSON string
+    else:
+        print("No forecast_data.json found. Run arima.py first.")
+        course_data = "[]"
+
+    #render home page with dropdown + chart data
+    return render(request, 'home.html', {
+        'courses': courses,
+        'course_data': course_data
+    })
 
 def graduate_data(request):
     #auto-fill database with empty entries from 2021 → current year
