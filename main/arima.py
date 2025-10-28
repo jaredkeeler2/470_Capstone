@@ -7,7 +7,7 @@ import numpy as np
 from statsmodels.tsa.arima.model import ARIMA
 from sklearn.metrics import mean_absolute_error
 from sklearn.metrics import root_mean_squared_error
-
+from csce_scraper import build_term_codes_past_years
 
 warnings.filterwarnings("ignore")
 
@@ -27,13 +27,16 @@ def term_name_from_code(term):
     return f"{names.get(sem, 'Unknown')} {year}"
 
 #finds next term
-def next_term_code(current_term):
-    year, sem = divmod(int(current_term), 100)
-    if sem == 1:      #Spring -> Summer
+def next_term_code():
+    #using the scraper current term to get current semester
+    terms = build_term_codes_past_years(years=1, include_current=True)
+    current_real_term = int(terms[-1][0])  #last tuple in list, e.g. ("202503", "Fall 2025")
+    year, sem = divmod(current_real_term, 100)
+    if sem == 1:      #Spring → Summer
         return year * 100 + 2
-    elif sem == 2:    #Summer -> Fall
+    elif sem == 2:    #Summer → Fall
         return year * 100 + 3
-    elif sem == 3:    #Fall -> next year's Spring
+    elif sem == 3:    #Fall → next Spring
         return (year + 1) * 100 + 1
 
 #load data from the Course model
@@ -72,7 +75,7 @@ for code, group in df.groupby('code'):
         fit = model.fit()
         forecast = fit.forecast(steps=1)[0] #predict 1 term ahead
         forecast = max(round(forecast, 0), 0) #round number to 0, and replace negative value with 0 if there is one
-        next_term = next_term_code(terms[-1]) #gets next term code based on previous one
+        next_term = next_term_code() #gets next term code based on previous one
 
         mae = None
         rmse = None

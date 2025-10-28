@@ -40,22 +40,11 @@
         document.getElementById("course-data").textContent
       );
 
-      //Converts terms like 202503 to Fall 2025
-      function termName(termCode) {
-        if (!termCode) return "Unknown";
-        const year = termCode.toString().slice(0, 4);
-        const sem = termCode.toString().slice(4);
-        if (sem === "01") return `Spring ${year}`;
-        if (sem === "02") return `Summer ${year}`;
-        if (sem === "03") return `Fall ${year}`;
-        return year;
-      }
-
       //Loops through the data points and organizes them by course code (x = terms, y = enrollment #, error metrics stored in legend)
       const groupedData = {};
       for (const entry of courseDataRaw) {
         const code = entry.code;
-        const termLabel = entry.term_name || termName(entry.term);
+        const termLabel = entry.term_name;
 
         //Initialize group if it doesn't exist
         if (!groupedData[code]) {
