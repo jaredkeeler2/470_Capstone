@@ -3,7 +3,11 @@ import sys
 import django
 import pandas as pd
 import warnings
+import numpy as np
 from statsmodels.tsa.arima.model import ARIMA
+from sklearn.metrics import mean_absolute_error
+from sklearn.metrics import root_mean_squared_error
+
 
 warnings.filterwarnings("ignore")
 
@@ -45,6 +49,8 @@ df['term'] = df['term'].astype(int)
 df['term_name'] = df['term'].apply(term_name_from_code)
 df = df.sort_values(['code', 'term'])
 
+all_MAES = [] #list for the average MAEs
+all_RMSE = [] #list for the average RMSE
 results = []
 for code, group in df.groupby('code'):
     y = group['enrolled'].astype(float).values
@@ -68,16 +74,59 @@ for code, group in df.groupby('code'):
         forecast = max(round(forecast, 0), 0) #round number to 0, and replace negative value with 0 if there is one
         next_term = next_term_code(terms[-1]) #gets next term code based on previous one
 
+        mae = None
+        rmse = None
+
+        #Only calculate metrics if there’s enough data (e.g., > 4 terms)
+        if len(y) > 4:
+            train, test = y[:-3], y[-3:]  #train on all but last 3, test on last 3
+            try:
+                model_eval = ARIMA(train, order=(1, 1, 1)).fit()
+                preds = model_eval.forecast(steps=len(test))
+
+                test = np.ravel(test)
+                preds = np.ravel(preds)
+
+                mae = mean_absolute_error(test, preds)
+                rmse = root_mean_squared_error(test, preds)
+
+                all_MAES.append(mae)
+                all_RMSE.append(rmse)
+
+                print(f"{code}: MAE={mae:.2f}, RMSE={rmse:.2f}")
+
+            except Exception as inner_e:
+                print(f"Metrics didn't calculate for {code}: {inner_e}")
+
         #stores forecast info
         results.append({
             "code": code,
             "term": next_term,
             "term_name": term_name_from_code(next_term),
-            "enrolled": forecast
+            "enrolled": forecast,
+            "mae": round(mae, 2) if mae is not None else None,
+            "rmse": round(rmse, 2) if rmse is not None else None
         })
 
     except Exception as e:
         print(f"Error with {code}: {e}")
+
+#calculate the average MAE
+average_MAE = 0
+n = 0
+for mae in all_MAES:
+    average_MAE += mae
+    n += 1
+average_MAE = round((average_MAE / n), 2)
+
+#calculate the average RMSE
+average_RMSE = 0
+n = 0
+for rmse in all_RMSE:
+    average_RMSE += rmse
+    n += 1
+average_RMSE = round((average_RMSE / n), 2)
+
 
 #combine forecasts with existing data
 forecast_df = pd.DataFrame(results)

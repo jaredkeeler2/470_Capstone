@@ -32,7 +32,7 @@ def home(request):
     #get unique course codes for dropdown
     courses = Course.objects.values_list('code', flat=True).distinct().order_by('code')
 
-    #load ARIMA forecast data for Plotly ---
+    #load ARIMA forecast data for Plotly
     forecast_path = os.path.join("main", "forecast_data.json")
     if os.path.exists(forecast_path):
         with open(forecast_path, "r") as f:
