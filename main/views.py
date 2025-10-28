@@ -3,13 +3,13 @@ from django.http import HttpResponse
 import csv
 from django.utils import timezone
 from datetime import timedelta
-from .models import Course
+from .models import Course ,GraduationData
 from .csce_scraper import build_term_codes_past_years
 from .forms import GraduationForm
-from .models import GraduationData
 from datetime import datetime
 import json
 import os
+import io
 
 #homepage
 def home(request):
@@ -79,6 +79,13 @@ def graduate_data(request):
 
 
 #Fetch data from Courses
+def sanitize_csv_value(value):
+    if value and value[0] in ('=', '+', '-', '@'):
+        value = "'" + value  # prefix with apostrophe to neutralize Excel formulas
+    return value.strip()
+
+
+# Fetch data from Courses
 def data(request):
     message = None
 
@@ -103,9 +110,9 @@ def data(request):
                     skipped_count = 0
 
                     for row in reader:
-                        term = row.get('Term', '').strip()
-                        code = row.get('Code', '').strip()
-                        title = row.get('Title', '').strip()
+                        term = sanitize_csv_value(row.get('Term', ''))
+                        code = sanitize_csv_value(row.get('Code', ''))
+                        title = sanitize_csv_value(row.get('Title', ''))
                         enrolled = row.get('Enrolled', '').strip()
 
                         # Skip completely empty rows
@@ -154,6 +161,11 @@ def download_data(request):
     writer.writerow(['Term', 'Code', 'Title', 'Enrolled'])
 
     for course in Course.objects.all().order_by('-term', 'code'):
-        writer.writerow([course.term, course.code, course.title, course.enrolled])
+        writer.writerow([
+            sanitize_csv_value(course.term),
+            sanitize_csv_value(course.code),
+            sanitize_csv_value(course.title),
+            course.enrolled
+        ])
 
     return response
