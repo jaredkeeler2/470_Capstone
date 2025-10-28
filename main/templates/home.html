@@ -9,12 +9,13 @@
   </head>
 
   <body>
+    <!--Title and navigation buttons-->
     <h1>Enrollment Trend Dashboard</h1>
     <p>
       <a href="/data/"><button>View Data</button></a>
       <a href="/graduates/"><button>Graduates Data</button></a>
     </p>
-
+    <!--Dropdown menu for course form selection-->
     <form>
       {% csrf_token %}
       <select id="dropdown" name="selected_course">
@@ -25,17 +26,21 @@
       </select>
     </form>
 
+    <!--Chart container (empty div)-->
     <div id="enrollmentChart" style="position: relative;"></div>
 
+    <!--Stores course data from Django as a json object, use safe so json isnt converted into unreadable html-->
     <script id="course-data" type="application/json">
       {{ course_data|safe }}
     </script>
 
+    <!--Converts the json into javascript objects for chart to use-->
     <script>
       const courseDataRaw = JSON.parse(
         document.getElementById("course-data").textContent
       );
 
+      //Converts terms like 202503 to Fall 2025
       function termName(termCode) {
         if (!termCode) return "Unknown";
         const year = termCode.toString().slice(0, 4);
@@ -46,23 +51,39 @@
         return year;
       }
 
+      //Loops through the data points and organizes them by course code (x = terms, y = enrollment #, error metrics stored in legend)
       const groupedData = {};
       for (const entry of courseDataRaw) {
         const code = entry.code;
         const termLabel = entry.term_name || termName(entry.term);
-        if (!groupedData[code])
-          groupedData[code] = { x: [], y: [], mae: null, rmse: null };
+
+        //Initialize group if it doesn't exist
+        if (!groupedData[code]) {
+          groupedData[code] = { 
+            x: [], 
+            y: [], 
+            mae: null, 
+            rmse: null 
+          };
+        }
+
+        //Add data points
         groupedData[code].x.push(termLabel);
         groupedData[code].y.push(entry.enrolled);
-        if (entry.mae !== null && entry.rmse !== null) {
+
+        //Add error metrics if present
+        const hasMetrics = entry.mae !== null && entry.rmse !== null;
+        if (hasMetrics) {
           groupedData[code].mae = entry.mae;
           groupedData[code].rmse = entry.rmse;
         }
       }
 
+      //Connects the javascript to the dropdown and chart in the html
       const dropdown = document.getElementById("dropdown");
       const chartDiv = document.getElementById("enrollmentChart");
 
+      //Clears chart if there isn't a course selected
       dropdown.addEventListener("change", () => {
         const selected = dropdown.value;
         const data = groupedData[selected];
@@ -71,10 +92,12 @@
           return;
         }
 
-        const lastIndex = data.x.length - 1;
-        const mae = data.mae ?? "N/A";
+        
+        const lastIndex = data.x.length - 1; //Gets last datapoint for the forecast
+        const mae = data.mae ?? "N/A"; //mae & rmse are displayed, but N/A if there isn't any mae & rmse value
         const rmse = data.rmse ?? "N/A";
 
+        //Plots all historical enrollment data with blue lines (except for last point)
         const tracePast = {
           type: "scatter",
           mode: "lines+markers",
@@ -85,6 +108,7 @@
           marker: { size: 8 }
         };
 
+        //Connects the last historical data point to the last data point (which is forecast value) with a dotted line, 
         const traceForecast = {
           type: "scatter",
           mode: "lines+markers+text",
@@ -97,19 +121,19 @@
           marker: { size: [0, 16], color: "#ff5733", symbol: "star",  line: { width: 0 }}
         };
 
+        //Doesn't display visible chart data, just meant to add the MAE and RMSE to the legend
         const traceMetrics = {
           type: "scatter",
+          mode: "lines",
+          name: `MAE: ${mae} <br>RMSE: ${rmse}`,
           x: [null], 
           y: [null],
-          mode: "lines",
           line: { color: "rgba(0,0,0,0)" },
           marker: { size: 0, opacity: 0 },
-          name: `MAE: ${mae} <br>RMSE: ${rmse}`,
           hoverinfo: "none",
-          showlegend: true,
-          textfont: { color: "black", size: 0 },
         };
 
+        //Chart styling
         const layout = {
           title: { text: selected },
           xaxis: { title: "Term" },
@@ -126,6 +150,7 @@
           }
         };
 
+        //Renders chart
         Plotly.newPlot(chartDiv, [tracePast, traceForecast, traceMetrics], layout, {
           displayModeBar: true,
           responsive: true

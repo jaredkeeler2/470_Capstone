@@ -1,7 +1,8 @@
 Django
 requests
 beautifulsoup4
-pandas
-numpy
+pandas==1.5.3
+numpy==1.23.5
 statsmodels
 plotly
+scikit-learn

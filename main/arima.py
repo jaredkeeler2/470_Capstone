@@ -57,7 +57,7 @@ for code, group in df.groupby('code'):
     terms = group['term'].astype(int).values
 
     try:
-        if len(y) < 2:
+        if len(y) < 4:
             #mark as insufficient data
             results.append({
                 "code": code,
@@ -77,9 +77,9 @@ for code, group in df.groupby('code'):
         mae = None
         rmse = None
 
-        #Only calculate metrics if there’s enough data (e.g., > 4 terms)
-        if len(y) > 4:
-            train, test = y[:-3], y[-3:]  #train on all but last 3, test on last 3
+        #Only calculate metrics if there’s enough data (e.g., >= 4 terms)
+        if len(y) >= 4:
+            train, test = y[:-2], y[-2:]  #train on all but last 2, test on last 
             try:
                 model_eval = ARIMA(train, order=(1, 1, 1)).fit()
                 preds = model_eval.forecast(steps=len(test))
