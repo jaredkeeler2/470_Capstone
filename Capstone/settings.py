@@ -121,3 +121,9 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+#Password required for uploading CSV files
+UPLOAD_PASSWORD = "Coursetrend123"
+
+#Password required for uploading graduate number
+GRADUATE_PASSWORD = "NewGraduate123"

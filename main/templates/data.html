@@ -6,15 +6,74 @@
     <title>Course Enrollment Data</title>
     <link rel="stylesheet" href="{% static 'style.css' %}">
     <style>
-        /* Optional: make buttons inline and spaced nicely */
+        /* Button layout */
         .button-row {
             margin-bottom: 20px;
         }
-        .button-row a button {
+        .button-row a button, .button-row button {
             margin-right: 10px;
             padding: 10px 20px;
             font-size: 16px;
             cursor: pointer;
+        }
+
+        /* Popup modal styles for CSV upload */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            padding-top: 100px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.5);
+        }
+
+        .modal-content {
+            background-color: #fff;
+            margin: auto;
+            padding: 25px;
+            border: 1px solid #888;
+            width: 350px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 22px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .close:hover {
+            color: black;
+        }
+
+        /* Table styling */
+        table {
+            border-collapse: collapse;
+            width: 80%;
+        }
+
+        th, td {
+            border: 1px solid #333;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        p.message {
+            color: green;
+        }
+        p.error {
+            color: red;
         }
     </style>
 </head>
@@ -23,50 +82,114 @@
 
 <!-- Button row -->
 <div class="button-row">
-    <a href="/"><button>Back to Dashboard</button></a>
-    <a href="{% url 'download_data' %}"><button>Download CSV</button></a>
+    <a href="/"><button type="button">Back to Dashboard</button></a>
+    <a href="{% url 'download_data' %}"><button type="button">Download CSV</button></a>
+    <button type="button" onclick="openPasswordPopup()">Upload CSV</button>
+    <button type="button" onclick="confirmRescrape()">Rescrape Data</button>
 </div>
 
-<hr>
-
-<!-- Upload CSV form -->
-<h2>Upload Updated CSV</h2>
-<form method="POST" enctype="multipart/form-data">
-    {% csrf_token %}
-    <input type="file" name="csv_file" accept=".csv" required>
-    <button type="submit">Upload CSV</button>
-</form>
+<!-- Display Django messages -->
+{% if messages %}
+    {% for message in messages %}
+        <p class="message">{{ message }}</p>
+    {% endfor %}
+{% endif %}
 
 {% if message %}
-    <p style="color:green">{{ message }}</p>
+    <p class="message">{{ message }}</p>
+{% endif %}
+{% if error %}
+    <p class="error">{{ error }}</p>
 {% endif %}
 
 <hr>
 
-<!-- Current course data table -->
+<!-- Current course data -->
 <h2>Current Course Data</h2>
 {% if terms %}
     {% for term, course_list in terms.items %}
         <h3>Term: {{ term }}</h3>
-        <table border="1" cellpadding="5">
-            <tr>
-                <th>Course Code</th>
-                <th>Title</th>
-                <th>Enrolled</th>
-            </tr>
-            {% for course in course_list %}
+        <table>
+            <thead>
                 <tr>
-                    <td>{{ course.code }}</td>
-                    <td>{{ course.title }}</td>
-                    <td>{{ course.enrolled }}</td>
+                    <th>Course Code</th>
+                    <th>Title</th>
+                    <th>Enrolled</th>
                 </tr>
-            {% endfor %}
+            </thead>
+            <tbody>
+                {% for course in course_list %}
+                    <tr>
+                        <td>{{ course.code }}</td>
+                        <td>{{ course.title }}</td>
+                        <td>{{ course.enrolled }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
         </table>
         <br>
     {% endfor %}
 {% else %}
     <p>No course data available.</p>
 {% endif %}
+
+<!-- Hidden CSV upload popup -->
+<div id="passwordPopup" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closePasswordPopup()">&times;</span>
+    <h3>Enter Upload Password</h3>
+    <form id="uploadForm" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <input type="file" name="csv_file" accept=".csv" required><br><br>
+        <input type="password" id="uploadPassword" name="upload_password" placeholder="Enter password" required>
+        <br>
+        <input type="checkbox" onclick="togglePassword()"> Show Password
+        <br><br>
+        <button type="submit">Confirm Upload</button>
+    </form>
+  </div>
+</div>
+
+<script>
+// CSV Upload Modal
+function openPasswordPopup() {
+    document.getElementById("passwordPopup").style.display = "block";
+}
+function closePasswordPopup() {
+    document.getElementById("passwordPopup").style.display = "none";
+}
+function togglePassword() {
+    var x = document.getElementById("uploadPassword");
+    x.type = x.type === "password" ? "text" : "password";
+}
+window.onclick = function(event) {
+    var modal = document.getElementById("passwordPopup");
+    if (event.target === modal) {
+        modal.style.display = "none";
+    }
+}
+
+// Rescrape Confirmation
+function confirmRescrape() {
+    if (confirm("Are you sure you want to rescrape all missing CSCE terms?")) {
+        // Create a form dynamically to POST to /rescrape/
+        const form = document.createElement('form');
+        form.method = 'POST';
+        form.action = "{% url 'rescrape_data' %}";
+
+        // Add CSRF token
+        const csrfToken = document.querySelector('[name=csrfmiddlewaretoken]').value;
+        const input = document.createElement('input');
+        input.type = 'hidden';
+        input.name = 'csrfmiddlewaretoken';
+        input.value = csrfToken;
+        form.appendChild(input);
+
+        document.body.appendChild(form);
+        form.submit();
+    }
+}
+</script>
 
 </body>
 </html>

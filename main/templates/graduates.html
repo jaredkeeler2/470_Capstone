@@ -1,42 +1,56 @@
 {% load static %}
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <title>Data</title>
-        <link rel="stylesheet" href="{% static 'style.css' %}">
-    </head>
+<head>
+    <meta charset="utf-8">
+    <title>Graduation Data</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <script>
+        function promptGraduatePassword(event) {
+            const password = prompt("Enter graduate submission password:");
+            if (password === null) {
+                // User cancelled the prompt
+                event.preventDefault();
+                return false;
+            }
+            document.getElementById('graduate_password').value = password;
+        }
+    </script>
+</head>
 
-    <body>
-        <h1>Data Page</h1>
-        <p>
-            <a href="/">
-                <button>Back to Dashboard</button>
-            </a>
-        </p>
-         <hr>
+<body>
+    <h1>Data Page</h1>
+    <p>
+        <a href="/"><button>Back to Dashboard</button></a>
+    </p>
+    <hr>
 
-        <h2>High School Graduation Numbers</h2>
+    <h2>High School Graduation Numbers</h2>
 
-        <form method="POST">
-            {% csrf_token %}
-            {{ form.as_p }}
-            <button type="submit">Submit</button>
-        </form>
+    <form method="POST" onsubmit="promptGraduatePassword(event)">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="hidden" name="graduate_password" id="graduate_password">
+        <button type="submit">Submit</button>
+    </form>
 
-        <hr>
+    {% if error %}
+        <p style="color:red;">{{ error }}</p>
+    {% endif %}
 
-        <h3>Existing Data</h3>
-        <table border="1">
-            <tr><th>Year</th><th>Graduates</th></tr>
-            {% for entry in data %}
-                <tr>
-                    <td>{{ entry.year }}</td>
-                    <td>{{ entry.graduates }}</td>
-                </tr>
-            {% empty %}
-                <tr><td colspan="2">No data yet.</td></tr>
-            {% endfor %}
-        </table>
-    </body>
+    <hr>
+
+    <h3>Existing Data</h3>
+    <table border="1">
+        <tr><th>Year</th><th>Graduates</th></tr>
+        {% for entry in data %}
+            <tr>
+                <td>{{ entry.year }}</td>
+                <td>{{ entry.graduates }}</td>
+            </tr>
+        {% empty %}
+            <tr><td colspan="2">No data yet.</td></tr>
+        {% endfor %}
+    </table>
+</body>
 </html>

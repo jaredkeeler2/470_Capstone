@@ -2,6 +2,8 @@ from django.shortcuts import render, redirect
 from django.http import HttpResponse
 import csv
 from django.utils import timezone
+from django.conf import settings
+from django.contrib import messages
 from datetime import timedelta
 from .models import Course ,GraduationData
 from .csce_scraper import build_term_codes_past_years
@@ -47,34 +49,50 @@ def home(request):
         'courses': courses,
         'course_data': course_data
     })
+    
+    
+def rescrape_data(request):
+    if request.method == 'POST':
+        all_terms = [term for term, label in build_term_codes_past_years(years=5)]
+        existing_terms = set(Course.objects.values_list('term', flat=True))
+        missing_terms = [term for term in all_terms if term not in existing_terms]
+
+        if missing_terms:
+            Course.save_courses(subj="CSCE")
+            messages.success(request, f"Rescraped missing terms: {', '.join(missing_terms)}")
+        else:
+            messages.info(request, "No missing terms to rescrape.")
+
+    return redirect('data')
 
 def graduate_data(request):
-    #auto-fill database with empty entries from 2021 → current year
+    error = None
+    GRADUATE_PASSWORD = getattr(settings, 'GRADUATE_PASSWORD', 'grad123')  # new key
+
+    # Auto-fill database
     current_year = datetime.now().year
     for year in range(2021, current_year + 1):
         GraduationData.objects.get_or_create(year=year, defaults={'graduates': 0})
 
-    #handle user input from the form
     if request.method == 'POST':
-        form = GraduationForm(request.POST)
-        if form.is_valid():
-            year = form.cleaned_data['year']
-            graduates = form.cleaned_data['graduates']
-
-            #update if year exists, otherwise create a new one
-            obj, created = GraduationData.objects.update_or_create(
-                year=year, defaults={'graduates': graduates}
-            )
-
-            return redirect('graduates')  # reload page after submit
+        password = request.POST.get('graduate_password', '').strip()
+        if password != GRADUATE_PASSWORD:
+            error = "Invalid password. You are not authorized to submit graduation data."
+        else:
+            form = GraduationForm(request.POST)
+            if form.is_valid():
+                year = form.cleaned_data['year']
+                graduates = form.cleaned_data['graduates']
+                GraduationData.objects.update_or_create(
+                    year=year, defaults={'graduates': graduates}
+                )
+                return redirect('graduates')
     else:
         form = GraduationForm()
 
-    #fetch all stored data
     data = GraduationData.objects.all().order_by('-year')
 
-    #render page with form and data
-    return render(request, "graduates.html", {'form': form, 'data': data})
+    return render(request, "graduates.html", {'form': form, 'data': data, 'error': error})
 
 
 
@@ -88,68 +106,62 @@ def sanitize_csv_value(value):
 # Fetch data from Courses
 def data(request):
     message = None
+    error = None
+    UPLOAD_PASSWORD = getattr(settings, 'UPLOAD_PASSWORD', 'admin123')
 
-    # Handle CSV upload
     if request.method == 'POST' and 'csv_file' in request.FILES:
-        csv_file = request.FILES['csv_file']
+        password = request.POST.get('upload_password', '').strip()
 
-        # Only allow CSV files
-        if not csv_file.name.endswith('.csv'):
-            message = "Error: File is not CSV type."
+        if password != UPLOAD_PASSWORD:
+            error = "Invalid password."
         else:
-            try:
-                data_set = csv_file.read().decode('UTF-8')
-                io_string = io.StringIO(data_set)
-                reader = csv.DictReader(io_string)
+            csv_file = request.FILES['csv_file']
+            if not csv_file.name.endswith('.csv'):
+                error = "Error: File is not CSV type."
+            else:
+                try:
+                    data_set = csv_file.read().decode('UTF-8')
+                    io_string = io.StringIO(data_set)
+                    reader = csv.DictReader(io_string)
 
-                required_columns = {'Term', 'Code', 'Title', 'Enrolled'}
-                if not required_columns.issubset(reader.fieldnames):
-                    message = f"Error: CSV must contain columns: {', '.join(required_columns)}."
-                else:
-                    updated_count = 0
-                    skipped_count = 0
-
-                    for row in reader:
-                        term = sanitize_csv_value(row.get('Term', ''))
-                        code = sanitize_csv_value(row.get('Code', ''))
-                        title = sanitize_csv_value(row.get('Title', ''))
-                        enrolled = row.get('Enrolled', '').strip()
-
-                        # Skip completely empty rows
-                        if not term or not code or not title or not enrolled:
-                            skipped_count += 1
-                            continue
-
-                        # Validate enrolled number
-                        try:
-                            enrolled = int(enrolled)
-                            if enrolled < 0:
+                    required_columns = {'Term', 'Code', 'Title', 'Enrolled'}
+                    if not required_columns.issubset(reader.fieldnames):
+                        error = f"Error: CSV must contain columns: {', '.join(required_columns)}."
+                    else:
+                        updated_count = 0
+                        skipped_count = 0
+                        for row in reader:
+                            term = sanitize_csv_value(row.get('Term', ''))
+                            code = sanitize_csv_value(row.get('Code', ''))
+                            title = sanitize_csv_value(row.get('Title', ''))
+                            enrolled = row.get('Enrolled', '').strip()
+                            if not term or not code or not title or not enrolled:
                                 skipped_count += 1
                                 continue
-                        except ValueError:
-                            skipped_count += 1
-                            continue
+                            try:
+                                enrolled = int(enrolled)
+                                if enrolled < 0:
+                                    skipped_count += 1
+                                    continue
+                            except ValueError:
+                                skipped_count += 1
+                                continue
+                            Course.objects.update_or_create(
+                                code=code,
+                                term=term,
+                                defaults={'title': title, 'enrolled': enrolled}
+                            )
+                            updated_count += 1
+                        message = f"CSV uploaded successfully. {updated_count} rows updated, {skipped_count} rows skipped."
+                except Exception as e:
+                    error = f"Error processing CSV: {str(e)}"
 
-                        # Safe update or create
-                        Course.objects.update_or_create(
-                            code=code,
-                            term=term,
-                            defaults={'title': title, 'enrolled': enrolled}
-                        )
-                        updated_count += 1
-
-                    message = f"CSV uploaded. {updated_count} rows updated, {skipped_count} rows skipped."
-
-            except Exception as e:
-                message = f"Error processing CSV: {str(e)}"
-
-    # Always display current course data
     courses = Course.objects.all().order_by('-term', 'code')
     terms = {}
     for c in courses:
         terms.setdefault(c.term, []).append(c)
 
-    return render(request, 'data.html', {'terms': terms, 'message': message})
+    return render(request, 'data.html', {'terms': terms, 'message': message, 'error': error})
 
 
 def download_data(request):
