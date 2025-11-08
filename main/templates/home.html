@@ -36,115 +36,154 @@
 
     <!--Converts the json into javascript objects for chart to use-->
     <script>
-      const courseDataRaw = JSON.parse(
-        document.getElementById("course-data").textContent
-      );
+  const courseDataRaw = JSON.parse(
+    document.getElementById("course-data").textContent
+  );
 
-      //Loops through the data points and organizes them by course code (x = terms, y = enrollment #, error metrics stored in legend)
-      const groupedData = {};
-      for (const entry of courseDataRaw) {
-        const code = entry.code;
-        const termLabel = entry.term_name;
+  const groupedData = {};
+  for (const entry of courseDataRaw) {
+    const code = entry.code;
+    const termLabel = entry.term_name;
 
-        //Initialize group if it doesn't exist
-        if (!groupedData[code]) {
-          groupedData[code] = { 
-            x: [], 
-            y: [], 
-            mae: null, 
-            rmse: null 
-          };
-        }
+    if (!groupedData[code]) {
+      groupedData[code] = { 
+        title: entry.title || code,
+        x: [], 
+        y: [], 
+        arima_forecast: null,
+        sarima_forecast: null,
+        arimax_forecast: null,
+        sarimax_forecast: null,
+        arima_mae: null,
+        sarima_mae: null,
+        arimax_mae: null,
+        sarimax_mae: null
+      };
+    }
 
-        //Add data points
-        groupedData[code].x.push(termLabel);
-        groupedData[code].y.push(entry.enrolled);
+    // Historical data
+    if (entry.enrolled !== null) {
+      groupedData[code].x.push(termLabel);
+      groupedData[code].y.push(entry.enrolled);
+    }
 
-        //Add error metrics if present
-        const hasMetrics = entry.mae !== null && entry.rmse !== null;
-        if (hasMetrics) {
-          groupedData[code].mae = entry.mae;
-          groupedData[code].rmse = entry.rmse;
-        }
+    // Forecast data
+    if (entry.arima_forecast !== null || entry.sarima_forecast !== null) {
+      groupedData[code].next_term = entry.term_name;
+      groupedData[code].arima_forecast = entry.arima_forecast;
+      groupedData[code].sarima_forecast = entry.sarima_forecast;
+      groupedData[code].arimax_forecast = entry.arimax_forecast;
+      groupedData[code].sarimax_forecast = entry.sarimax_forecast;
+      groupedData[code].arima_mae = entry.arima_mae;
+      groupedData[code].sarima_mae = entry.sarima_mae;
+      groupedData[code].arimax_mae = entry.arimax_mae;
+      groupedData[code].sarimax_mae = entry.sarimax_mae;
+    }
+  }
+
+  const dropdown = document.getElementById("dropdown");
+  const chartDiv = document.getElementById("enrollmentChart");
+
+  dropdown.addEventListener("change", () => {
+    const selected = dropdown.value;
+    const data = groupedData[selected];
+    if (!data) {
+      Plotly.purge(chartDiv);
+      return;
+    }
+
+    const lastTerm = data.x[data.x.length - 1];
+    const nextTerm = data.next_term || "Next Term";
+
+    // === Historical data ===
+    const tracePast = {
+      type: "scatter",
+      mode: "lines+markers",
+      name: "",
+      x: data.x,
+      y: data.y,
+      line: { width: 3, color: "#007bff" },
+      marker: { size: 8 }
+    };
+
+    // === ARIMA forecast ===
+    const traceArima = {
+      type: "scatter",
+      mode: "lines+markers+text",
+      name: `ARIMA Forecast (Mean Absolute Error: ${data.arima_mae ?? "N/A"})`,
+      x: [lastTerm, nextTerm],
+      y: [data.y[data.y.length - 1], data.arima_forecast],
+      text: ["", "ARIMA"],
+      textposition: "top center",
+      line: { width: 3, color: "#ff5733", dash: "dot" },
+      marker: { size: [0, 14], color: "#ff5733", symbol: "star" }
+    };
+
+    // === SARIMA forecast ===
+    const traceSarima = {
+      type: "scatter",
+      mode: "lines+markers+text",
+      name: `SARIMA Forecast (Mean Absolute Error: ${data.sarima_mae ?? "N/A"})`,
+      x: [lastTerm, nextTerm],
+      y: [data.y[data.y.length - 1], data.sarima_forecast],
+      text: ["", "SARIMA"],
+      textposition: "bottom center",
+      line: { width: 3, color: "#ffa500", dash: "dot" },
+      marker: { size: [0, 14], color: "#ffa500", symbol: "diamond" }
+    };
+
+    // === ARIMAX forecast ===
+    const traceArimax = {
+      type: "scatter",
+      mode: "lines+markers+text",
+      name: `ARIMAX Forecast (MAE: ${data.arimax_mae ?? "N/A"})`,
+      x: [lastTerm, nextTerm],
+      y: [data.y[data.y.length - 1], data.arimax_forecast],
+      text: ["", "ARIMAX"],
+      textposition: "top center",
+      line: { width: 3, color: "#8000ff", dash: "dot" },
+      marker: { size: [0, 14], color: "#8000ff", symbol: "triangle" }
+    };
+
+    // === SARIMAX forecast ===
+    const traceSarimax = {
+      type: "scatter",
+      mode: "lines+markers+text",
+      name: `SARIMAX Forecast (Mean Absolute Error: ${data.sarimax_mae ?? "N/A"})`,
+      x: [lastTerm, nextTerm],
+      y: [data.y[data.y.length - 1], data.sarimax_forecast],
+      text: ["", "SARIMAX"],
+      textposition: "bottom center",
+      line: { width: 3, color: "#00cc44", dash: "dot" },
+      marker: { size: [0, 14], color: "#00cc44", symbol: "circle" }
+    };
+
+    const layout = {
+      title: { text: data.title || selected },
+      xaxis: { title: "Term" },
+      yaxis: { 
+        title: "Enrollment Count",
+        range: [0, null]
+       },
+      margin: { t: 80, r: 80, b: 60, l: 80 },
+      font: { size: 16 },
+      plot_bgcolor: "#fafafa",
+      paper_bgcolor: "#fafafa",
+      legend: {
+        x: 1.05,
+        y: 1,
+        bgcolor: "rgba(255,255,255,0)",
+        bordercolor: "rgba(0,0,0,0)"
       }
+    };
 
-      //Connects the javascript to the dropdown and chart in the html
-      const dropdown = document.getElementById("dropdown");
-      const chartDiv = document.getElementById("enrollmentChart");
+    Plotly.newPlot(chartDiv, [tracePast, traceArima, traceSarima, traceArimax, traceSarimax], layout, {
+      displayModeBar: true,
+      responsive: true
+    });
+  });
 
-      //Clears chart if there isn't a course selected
-      dropdown.addEventListener("change", () => {
-        const selected = dropdown.value;
-        const data = groupedData[selected];
-        if (!data) {
-          Plotly.purge(chartDiv);
-          return;
-        }
+  dropdown.value = "CSCE A101";
+  dropdown.dispatchEvent(new Event("change"));
 
-        
-        const lastIndex = data.x.length - 1; //Gets last datapoint for the forecast
-        const mae = data.mae ?? "N/A"; //mae & rmse are displayed, but N/A if there isn't any mae & rmse value
-        const rmse = data.rmse ?? "N/A";
-
-        //Plots all historical enrollment data with blue lines (except for last point)
-        const tracePast = {
-          type: "scatter",
-          mode: "lines+markers",
-          name: "Historical Data",
-          x: data.x.slice(0, lastIndex),
-          y: data.y.slice(0, lastIndex),
-          line: { width: 3, color: "#007bff" },
-          marker: { size: 8 }
-        };
-
-        //Connects the last historical data point to the last data point (which is forecast value) with a dotted line, 
-        const traceForecast = {
-          type: "scatter",
-          mode: "lines+markers+text",
-          name: "Forecast",
-          x: [data.x[lastIndex - 1], data.x[lastIndex]],
-          y: [data.y[lastIndex - 1], data.y[lastIndex]],
-          text: ["", "Forecast"],
-          textposition: "top center",
-          line: { width: 3, color: "#1E90FF", dash: "dot" },
-          marker: { size: [0, 16], color: "#ff5733", symbol: "star",  line: { width: 0 }}
-        };
-
-        //Doesn't display visible chart data, just meant to add the MAE and RMSE to the legend
-        const traceMetrics = {
-          type: "scatter",
-          mode: "lines",
-          name: `MAE: ${mae} <br>RMSE: ${rmse}`,
-          x: [null], 
-          y: [null],
-          line: { color: "rgba(0,0,0,0)" },
-          marker: { size: 0, opacity: 0 },
-          hoverinfo: "none",
-        };
-
-        //Chart styling
-        const layout = {
-          title: { text: selected },
-          xaxis: { title: "Term" },
-          yaxis: { title: "Enrollment Count" },
-          margin: { t: 80, r: 80, b: 60, l: 80 },
-          font: { size: 16 },
-          plot_bgcolor: "#fafafa",
-          paper_bgcolor: "#fafafa",
-          legend: {
-            x: 1.05,
-            y: 1,
-            bgcolor: "rgba(255,255,255,0)",
-            bordercolor: "rgba(0,0,0,0)"
-          }
-        };
-
-        //Renders chart
-        Plotly.newPlot(chartDiv, [tracePast, traceForecast, traceMetrics], layout, {
-          displayModeBar: true,
-          responsive: true
-        });
-      });
-    </script>
-  </body>
-</html>
+</script>
