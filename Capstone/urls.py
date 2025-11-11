@@ -26,5 +26,5 @@ urlpatterns = [
     path('graduates/', graduate_data, name='graduates'),
     path('data/', data, name='data'),
     path('download/', download_data, name='download_data'),
-    path('rescrape/',rescrape_data, name='rescrape_data'), # Rescrape missing terms
+    path('rescrape/',rescrape_data, name='rescrape_data'), # Rescrape missing terms 
 ]

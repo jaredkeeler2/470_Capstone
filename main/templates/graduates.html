@@ -5,6 +5,59 @@
     <meta charset="utf-8">
     <title>Graduation Data</title>
     <link rel="stylesheet" href="{% static 'style.css' %}">
+
+    <style>
+        input[type=number]::-webkit-outer-spin-button,
+        input[type=number]::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        /*For Firefox*/
+        input[type=number] {
+            -moz-appearance: textfield;
+        }
+
+        Optional styling for cleaner table/form appearance */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 50%;
+            margin-top: 10px;
+        }
+
+        th, td {
+            border: 1px solid #999;
+            padding: 8px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        button {
+            padding: 6px 12px;
+            border-radius: 6px;
+            border: none;
+            background-color: #007BFF;
+            color: white;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        h1, h2, h3 {
+            color: #333;
+        }
+    </style>
+
     <script>
         function promptGraduatePassword(event) {
             const password = prompt("Enter graduate submission password:");
@@ -19,10 +72,12 @@
 </head>
 
 <body>
-    <h1>Data Page</h1>
+    <h1>Graduates Data</h1>
+
     <p>
         <a href="/"><button>Back to Dashboard</button></a>
     </p>
+
     <hr>
 
     <h2>High School Graduation Numbers</h2>
@@ -41,15 +96,20 @@
     <hr>
 
     <h3>Existing Data</h3>
-    <table border="1">
-        <tr><th>Year</th><th>Graduates</th></tr>
+    <table>
+        <tr>
+            <th>Year</th>
+            <th>Graduates</th>
+        </tr>
         {% for entry in data %}
             <tr>
                 <td>{{ entry.year }}</td>
                 <td>{{ entry.graduates }}</td>
             </tr>
         {% empty %}
-            <tr><td colspan="2">No data yet.</td></tr>
+            <tr>
+                <td colspan="2">No data yet.</td>
+            </tr>
         {% endfor %}
     </table>
 </body>
