@@ -61,14 +61,14 @@
       };
     }
 
-    // Historical data
+    //Historical data
     if (entry.enrolled !== null) {
       groupedData[code].x.push(termLabel);
       groupedData[code].y.push(entry.enrolled);
     }
 
-    // Forecast data
-    if (entry.arima_forecast !== null || entry.sarima_forecast !== null) {
+    //Forecast data
+    if (entry.arima_forecast !== null || entry.sarima_forecast !== null || entry.arimax_forecast !== null || entry.sarimax_forecast !== null) {
       groupedData[code].next_term = entry.term_name;
       groupedData[code].arima_forecast = entry.arima_forecast;
       groupedData[code].sarima_forecast = entry.sarima_forecast;
@@ -78,6 +78,14 @@
       groupedData[code].sarima_mae = entry.sarima_mae;
       groupedData[code].arimax_mae = entry.arimax_mae;
       groupedData[code].sarimax_mae = entry.sarimax_mae;
+      groupedData[code].arima_val_terms = entry.arima_val_terms;
+      groupedData[code].arima_val_preds = entry.arima_val_preds;
+      groupedData[code].sarima_val_terms = entry.sarima_val_terms;
+      groupedData[code].sarima_val_preds = entry.sarima_val_preds;
+      groupedData[code].arimax_val_terms = entry.arimax_val_terms;
+      groupedData[code].arimax_val_preds = entry.arimax_val_preds;
+      groupedData[code].sarimax_val_terms = entry.sarimax_val_terms;
+      groupedData[code].sarimax_val_preds = entry.sarimax_val_preds;
     }
   }
 
@@ -93,71 +101,130 @@
     }
 
     const lastTerm = data.x[data.x.length - 1];
-    const nextTerm = data.next_term || "Next Term";
+    const hasForecast = data.arima_forecast || data.sarima_forecast || data.arimax_forecast || data.sarimax_forecast;
+    const nextTerm = hasForecast ? (data.next_term) : "Insufficient Data";
 
-    // === Historical data ===
+    //Historical data
     const tracePast = {
       type: "scatter",
       mode: "lines+markers",
-      name: "",
+      name: "Historical Data",
+      hoverinfo: "x+y",
       x: data.x,
       y: data.y,
       line: { width: 3, color: "#007bff" },
       marker: { size: 8 }
     };
 
-    // === ARIMA forecast ===
+    const maes = [data.arima_mae, data.sarima_mae, data.arimax_mae, data.sarimax_mae].filter(v => v !== null && !isNaN(v));
+    const minMae = maes.length ? Math.min(...maes) : null;
+    let bestModel = null;
+    if (minMae !== null) {
+      if (data.arima_mae === minMae) bestModel = "arima";
+      else if (data.sarima_mae === minMae) bestModel = "sarima";
+      else if (data.arimax_mae === minMae) bestModel = "arimax";
+      else if (data.sarimax_mae === minMae) bestModel = "sarimax";
+    }
+
+    //ARIMA forecast
     const traceArima = {
       type: "scatter",
       mode: "lines+markers+text",
-      name: `ARIMA Forecast (Mean Absolute Error: ${data.arima_mae ?? "N/A"})`,
+      name: `ARIMA Forecast (Mean Absolute Error: ${data.arima_mae != null ? data.arima_mae.toFixed(1) : "N/A"})`,
+      hoverinfo: "x+y",
       x: [lastTerm, nextTerm],
       y: [data.y[data.y.length - 1], data.arima_forecast],
       text: ["", "ARIMA"],
       textposition: "top center",
       line: { width: 3, color: "#ff5733", dash: "dot" },
-      marker: { size: [0, 14], color: "#ff5733", symbol: "star" }
+      marker: { size: [0, 14], color: "#ff5733", symbol: data.arima_mae === minMae ? "star" : "circle" },
+      opacity: data.arima_mae === minMae ? 1 : 0.2
     };
 
-    // === SARIMA forecast ===
+    //SARIMA forecast
     const traceSarima = {
       type: "scatter",
       mode: "lines+markers+text",
-      name: `SARIMA Forecast (Mean Absolute Error: ${data.sarima_mae ?? "N/A"})`,
+      name: `SARIMA Forecast (Mean Absolute Error: ${data.sarima_mae != null ? data.sarima_mae.toFixed(1) : "N/A"})`,
+      hoverinfo: "x+y",
       x: [lastTerm, nextTerm],
       y: [data.y[data.y.length - 1], data.sarima_forecast],
       text: ["", "SARIMA"],
       textposition: "bottom center",
       line: { width: 3, color: "#ffa500", dash: "dot" },
-      marker: { size: [0, 14], color: "#ffa500", symbol: "diamond" }
+      marker: { size: [0, 14], color: "#ffa500", symbol: data.sarima_mae === minMae ? "star" : "circle" },
+      opacity: data.sarima_mae === minMae ? 1 : 0.2
     };
 
-    // === ARIMAX forecast ===
+    //ARIMAX forecast
     const traceArimax = {
       type: "scatter",
       mode: "lines+markers+text",
-      name: `ARIMAX Forecast (MAE: ${data.arimax_mae ?? "N/A"})`,
+      name: `ARIMAX Forecast (Mean Absolute Error: ${data.arimax_mae != null ? data.arimax_mae.toFixed(1) : "N/A"})`,
+      hoverinfo: "x+y",
       x: [lastTerm, nextTerm],
       y: [data.y[data.y.length - 1], data.arimax_forecast],
       text: ["", "ARIMAX"],
       textposition: "top center",
       line: { width: 3, color: "#8000ff", dash: "dot" },
-      marker: { size: [0, 14], color: "#8000ff", symbol: "triangle" }
+      marker: { size: [0, 14], color: "#8000ff", symbol: (data.arimax_mae ?? 0) === minMae ? "star" : "circle" },
+      opacity: data.arimax_mae === minMae ? 1 : 0.2
     };
 
-    // === SARIMAX forecast ===
+    //SARIMAX forecast
     const traceSarimax = {
       type: "scatter",
       mode: "lines+markers+text",
-      name: `SARIMAX Forecast (Mean Absolute Error: ${data.sarimax_mae ?? "N/A"})`,
+      name: `SARIMAX Forecast (Mean Absolute Error: ${data.sarimax_mae != null ? data.sarimax_mae.toFixed(1) : "N/A"})`,
+      hoverinfo: "x+y",
       x: [lastTerm, nextTerm],
       y: [data.y[data.y.length - 1], data.sarimax_forecast],
       text: ["", "SARIMAX"],
       textposition: "bottom center",
       line: { width: 3, color: "#00cc44", dash: "dot" },
-      marker: { size: [0, 14], color: "#00cc44", symbol: "circle" }
+      marker: { size: [0, 14], color: "#00cc44", symbol: (data.sarimax_mae ?? 0) === minMae ? "star" : "circle" },
+      opacity: data.sarimax_mae === minMae ? 1 : 0.2
     };
 
+    let validationTrace = null;
+    if (bestModel) {
+      const colorMap = {
+        arima: "#ff5733",
+        sarima: "#ffa500",
+        arimax: "#8000ff",
+        sarimax: "#00cc44"
+      };
+
+      const valTerms = data[`${bestModel}_val_terms`];
+      const valPreds = data[`${bestModel}_val_preds`];
+
+      if (valTerms && valPreds) {
+        const termLabels = valTerms.map(term => {
+          const year = Math.floor(term / 100);
+          const sem = term % 100;
+          const semNames = { 1: "Spring", 2: "Summer", 3: "Fall" };
+          return `${semNames[sem] || "Unknown"} ${year}`;
+        });
+
+        validationTrace = {
+          type: "scatter",
+          mode: "markers+text",
+          name: `Validation (${bestModel.toUpperCase()})`,
+          hoverinfo: "x+y",
+          x: termLabels,
+          y: valPreds,
+          text: ["Validation 1", "Validation 2"],
+          textposition: "top center",
+          marker: {
+            size: 12,
+            color: colorMap[bestModel],
+            symbol: "x"
+          }
+        };
+      }
+    }
+
+    //Chart layout
     const layout = {
       title: { text: data.title || selected },
       xaxis: { title: "Term" },
@@ -166,7 +233,7 @@
         range: [0, null]
        },
       margin: { t: 80, r: 80, b: 60, l: 80 },
-      font: { size: 16 },
+      font: { size: 15 },
       plot_bgcolor: "#fafafa",
       paper_bgcolor: "#fafafa",
       legend: {
@@ -177,7 +244,10 @@
       }
     };
 
-    Plotly.newPlot(chartDiv, [tracePast, traceArima, traceSarima, traceArimax, traceSarimax], layout, {
+    const traces = [tracePast, traceArima, traceSarima, traceArimax, traceSarimax];
+    if (validationTrace) traces.push(validationTrace);
+
+    Plotly.newPlot(chartDiv, traces, layout, {
       displayModeBar: true,
       responsive: true
     });

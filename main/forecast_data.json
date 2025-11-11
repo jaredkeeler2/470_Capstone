@@ -12,7 +12,15 @@
         "arima_mae":null,
         "sarima_mae":null,
         "arimax_mae":null,
-        "sarimax_mae":null
+        "sarimax_mae":null,
+        "arima_val_terms":null,
+        "arima_val_preds":null,
+        "sarima_val_terms":null,
+        "sarima_val_preds":null,
+        "arimax_val_terms":null,
+        "arimax_val_preds":null,
+        "sarimax_val_terms":null,
+        "sarimax_val_preds":null
     },
     {
         "code":"CSCE A101",
@@ -27,7 +35,15 @@
         "arima_mae":null,
         "sarima_mae":null,
         "arimax_mae":null,
-        "sarimax_mae":null
+        "sarimax_mae":null,
+        "arima_val_terms":null,
+        "arima_val_preds":null,
+        "sarima_val_terms":null,
+        "sarima_val_preds":null,
+        "arimax_val_terms":null,
+        "arimax_val_preds":null,
+        "sarimax_val_terms":null,
+        "sarimax_val_preds":null
     },
     {
         "code":"CSCE A101",
@@ -42,7 +58,15 @@
         "arima_mae":null,
         "sarima_mae":null,
         "arimax_mae":null,
-        "sarimax_mae":null
+        "sarimax_mae":null,
+        "arima_val_terms":null,
+        "arima_val_preds":null,
+        "sarima_val_terms":null,
+        "sarima_val_preds":null,
+        "arimax_val_terms":null,
+        "arimax_val_preds":null,
+        "sarimax_val_terms":null,
+        "sarimax_val_preds":null
     },
     {
         "code":"CSCE A101",
@@ -57,7 +81,15 @@
         "arima_mae":null,
         "sarima_mae":null,
         "arimax_mae":null,
-        "sarimax_mae":null
+        "sarimax_mae":null,
+        "arima_val_terms":null,
+        "arima_val_preds":null,
+        "sarima_val_terms":null,
+        "sarima_val_preds":null,
+        "arimax_val_terms":null,
+        "arimax_val_preds":null,
+        "sarimax_val_terms":null,
+        "sarimax_val_preds":null
     },
     {
         "code":"CSCE A101",
@@ -72,7 +104,15 @@
         "arima_mae":null,
         "sarima_mae":null,
         "arimax_mae":null,
-        "sarimax_mae":null
+        "sarimax_mae":null,
+        "arima_val_terms":null,
+        "arima_val_preds":null,
+        "sarima_val_terms":null,
+        "sarima_val_preds":null,
+        "arimax_val_terms":null,
+        "arimax_val_preds":null,
+        "sarimax_val_terms":null,
+        "sarimax_val_preds":null
     },
     {
         "code":"CSCE A101",
@@ -87,7 +127,15 @@
         "arima_mae":null,
         "sarima_mae":null,
         "arimax_mae":null,
-        "sarimax_mae":null
+        "sarimax_mae":null,
+        "arima_val_terms":null,
+        "arima_val_preds":null,
+        "sarima_val_terms":null,
+        "sarima_val_preds":null,
+        "arimax_val_terms":null,
+        "arimax_val_preds":null,
+        "sarimax_val_terms":null,
+        "sarimax_val_preds":null
     },
     {
         "code":"CSCE A101",
@@ -102,7 +150,15 @@
         "arima_mae":null,
         "sarima_mae":null,
         "arimax_mae":null,
-        "sarimax_mae":null
+        "sarimax_mae":null,
+        "arima_val_terms":null,
+        "arima_val_preds":null,
+        "sarima_val_terms":null,
+        "sarima_val_preds":null,
+        "arimax_val_terms":null,
+        "arimax_val_preds":null,
+        "sarimax_val_terms":null,
+        "sarimax_val_preds":null
     },
     {
         "code":"CSCE A101",
@@ -117,7 +173,15 @@
         "arima_mae":null,
         "sarima_mae":null,
         "arimax_mae":null,
-        "sarimax_mae":null
+        "sarimax_mae":null,
+        "arima_val_terms":null,
+        "arima_val_preds":null,
+        "sarima_val_terms":null,
+        "sarima_val_preds":null,
+        "arimax_val_terms":null,
+        "arimax_val_preds":null,
+        "sarimax_val_terms":null,
+        "sarimax_val_preds":null
     },
     {
         "code":"CSCE A101",
@@ -132,7 +196,15 @@
         "arima_mae":null,
         "sarima_mae":null,
         "arimax_mae":null,
-        "sarimax_mae":null
+        "sarimax_mae":null,
+        "arima_val_terms":null,
+        "arima_val_preds":null,
+        "sarima_val_terms":null,
+        "sarima_val_preds":null,
+        "arimax_val_terms":null,
+        "arimax_val_preds":null,
+        "sarimax_val_terms":null,
+        "sarimax_val_preds":null
     },
     {
         "code":"CSCE A101",
@@ -147,7 +219,15 @@
         "arima_mae":null,
         "sarima_mae":null,
         "arimax_mae":null,
-        "sarimax_mae":null
+        "sarimax_mae":null,
+        "arima_val_terms":null,
+        "arima_val_preds":null,
+        "sarima_val_terms":null,
+        "sarima_val_preds":null,
+        "arimax_val_terms":null,
+        "arimax_val_preds":null,
+        "sarimax_val_terms":null,
+        "sarimax_val_preds":null
     },
     {
         "code":"CSCE A101",
@@ -162,7 +242,15 @@
         "arima_mae":null,
         "sarima_mae":null,
         "arimax_mae":null,
-        "sarimax_mae":null
+        "sarimax_mae":null,
+        "arima_val_terms":null,
+        "arima_val_preds":null,
+        "sarima_val_terms":null,
+        "sarima_val_preds":null,
+        "arimax_val_terms":null,
+        "arimax_val_preds":null,
+        "sarimax_val_terms":null,
+        "sarimax_val_preds":null
     },
     {
         "code":"CSCE A101",
@@ -177,7 +265,15 @@
         "arima_mae":null,
         "sarima_mae":null,
         "arimax_mae":null,
-        "sarimax_mae":null
+        "sarimax_mae":null,
+        "arima_val_terms":null,
+        "arima_val_preds":null,
+        "sarima_val_terms":null,
+        "sarima_val_preds":null,
+        "arimax_val_terms":null,
+        "arimax_val_preds":null,
+        "sarimax_val_terms":null,
+        "sarimax_val_preds":null
     },
     {
         "code":"CSCE A101",
@@ -192,7 +288,15 @@
         "arima_mae":null,
         "sarima_mae":null,
         "arimax_mae":null,
-        "sarimax_mae":null
+        "sarimax_mae":null,
+        "arima_val_terms":null,
+        "arima_val_preds":null,
+        "sarima_val_terms":null,
+        "sarima_val_preds":null,
+        "arimax_val_terms":null,
+        "arimax_val_preds":null,
+        "sarimax_val_terms":null,
+        "sarimax_val_preds":null
     },
     {
         "code":"CSCE A101",
@@ -207,7 +311,15 @@
         "arima_mae":null,
         "sarima_mae":null,
         "arimax_mae":null,
-        "sarimax_mae":null
+        "sarimax_mae":null,
+        "arima_val_terms":null,
+        "arima_val_preds":null,
+        "sarima_val_terms":null,
+        "sarima_val_preds":null,
+        "arimax_val_terms":null,
+        "arimax_val_preds":null,
+        "sarimax_val_terms":null,
+        "sarimax_val_preds":null
     },
     {
         "code":"CSCE A115",
@@ -222,7 +334,15 @@
         "arima_mae":null,
         "sarima_mae":null,
         "arimax_mae":null,
-        "sarimax_mae":null
+        "sarimax_mae":null,
+        "arima_val_terms":null,
+        "arima_val_preds":null,
+        "sarima_val_terms":null,
+        "sarima_val_preds":null,
+        "arimax_val_terms":null,
+        "arimax_val_preds":null,
+        "sarimax_val_terms":null,
+        "sarimax_val_preds":null
     },
     {
         "code":"CSCE A115",
@@ -237,7 +357,15 @@
         "arima_mae":null,
         "sarima_mae":null,
         "arimax_mae":null,
-        "sarimax_mae":null
+        "sarimax_mae":null,
+        "arima_val_terms":null,
+        "arima_val_preds":null,
+        "sarima_val_terms":null,
+        "sarima_val_preds":null,
+        "arimax_val_terms":null,
+        "arimax_val_preds":null,
+        "sarimax_val_terms":null,
+        "sarimax_val_preds":null
     },
     {
         "code":"CSCE A115",
@@ -252,7 +380,15 @@
         "arima_mae":null,
         "sarima_mae":null,
         "arimax_mae":null,
-        "sarimax_mae":null
+        "sarimax_mae":null,
+        "arima_val_terms":null,
+        "arima_val_preds":null,
+        "sarima_val_terms":null,
+        "sarima_val_preds":null,
+        "arimax_val_terms":null,
+        "arimax_val_preds":null,
+        "sarimax_val_terms":null,
+        "sarimax_val_preds":null
     },
     {
         "code":"CSCE A201",
@@ -267,7 +403,15 @@
         "arima_mae":null,
         "sarima_mae":null,
         "arimax_mae":null,
-        "sarimax_mae":null
+        "sarimax_mae":null,
+        "arima_val_terms":null,
+        "arima_val_preds":null,
+        "sarima_val_terms":null,
+        "sarima_val_preds":null,
+        "arimax_val_terms":null,
+        "arimax_val_preds":null,
+        "sarimax_val_terms":null,
+        "sarimax_val_preds":null
     },
     {
         "code":"CSCE A201",
@@ -282,7 +426,15 @@
         "arima_mae":null,
         "sarima_mae":null,
         "arimax_mae":null,
-        "sarimax_mae":null
+        "sarimax_mae":null,
+        "arima_val_terms":null,
+        "arima_val_preds":null,
+        "sarima_val_terms":null,
+        "sarima_val_preds":null,
+        "arimax_val_terms":null,
+        "arimax_val_preds":null,
+        "sarimax_val_terms":null,
+        "sarimax_val_preds":null
     },
     {
         "code":"CSCE A201",
@@ -297,7 +449,15 @@
         "arima_mae":null,
         "sarima_mae":null,
         "arimax_mae":null,
-        "sarimax_mae":null
+        "sarimax_mae":null,
+        "arima_val_terms":null,
+        "arima_val_preds":null,
+        "sarima_val_terms":null,
+        "sarima_val_preds":null,
+        "arimax_val_terms":null,
+        "arimax_val_preds":null,
+        "sarimax_val_terms":null,
+        "sarimax_val_preds":null
     },
     {
         "code":"CSCE A201",
@@ -312,7 +472,15 @@
         "arima_mae":null,
         "sarima_mae":null,
         "arimax_mae":null,
-        "sarimax_mae":null
+        "sarimax_mae":null,
+        "arima_val_terms":null,
+        "arima_val_preds":null,
+        "sarima_val_terms":null,
+        "sarima_val_preds":null,
+        "arimax_val_terms":null,
+        "arimax_val_preds":null,
+        "sarimax_val_terms":null,
+        "sarimax_val_preds":null
     },
     {
         "code":"CSCE A201",
@@ -327,7 +495,15 @@
         "arima_mae":null,
         "sarima_mae":null,
         "arimax_mae":null,
-        "sarimax_mae":null
+        "sarimax_mae":null,
+        "arima_val_terms":null,
+        "arima_val_preds":null,
+        "sarima_val_terms":null,
+        "sarima_val_preds":null,
+        "arimax_val_terms":null,
+        "arimax_val_preds":null,
+        "sarimax_val_terms":null,
+        "sarimax_val_preds":null
     },
     {
         "code":"CSCE A201",
@@ -342,7 +518,15 @@
         "arima_mae":null,
         "sarima_mae":null,
         "arimax_mae":null,
-        "sarimax_mae":null
+        "sarimax_mae":null,
+        "arima_val_terms":null,
+        "arima_val_preds":null,
+        "sarima_val_terms":null,
+        "sarima_val_preds":null,
+        "arimax_val_terms":null,
+        "arimax_val_preds":null,
+        "sarimax_val_terms":null,
+        "sarimax_val_preds":null
     },
     {
         "code":"CSCE A201",
@@ -357,7 +541,15 @@
         "arima_mae":null,
         "sarima_mae":null,
         "arimax_mae":null,
-        "sarimax_mae":null
+        "sarimax_mae":null,
+        "arima_val_terms":null,
+        "arima_val_preds":null,
+        "sarima_val_terms":null,
+        "sarima_val_preds":null,
+        "arimax_val_terms":null,
+        "arimax_val_preds":null,
+        "sarimax_val_terms":null,
+        "sarimax_val_preds":null
     },
     {
         "code":"CSCE A201",
@@ -372,7 +564,15 @@
         "arima_mae":null,
         "sarima_mae":null,
         "arimax_mae":null,
-        "sarimax_mae":null
+        "sarimax_mae":null,
+        "arima_val_terms":null,
+        "arima_val_preds":null,
+        "sarima_val_terms":null,
+        "sarima_val_preds":null,
+        "arimax_val_terms":null,
+        "arimax_val_preds":null,
+        "sarimax_val_terms":null,
+        "sarimax_val_preds":null
     },
     {
         "code":"CSCE A201",
@@ -387,7 +587,15 @@
         "arima_mae":null,
         "sarima_mae":null,
         "arimax_mae":null,
-        "sarimax_mae":null
+        "sarimax_mae":null,
+        "arima_val_terms":null,
+        "arima_val_preds":null,
+        "sarima_val_terms":null,
+        "sarima_val_preds":null,
+        "arimax_val_terms":null,
+        "arimax_val_preds":null,
+        "sarimax_val_terms":null,
+        "sarimax_val_preds":null
     },
     {
         "code":"CSCE A201",
@@ -402,7 +610,15 @@
         "arima_mae":null,
         "sarima_mae":null,
         "arimax_mae":null,
-        "sarimax_mae":null
+        "sarimax_mae":null,
+        "arima_val_terms":null,
+        "arima_val_preds":null,
+        "sarima_val_terms":null,
+        "sarima_val_preds":null,
+        "arimax_val_terms":null,
+        "arimax_val_preds":null,
+        "sarimax_val_terms":null,
+        "sarimax_val_preds":null
     },
     {
         "code":"CSCE A201",
@@ -417,7 +633,15 @@
         "arima_mae":null,
         "sarima_mae":null,
         "arimax_mae":null,
-        "sarimax_mae":null
+        "sarimax_mae":null,
+        "arima_val_terms":null,
+        "arima_val_preds":null,
+        "sarima_val_terms":null,
+        "sarima_val_preds":null,
+        "arimax_val_terms":null,
+        "arimax_val_preds":null,
+        "sarimax_val_terms":null,
+        "sarimax_val_preds":null
     },
     {
         "code":"CSCE A201",
@@ -432,7 +656,15 @@
         "arima_mae":null,
         "sarima_mae":null,
         "arimax_mae":null,
-        "sarimax_mae":null
+        "sarimax_mae":null,
+        "arima_val_terms":null,
+        "arima_val_preds":null,
+        "sarima_val_terms":null,
+        "sarima_val_preds":null,
+        "arimax_val_terms":null,
+        "arimax_val_preds":null,
+        "sarimax_val_terms":null,
+        "sarimax_val_preds":null
     },
     {
         "code":"CSCE A201",
@@ -447,7 +679,15 @@
         "arima_mae":null,
         "sarima_mae":null,
         "arimax_mae":null,
-        "sarimax_mae":null
+        "sarimax_mae":null,
+        "arima_val_terms":null,
+        "arima_val_preds":null,
+        "sarima_val_terms":null,
+        "sarima_val_preds":null,
+        "arimax_val_terms":null,
+        "arimax_val_preds":null,
+        "sarimax_val_terms":null,
+        "sarimax_val_preds":null
     },
     {
         "code":"CSCE A211",
@@ -462,7 +702,15 @@
         "arima_mae":null,
         "sarima_mae":null,
         "arimax_mae":null,
-        "sarimax_mae":null
+        "sarimax_mae":null,
+        "arima_val_terms":null,
+        "arima_val_preds":null,
+        "sarima_val_terms":null,
+        "sarima_val_preds":null,
+        "arimax_val_terms":null,
+        "arimax_val_preds":null,
+        "sarimax_val_terms":null,
+        "sarimax_val_preds":null
     },
     {
         "code":"CSCE A211",
@@ -477,7 +725,15 @@
         "arima_mae":null,
         "sarima_mae":null,
         "arimax_mae":null,
-        "sarimax_mae":null
+        "sarimax_mae":null,
+        "arima_val_terms":null,
+        "arima_val_preds":null,
+        "sarima_val_terms":null,
+        "sarima_val_preds":null,
+        "arimax_val_terms":null,
+        "arimax_val_preds":null,
+        "sarimax_val_terms":null,
+        "sarimax_val_preds":null
     },
     {
         "code":"CSCE A211",
@@ -492,7 +748,15 @@
         "arima_mae":null,
         "sarima_mae":null,
         "arimax_mae":null,
-        "sarimax_mae":null
+        "sarimax_mae":null,
+        "arima_val_terms":null,
+        "arima_val_preds":null,
+        "sarima_val_terms":null,
+        "sarima_val_preds":null,
+        "arimax_val_terms":null,
+        "arimax_val_preds":null,
+        "sarimax_val_terms":null,
+        "sarimax_val_preds":null
     },
     {
         "code":"CSCE A211",
@@ -507,7 +771,15 @@
         "arima_mae":null,
         "sarima_mae":null,
         "arimax_mae":null,
-        "sarimax_mae":null
+        "sarimax_mae":null,
+        "arima_val_terms":null,
+        "arima_val_preds":null,
+        "sarima_val_terms":null,
+        "sarima_val_preds":null,
+        "arimax_val_terms":null,
+        "arimax_val_preds":null,
+        "sarimax_val_terms":null,
+        "sarimax_val_preds":null
     },
     {
         "code":"CSCE A211",
@@ -522,7 +794,15 @@
         "arima_mae":null,
         "sarima_mae":null,
         "arimax_mae":null,
-        "sarimax_mae":null
+        "sarimax_mae":null,
+        "arima_val_terms":null,
+        "arima_val_preds":null,
+        "sarima_val_terms":null,
+        "sarima_val_preds":null,
+        "arimax_val_terms":null,
+        "arimax_val_preds":null,
+        "sarimax_val_terms":null,
+        "sarimax_val_preds":null
     },
     {
         "code":"CSCE A211",
@@ -537,7 +817,15 @@
         "arima_mae":null,
         "sarima_mae":null,
         "arimax_mae":null,
-        "sarimax_mae":null
+        "sarimax_mae":null,
+        "arima_val_terms":null,
+        "arima_val_preds":null,
+        "sarima_val_terms":null,
+        "sarima_val_preds":null,
+        "arimax_val_terms":null,
+        "arimax_val_preds":null,
+        "sarimax_val_terms":null,
+        "sarimax_val_preds":null
     },
     {
         "code":"CSCE A211",
@@ -552,7 +840,15 @@
         "arima_mae":null,
         "sarima_mae":null,
         "arimax_mae":null,
-        "sarimax_mae":null
+        "sarimax_mae":null,
+        "arima_val_terms":null,
+        "arima_val_preds":null,
+        "sarima_val_terms":null,
+        "sarima_val_preds":null,
+        "arimax_val_terms":null,
+        "arimax_val_preds":null,
+        "sarimax_val_terms":null,
+        "sarimax_val_preds":null
     },
     {
         "code":"CSCE A211",
@@ -567,7 +863,15 @@
         "arima_mae":null,
         "sarima_mae":null,
         "arimax_mae":null,
-        "sarimax_mae":null
+        "sarimax_mae":null,
+        "arima_val_terms":null,
+        "arima_val_preds":null,
+        "sarima_val_terms":null,
+        "sarima_val_preds":null,
+        "arimax_val_terms":null,
+        "arimax_val_preds":null,
+        "sarimax_val_terms":null,
+        "sarimax_val_preds":null
     },
     {
         "code":"CSCE A211",
@@ -582,7 +886,15 @@
         "arima_mae":null,
         "sarima_mae":null,
         "arimax_mae":null,
-        "sarimax_mae":null
+        "sarimax_mae":null,
+        "arima_val_terms":null,
+        "arima_val_preds":null,
+        "sarima_val_terms":null,
+        "sarima_val_preds":null,
+        "arimax_val_terms":null,
+        "arimax_val_preds":null,
+        "sarimax_val_terms":null,
+        "sarimax_val_preds":null
     },
     {
         "code":"CSCE A211",
@@ -597,7 +909,15 @@
         "arima_mae":null,
         "sarima_mae":null,
         "arimax_mae":null,
-        "sarimax_mae":null
+        "sarimax_mae":null,
+        "arima_val_terms":null,
+        "arima_val_preds":null,
+        "sarima_val_terms":null,
+        "sarima_val_preds":null,
+        "arimax_val_terms":null,
+        "arimax_val_preds":null,
+        "sarimax_val_terms":null,
+        "sarimax_val_preds":null
     },
     {
         "code":"CSCE A211",
@@ -612,7 +932,15 @@
         "arima_mae":null,
         "sarima_mae":null,
         "arimax_mae":null,
-        "sarimax_mae":null
+        "sarimax_mae":null,
+        "arima_val_terms":null,
+        "arima_val_preds":null,
+        "sarima_val_terms":null,
+        "sarima_val_preds":null,
+        "arimax_val_terms":null,
+        "arimax_val_preds":null,
+        "sarimax_val_terms":null,
+        "sarimax_val_preds":null
     },
     {
         "code":"CSCE A241",
@@ -627,7 +955,15 @@
         "arima_mae":null,
         "sarima_mae":null,
         "arimax_mae":null,
-        "sarimax_mae":null
+        "sarimax_mae":null,
+        "arima_val_terms":null,
+        "arima_val_preds":null,
+        "sarima_val_terms":null,
+        "sarima_val_preds":null,
+        "arimax_val_terms":null,
+        "arimax_val_preds":null,
+        "sarimax_val_terms":null,
+        "sarimax_val_preds":null
     },
     {
         "code":"CSCE A241",
@@ -642,7 +978,15 @@
         "arima_mae":null,
         "sarima_mae":null,
         "arimax_mae":null,
-        "sarimax_mae":null
+        "sarimax_mae":null,
+        "arima_val_terms":null,
+        "arima_val_preds":null,
+        "sarima_val_terms":null,
+        "sarima_val_preds":null,
+        "arimax_val_terms":null,
+        "arimax_val_preds":null,
+        "sarimax_val_terms":null,
+        "sarimax_val_preds":null
     },
     {
         "code":"CSCE A241",
@@ -657,7 +1001,15 @@
         "arima_mae":null,
         "sarima_mae":null,
         "arimax_mae":null,
-        "sarimax_mae":null
+        "sarimax_mae":null,
+        "arima_val_terms":null,
+        "arima_val_preds":null,
+        "sarima_val_terms":null,
+        "sarima_val_preds":null,
+        "arimax_val_terms":null,
+        "arimax_val_preds":null,
+        "sarimax_val_terms":null,
+        "sarimax_val_preds":null
     },
     {
         "code":"CSCE A241",
@@ -672,7 +1024,15 @@
         "arima_mae":null,
         "sarima_mae":null,
         "arimax_mae":null,
-        "sarimax_mae":null
+        "sarimax_mae":null,
+        "arima_val_terms":null,
+        "arima_val_preds":null,
+        "sarima_val_terms":null,
+        "sarima_val_preds":null,
+        "arimax_val_terms":null,
+        "arimax_val_preds":null,
+        "sarimax_val_terms":null,
+        "sarimax_val_preds":null
     },
     {
         "code":"CSCE A241",
@@ -687,7 +1047,15 @@
         "arima_mae":null,
         "sarima_mae":null,
         "arimax_mae":null,
-        "sarimax_mae":null
+        "sarimax_mae":null,
+        "arima_val_terms":null,
+        "arima_val_preds":null,
+        "sarima_val_terms":null,
+        "sarima_val_preds":null,
+        "arimax_val_terms":null,
+        "arimax_val_preds":null,
+        "sarimax_val_terms":null,
+        "sarimax_val_preds":null
     },
     {
         "code":"CSCE A241",
@@ -702,7 +1070,15 @@
         "arima_mae":null,
         "sarima_mae":null,
         "arimax_mae":null,
-        "sarimax_mae":null
+        "sarimax_mae":null,
+        "arima_val_terms":null,
+        "arima_val_preds":null,
+        "sarima_val_terms":null,
+        "sarima_val_preds":null,
+        "arimax_val_terms":null,
+        "arimax_val_preds":null,
+        "sarimax_val_terms":null,
+        "sarimax_val_preds":null
     },
     {
         "code":"CSCE A241",
@@ -717,7 +1093,15 @@
         "arima_mae":null,
         "sarima_mae":null,
         "arimax_mae":null,
-        "sarimax_mae":null
+        "sarimax_mae":null,
+        "arima_val_terms":null,
+        "arima_val_preds":null,
+        "sarima_val_terms":null,
+        "sarima_val_preds":null,
+        "arimax_val_terms":null,
+        "arimax_val_preds":null,
+        "sarimax_val_terms":null,
+        "sarimax_val_preds":null
     },
     {
         "code":"CSCE A241",
@@ -732,7 +1116,15 @@
         "arima_mae":null,
         "sarima_mae":null,
         "arimax_mae":null,
-        "sarimax_mae":null
+        "sarimax_mae":null,
+        "arima_val_terms":null,
+        "arima_val_preds":null,
+        "sarima_val_terms":null,
+        "sarima_val_preds":null,
+        "arimax_val_terms":null,
+        "arimax_val_preds":null,
+        "sarimax_val_terms":null,
+        "sarimax_val_preds":null
     },
     {
         "code":"CSCE A241",
@@ -747,7 +1139,15 @@
         "arima_mae":null,
         "sarima_mae":null,
         "arimax_mae":null,
-        "sarimax_mae":null
+        "sarimax_mae":null,
+        "arima_val_terms":null,
+        "arima_val_preds":null,
+        "sarima_val_terms":null,
+        "sarima_val_preds":null,
+        "arimax_val_terms":null,
+        "arimax_val_preds":null,
+        "sarimax_val_terms":null,
+        "sarimax_val_preds":null
     },
     {
         "code":"CSCE A241",
@@ -762,7 +1162,15 @@
         "arima_mae":null,
         "sarima_mae":null,
         "arimax_mae":null,
-        "sarimax_mae":null
+        "sarimax_mae":null,
+        "arima_val_terms":null,
+        "arima_val_preds":null,
+        "sarima_val_terms":null,
+        "sarima_val_preds":null,
+        "arimax_val_terms":null,
+        "arimax_val_preds":null,
+        "sarimax_val_terms":null,
+        "sarimax_val_preds":null
     },
     {
         "code":"CSCE A248",
@@ -777,7 +1185,15 @@
         "arima_mae":null,
         "sarima_mae":null,
         "arimax_mae":null,
-        "sarimax_mae":null
+        "sarimax_mae":null,
+        "arima_val_terms":null,
+        "arima_val_preds":null,
+        "sarima_val_terms":null,
+        "sarima_val_preds":null,
+        "arimax_val_terms":null,
+        "arimax_val_preds":null,
+        "sarimax_val_terms":null,
+        "sarimax_val_preds":null
     },
     {
         "code":"CSCE A248",
@@ -792,7 +1208,15 @@
         "arima_mae":null,
         "sarima_mae":null,
         "arimax_mae":null,
-        "sarimax_mae":null
+        "sarimax_mae":null,
+        "arima_val_terms":null,
+        "arima_val_preds":null,
+        "sarima_val_terms":null,
+        "sarima_val_preds":null,
+        "arimax_val_terms":null,
+        "arimax_val_preds":null,
+        "sarimax_val_terms":null,
+        "sarimax_val_preds":null
     },
     {
         "code":"CSCE A248",
@@ -807,7 +1231,15 @@
         "arima_mae":null,
         "sarima_mae":null,
         "arimax_mae":null,
-        "sarimax_mae":null
+        "sarimax_mae":null,
+        "arima_val_terms":null,
+        "arima_val_preds":null,
+        "sarima_val_terms":null,
+        "sarima_val_preds":null,
+        "arimax_val_terms":null,
+        "arimax_val_preds":null,
+        "sarimax_val_terms":null,
+        "sarimax_val_preds":null
     },
     {
         "code":"CSCE A248",
@@ -822,7 +1254,15 @@
         "arima_mae":null,
         "sarima_mae":null,
         "arimax_mae":null,
-        "sarimax_mae":null
+        "sarimax_mae":null,
+        "arima_val_terms":null,
+        "arima_val_preds":null,
+        "sarima_val_terms":null,
+        "sarima_val_preds":null,
+        "arimax_val_terms":null,
+        "arimax_val_preds":null,
+        "sarimax_val_terms":null,
+        "sarimax_val_preds":null
     },
     {
         "code":"CSCE A248",
@@ -837,7 +1277,15 @@
         "arima_mae":null,
         "sarima_mae":null,
         "arimax_mae":null,
-        "sarimax_mae":null
+        "sarimax_mae":null,
+        "arima_val_terms":null,
+        "arima_val_preds":null,
+        "sarima_val_terms":null,
+        "sarima_val_preds":null,
+        "arimax_val_terms":null,
+        "arimax_val_preds":null,
+        "sarimax_val_terms":null,
+        "sarimax_val_preds":null
     },
     {
         "code":"CSCE A248",
@@ -852,7 +1300,15 @@
         "arima_mae":null,
         "sarima_mae":null,
         "arimax_mae":null,
-        "sarimax_mae":null
+        "sarimax_mae":null,
+        "arima_val_terms":null,
+        "arima_val_preds":null,
+        "sarima_val_terms":null,
+        "sarima_val_preds":null,
+        "arimax_val_terms":null,
+        "arimax_val_preds":null,
+        "sarimax_val_terms":null,
+        "sarimax_val_preds":null
     },
     {
         "code":"CSCE A248",
@@ -867,7 +1323,15 @@
         "arima_mae":null,
         "sarima_mae":null,
         "arimax_mae":null,
-        "sarimax_mae":null
+        "sarimax_mae":null,
+        "arima_val_terms":null,
+        "arima_val_preds":null,
+        "sarima_val_terms":null,
+        "sarima_val_preds":null,
+        "arimax_val_terms":null,
+        "arimax_val_preds":null,
+        "sarimax_val_terms":null,
+        "sarimax_val_preds":null
     },
     {
         "code":"CSCE A248",
@@ -882,7 +1346,15 @@
         "arima_mae":null,
         "sarima_mae":null,
         "arimax_mae":null,
-        "sarimax_mae":null
+        "sarimax_mae":null,
+        "arima_val_terms":null,
+        "arima_val_preds":null,
+        "sarima_val_terms":null,
+        "sarima_val_preds":null,
+        "arimax_val_terms":null,
+        "arimax_val_preds":null,
+        "sarimax_val_terms":null,
+        "sarimax_val_preds":null
     },
     {
         "code":"CSCE A248",
@@ -897,7 +1369,15 @@
         "arima_mae":null,
         "sarima_mae":null,
         "arimax_mae":null,
-        "sarimax_mae":null
+        "sarimax_mae":null,
+        "arima_val_terms":null,
+        "arima_val_preds":null,
+        "sarima_val_terms":null,
+        "sarima_val_preds":null,
+        "arimax_val_terms":null,
+        "arimax_val_preds":null,
+        "sarimax_val_terms":null,
+        "sarimax_val_preds":null
     },
     {
         "code":"CSCE A248",
@@ -912,7 +1392,15 @@
         "arima_mae":null,
         "sarima_mae":null,
         "arimax_mae":null,
-        "sarimax_mae":null
+        "sarimax_mae":null,
+        "arima_val_terms":null,
+        "arima_val_preds":null,
+        "sarima_val_terms":null,
+        "sarima_val_preds":null,
+        "arimax_val_terms":null,
+        "arimax_val_preds":null,
+        "sarimax_val_terms":null,
+        "sarimax_val_preds":null
     },
     {
         "code":"CSCE A311",
@@ -927,7 +1415,15 @@
         "arima_mae":null,
         "sarima_mae":null,
         "arimax_mae":null,
-        "sarimax_mae":null
+        "sarimax_mae":null,
+        "arima_val_terms":null,
+        "arima_val_preds":null,
+        "sarima_val_terms":null,
+        "sarima_val_preds":null,
+        "arimax_val_terms":null,
+        "arimax_val_preds":null,
+        "sarimax_val_terms":null,
+        "sarimax_val_preds":null
     },
     {
         "code":"CSCE A311",
@@ -942,7 +1438,15 @@
         "arima_mae":null,
         "sarima_mae":null,
         "arimax_mae":null,
-        "sarimax_mae":null
+        "sarimax_mae":null,
+        "arima_val_terms":null,
+        "arima_val_preds":null,
+        "sarima_val_terms":null,
+        "sarima_val_preds":null,
+        "arimax_val_terms":null,
+        "arimax_val_preds":null,
+        "sarimax_val_terms":null,
+        "sarimax_val_preds":null
     },
     {
         "code":"CSCE A311",
@@ -957,7 +1461,15 @@
         "arima_mae":null,
         "sarima_mae":null,
         "arimax_mae":null,
-        "sarimax_mae":null
+        "sarimax_mae":null,
+        "arima_val_terms":null,
+        "arima_val_preds":null,
+        "sarima_val_terms":null,
+        "sarima_val_preds":null,
+        "arimax_val_terms":null,
+        "arimax_val_preds":null,
+        "sarimax_val_terms":null,
+        "sarimax_val_preds":null
     },
     {
         "code":"CSCE A311",
@@ -972,7 +1484,15 @@
         "arima_mae":null,
         "sarima_mae":null,
         "arimax_mae":null,
-        "sarimax_mae":null
+        "sarimax_mae":null,
+        "arima_val_terms":null,
+        "arima_val_preds":null,
+        "sarima_val_terms":null,
+        "sarima_val_preds":null,
+        "arimax_val_terms":null,
+        "arimax_val_preds":null,
+        "sarimax_val_terms":null,
+        "sarimax_val_preds":null
     },
     {
         "code":"CSCE A311",
@@ -987,7 +1507,15 @@
         "arima_mae":null,
         "sarima_mae":null,
         "arimax_mae":null,
-        "sarimax_mae":null
+        "sarimax_mae":null,
+        "arima_val_terms":null,
+        "arima_val_preds":null,
+        "sarima_val_terms":null,
+        "sarima_val_preds":null,
+        "arimax_val_terms":null,
+        "arimax_val_preds":null,
+        "sarimax_val_terms":null,
+        "sarimax_val_preds":null
     },
     {
         "code":"CSCE A311",
@@ -1002,7 +1530,15 @@
         "arima_mae":null,
         "sarima_mae":null,
         "arimax_mae":null,
-        "sarimax_mae":null
+        "sarimax_mae":null,
+        "arima_val_terms":null,
+        "arima_val_preds":null,
+        "sarima_val_terms":null,
+        "sarima_val_preds":null,
+        "arimax_val_terms":null,
+        "arimax_val_preds":null,
+        "sarimax_val_terms":null,
+        "sarimax_val_preds":null
     },
     {
         "code":"CSCE A311",
@@ -1017,7 +1553,15 @@
         "arima_mae":null,
         "sarima_mae":null,
         "arimax_mae":null,
-        "sarimax_mae":null
+        "sarimax_mae":null,
+        "arima_val_terms":null,
+        "arima_val_preds":null,
+        "sarima_val_terms":null,
+        "sarima_val_preds":null,
+        "arimax_val_terms":null,
+        "arimax_val_preds":null,
+        "sarimax_val_terms":null,
+        "sarimax_val_preds":null
     },
     {
         "code":"CSCE A311",
@@ -1032,7 +1576,15 @@
         "arima_mae":null,
         "sarima_mae":null,
         "arimax_mae":null,
-        "sarimax_mae":null
+        "sarimax_mae":null,
+        "arima_val_terms":null,
+        "arima_val_preds":null,
+        "sarima_val_terms":null,
+        "sarima_val_preds":null,
+        "arimax_val_terms":null,
+        "arimax_val_preds":null,
+        "sarimax_val_terms":null,
+        "sarimax_val_preds":null
     },
     {
         "code":"CSCE A311",
@@ -1047,7 +1599,15 @@
         "arima_mae":null,
         "sarima_mae":null,
         "arimax_mae":null,
-        "sarimax_mae":null
+        "sarimax_mae":null,
+        "arima_val_terms":null,
+        "arima_val_preds":null,
+        "sarima_val_terms":null,
+        "sarima_val_preds":null,
+        "arimax_val_terms":null,
+        "arimax_val_preds":null,
+        "sarimax_val_terms":null,
+        "sarimax_val_preds":null
     },
     {
         "code":"CSCE A311",
@@ -1062,7 +1622,15 @@
         "arima_mae":null,
         "sarima_mae":null,
         "arimax_mae":null,
-        "sarimax_mae":null
+        "sarimax_mae":null,
+        "arima_val_terms":null,
+        "arima_val_preds":null,
+        "sarima_val_terms":null,
+        "sarima_val_preds":null,
+        "arimax_val_terms":null,
+        "arimax_val_preds":null,
+        "sarimax_val_terms":null,
+        "sarimax_val_preds":null
     },
     {
         "code":"CSCE A311",
@@ -1077,7 +1645,15 @@
         "arima_mae":null,
         "sarima_mae":null,
         "arimax_mae":null,
-        "sarimax_mae":null
+        "sarimax_mae":null,
+        "arima_val_terms":null,
+        "arima_val_preds":null,
+        "sarima_val_terms":null,
+        "sarima_val_preds":null,
+        "arimax_val_terms":null,
+        "arimax_val_preds":null,
+        "sarimax_val_terms":null,
+        "sarimax_val_preds":null
     },
     {
         "code":"CSCE A321",
@@ -1092,7 +1668,15 @@
         "arima_mae":null,
         "sarima_mae":null,
         "arimax_mae":null,
-        "sarimax_mae":null
+        "sarimax_mae":null,
+        "arima_val_terms":null,
+        "arima_val_preds":null,
+        "sarima_val_terms":null,
+        "sarima_val_preds":null,
+        "arimax_val_terms":null,
+        "arimax_val_preds":null,
+        "sarimax_val_terms":null,
+        "sarimax_val_preds":null
     },
     {
         "code":"CSCE A321",
@@ -1107,7 +1691,15 @@
         "arima_mae":null,
         "sarima_mae":null,
         "arimax_mae":null,
-        "sarimax_mae":null
+        "sarimax_mae":null,
+        "arima_val_terms":null,
+        "arima_val_preds":null,
+        "sarima_val_terms":null,
+        "sarima_val_preds":null,
+        "arimax_val_terms":null,
+        "arimax_val_preds":null,
+        "sarimax_val_terms":null,
+        "sarimax_val_preds":null
     },
     {
         "code":"CSCE A321",
@@ -1122,7 +1714,15 @@
         "arima_mae":null,
         "sarima_mae":null,
         "arimax_mae":null,
-        "sarimax_mae":null
+        "sarimax_mae":null,
+        "arima_val_terms":null,
+        "arima_val_preds":null,
+        "sarima_val_terms":null,
+        "sarima_val_preds":null,
+        "arimax_val_terms":null,
+        "arimax_val_preds":null,
+        "sarimax_val_terms":null,
+        "sarimax_val_preds":null
     },
     {
         "code":"CSCE A321",
@@ -1137,7 +1737,15 @@
         "arima_mae":null,
         "sarima_mae":null,
         "arimax_mae":null,
-        "sarimax_mae":null
+        "sarimax_mae":null,
+        "arima_val_terms":null,
+        "arima_val_preds":null,
+        "sarima_val_terms":null,
+        "sarima_val_preds":null,
+        "arimax_val_terms":null,
+        "arimax_val_preds":null,
+        "sarimax_val_terms":null,
+        "sarimax_val_preds":null
     },
     {
         "code":"CSCE A321",
@@ -1152,7 +1760,15 @@
         "arima_mae":null,
         "sarima_mae":null,
         "arimax_mae":null,
-        "sarimax_mae":null
+        "sarimax_mae":null,
+        "arima_val_terms":null,
+        "arima_val_preds":null,
+        "sarima_val_terms":null,
+        "sarima_val_preds":null,
+        "arimax_val_terms":null,
+        "arimax_val_preds":null,
+        "sarimax_val_terms":null,
+        "sarimax_val_preds":null
     },
     {
         "code":"CSCE A331",
@@ -1167,7 +1783,15 @@
         "arima_mae":null,
         "sarima_mae":null,
         "arimax_mae":null,
-        "sarimax_mae":null
+        "sarimax_mae":null,
+        "arima_val_terms":null,
+        "arima_val_preds":null,
+        "sarima_val_terms":null,
+        "sarima_val_preds":null,
+        "arimax_val_terms":null,
+        "arimax_val_preds":null,
+        "sarimax_val_terms":null,
+        "sarimax_val_preds":null
     },
     {
         "code":"CSCE A331",
@@ -1182,7 +1806,15 @@
         "arima_mae":null,
         "sarima_mae":null,
         "arimax_mae":null,
-        "sarimax_mae":null
+        "sarimax_mae":null,
+        "arima_val_terms":null,
+        "arima_val_preds":null,
+        "sarima_val_terms":null,
+        "sarima_val_preds":null,
+        "arimax_val_terms":null,
+        "arimax_val_preds":null,
+        "sarimax_val_terms":null,
+        "sarimax_val_preds":null
     },
     {
         "code":"CSCE A331",
@@ -1197,7 +1829,15 @@
         "arima_mae":null,
         "sarima_mae":null,
         "arimax_mae":null,
-        "sarimax_mae":null
+        "sarimax_mae":null,
+        "arima_val_terms":null,
+        "arima_val_preds":null,
+        "sarima_val_terms":null,
+        "sarima_val_preds":null,
+        "arimax_val_terms":null,
+        "arimax_val_preds":null,
+        "sarimax_val_terms":null,
+        "sarimax_val_preds":null
     },
     {
         "code":"CSCE A331",
@@ -1212,7 +1852,15 @@
         "arima_mae":null,
         "sarima_mae":null,
         "arimax_mae":null,
-        "sarimax_mae":null
+        "sarimax_mae":null,
+        "arima_val_terms":null,
+        "arima_val_preds":null,
+        "sarima_val_terms":null,
+        "sarima_val_preds":null,
+        "arimax_val_terms":null,
+        "arimax_val_preds":null,
+        "sarimax_val_terms":null,
+        "sarimax_val_preds":null
     },
     {
         "code":"CSCE A331",
@@ -1227,7 +1875,15 @@
         "arima_mae":null,
         "sarima_mae":null,
         "arimax_mae":null,
-        "sarimax_mae":null
+        "sarimax_mae":null,
+        "arima_val_terms":null,
+        "arima_val_preds":null,
+        "sarima_val_terms":null,
+        "sarima_val_preds":null,
+        "arimax_val_terms":null,
+        "arimax_val_preds":null,
+        "sarimax_val_terms":null,
+        "sarimax_val_preds":null
     },
     {
         "code":"CSCE A331",
@@ -1242,7 +1898,15 @@
         "arima_mae":null,
         "sarima_mae":null,
         "arimax_mae":null,
-        "sarimax_mae":null
+        "sarimax_mae":null,
+        "arima_val_terms":null,
+        "arima_val_preds":null,
+        "sarima_val_terms":null,
+        "sarima_val_preds":null,
+        "arimax_val_terms":null,
+        "arimax_val_preds":null,
+        "sarimax_val_terms":null,
+        "sarimax_val_preds":null
     },
     {
         "code":"CSCE A342",
@@ -1257,7 +1921,15 @@
         "arima_mae":null,
         "sarima_mae":null,
         "arimax_mae":null,
-        "sarimax_mae":null
+        "sarimax_mae":null,
+        "arima_val_terms":null,
+        "arima_val_preds":null,
+        "sarima_val_terms":null,
+        "sarima_val_preds":null,
+        "arimax_val_terms":null,
+        "arimax_val_preds":null,
+        "sarimax_val_terms":null,
+        "sarimax_val_preds":null
     },
     {
         "code":"CSCE A342",
@@ -1272,7 +1944,15 @@
         "arima_mae":null,
         "sarima_mae":null,
         "arimax_mae":null,
-        "sarimax_mae":null
+        "sarimax_mae":null,
+        "arima_val_terms":null,
+        "arima_val_preds":null,
+        "sarima_val_terms":null,
+        "sarima_val_preds":null,
+        "arimax_val_terms":null,
+        "arimax_val_preds":null,
+        "sarimax_val_terms":null,
+        "sarimax_val_preds":null
     },
     {
         "code":"CSCE A342",
@@ -1287,7 +1967,15 @@
         "arima_mae":null,
         "sarima_mae":null,
         "arimax_mae":null,
-        "sarimax_mae":null
+        "sarimax_mae":null,
+        "arima_val_terms":null,
+        "arima_val_preds":null,
+        "sarima_val_terms":null,
+        "sarima_val_preds":null,
+        "arimax_val_terms":null,
+        "arimax_val_preds":null,
+        "sarimax_val_terms":null,
+        "sarimax_val_preds":null
     },
     {
         "code":"CSCE A342",
@@ -1302,7 +1990,15 @@
         "arima_mae":null,
         "sarima_mae":null,
         "arimax_mae":null,
-        "sarimax_mae":null
+        "sarimax_mae":null,
+        "arima_val_terms":null,
+        "arima_val_preds":null,
+        "sarima_val_terms":null,
+        "sarima_val_preds":null,
+        "arimax_val_terms":null,
+        "arimax_val_preds":null,
+        "sarimax_val_terms":null,
+        "sarimax_val_preds":null
     },
     {
         "code":"CSCE A342",
@@ -1317,7 +2013,15 @@
         "arima_mae":null,
         "sarima_mae":null,
         "arimax_mae":null,
-        "sarimax_mae":null
+        "sarimax_mae":null,
+        "arima_val_terms":null,
+        "arima_val_preds":null,
+        "sarima_val_terms":null,
+        "sarima_val_preds":null,
+        "arimax_val_terms":null,
+        "arimax_val_preds":null,
+        "sarimax_val_terms":null,
+        "sarimax_val_preds":null
     },
     {
         "code":"CSCE A342",
@@ -1332,7 +2036,15 @@
         "arima_mae":null,
         "sarima_mae":null,
         "arimax_mae":null,
-        "sarimax_mae":null
+        "sarimax_mae":null,
+        "arima_val_terms":null,
+        "arima_val_preds":null,
+        "sarima_val_terms":null,
+        "sarima_val_preds":null,
+        "arimax_val_terms":null,
+        "arimax_val_preds":null,
+        "sarimax_val_terms":null,
+        "sarimax_val_preds":null
     },
     {
         "code":"CSCE A351",
@@ -1347,7 +2059,15 @@
         "arima_mae":null,
         "sarima_mae":null,
         "arimax_mae":null,
-        "sarimax_mae":null
+        "sarimax_mae":null,
+        "arima_val_terms":null,
+        "arima_val_preds":null,
+        "sarima_val_terms":null,
+        "sarima_val_preds":null,
+        "arimax_val_terms":null,
+        "arimax_val_preds":null,
+        "sarimax_val_terms":null,
+        "sarimax_val_preds":null
     },
     {
         "code":"CSCE A351",
@@ -1362,7 +2082,15 @@
         "arima_mae":null,
         "sarima_mae":null,
         "arimax_mae":null,
-        "sarimax_mae":null
+        "sarimax_mae":null,
+        "arima_val_terms":null,
+        "arima_val_preds":null,
+        "sarima_val_terms":null,
+        "sarima_val_preds":null,
+        "arimax_val_terms":null,
+        "arimax_val_preds":null,
+        "sarimax_val_terms":null,
+        "sarimax_val_preds":null
     },
     {
         "code":"CSCE A351",
@@ -1377,7 +2105,15 @@
         "arima_mae":null,
         "sarima_mae":null,
         "arimax_mae":null,
-        "sarimax_mae":null
+        "sarimax_mae":null,
+        "arima_val_terms":null,
+        "arima_val_preds":null,
+        "sarima_val_terms":null,
+        "sarima_val_preds":null,
+        "arimax_val_terms":null,
+        "arimax_val_preds":null,
+        "sarimax_val_terms":null,
+        "sarimax_val_preds":null
     },
     {
         "code":"CSCE A351",
@@ -1392,7 +2128,15 @@
         "arima_mae":null,
         "sarima_mae":null,
         "arimax_mae":null,
-        "sarimax_mae":null
+        "sarimax_mae":null,
+        "arima_val_terms":null,
+        "arima_val_preds":null,
+        "sarima_val_terms":null,
+        "sarima_val_preds":null,
+        "arimax_val_terms":null,
+        "arimax_val_preds":null,
+        "sarimax_val_terms":null,
+        "sarimax_val_preds":null
     },
     {
         "code":"CSCE A351",
@@ -1407,7 +2151,15 @@
         "arima_mae":null,
         "sarima_mae":null,
         "arimax_mae":null,
-        "sarimax_mae":null
+        "sarimax_mae":null,
+        "arima_val_terms":null,
+        "arima_val_preds":null,
+        "sarima_val_terms":null,
+        "sarima_val_preds":null,
+        "arimax_val_terms":null,
+        "arimax_val_preds":null,
+        "sarimax_val_terms":null,
+        "sarimax_val_preds":null
     },
     {
         "code":"CSCE A351",
@@ -1422,7 +2174,15 @@
         "arima_mae":null,
         "sarima_mae":null,
         "arimax_mae":null,
-        "sarimax_mae":null
+        "sarimax_mae":null,
+        "arima_val_terms":null,
+        "arima_val_preds":null,
+        "sarima_val_terms":null,
+        "sarima_val_preds":null,
+        "arimax_val_terms":null,
+        "arimax_val_preds":null,
+        "sarimax_val_terms":null,
+        "sarimax_val_preds":null
     },
     {
         "code":"CSCE A360",
@@ -1437,7 +2197,15 @@
         "arima_mae":null,
         "sarima_mae":null,
         "arimax_mae":null,
-        "sarimax_mae":null
+        "sarimax_mae":null,
+        "arima_val_terms":null,
+        "arima_val_preds":null,
+        "sarima_val_terms":null,
+        "sarima_val_preds":null,
+        "arimax_val_terms":null,
+        "arimax_val_preds":null,
+        "sarimax_val_terms":null,
+        "sarimax_val_preds":null
     },
     {
         "code":"CSCE A360",
@@ -1452,7 +2220,15 @@
         "arima_mae":null,
         "sarima_mae":null,
         "arimax_mae":null,
-        "sarimax_mae":null
+        "sarimax_mae":null,
+        "arima_val_terms":null,
+        "arima_val_preds":null,
+        "sarima_val_terms":null,
+        "sarima_val_preds":null,
+        "arimax_val_terms":null,
+        "arimax_val_preds":null,
+        "sarimax_val_terms":null,
+        "sarimax_val_preds":null
     },
     {
         "code":"CSCE A360",
@@ -1467,7 +2243,15 @@
         "arima_mae":null,
         "sarima_mae":null,
         "arimax_mae":null,
-        "sarimax_mae":null
+        "sarimax_mae":null,
+        "arima_val_terms":null,
+        "arima_val_preds":null,
+        "sarima_val_terms":null,
+        "sarima_val_preds":null,
+        "arimax_val_terms":null,
+        "arimax_val_preds":null,
+        "sarimax_val_terms":null,
+        "sarimax_val_preds":null
     },
     {
         "code":"CSCE A360",
@@ -1482,7 +2266,15 @@
         "arima_mae":null,
         "sarima_mae":null,
         "arimax_mae":null,
-        "sarimax_mae":null
+        "sarimax_mae":null,
+        "arima_val_terms":null,
+        "arima_val_preds":null,
+        "sarima_val_terms":null,
+        "sarima_val_preds":null,
+        "arimax_val_terms":null,
+        "arimax_val_preds":null,
+        "sarimax_val_terms":null,
+        "sarimax_val_preds":null
     },
     {
         "code":"CSCE A360",
@@ -1497,7 +2289,15 @@
         "arima_mae":null,
         "sarima_mae":null,
         "arimax_mae":null,
-        "sarimax_mae":null
+        "sarimax_mae":null,
+        "arima_val_terms":null,
+        "arima_val_preds":null,
+        "sarima_val_terms":null,
+        "sarima_val_preds":null,
+        "arimax_val_terms":null,
+        "arimax_val_preds":null,
+        "sarimax_val_terms":null,
+        "sarimax_val_preds":null
     },
     {
         "code":"CSCE A360",
@@ -1512,7 +2312,15 @@
         "arima_mae":null,
         "sarima_mae":null,
         "arimax_mae":null,
-        "sarimax_mae":null
+        "sarimax_mae":null,
+        "arima_val_terms":null,
+        "arima_val_preds":null,
+        "sarima_val_terms":null,
+        "sarima_val_preds":null,
+        "arimax_val_terms":null,
+        "arimax_val_preds":null,
+        "sarimax_val_terms":null,
+        "sarimax_val_preds":null
     },
     {
         "code":"CSCE A360",
@@ -1527,7 +2335,15 @@
         "arima_mae":null,
         "sarima_mae":null,
         "arimax_mae":null,
-        "sarimax_mae":null
+        "sarimax_mae":null,
+        "arima_val_terms":null,
+        "arima_val_preds":null,
+        "sarima_val_terms":null,
+        "sarima_val_preds":null,
+        "arimax_val_terms":null,
+        "arimax_val_preds":null,
+        "sarimax_val_terms":null,
+        "sarimax_val_preds":null
     },
     {
         "code":"CSCE A360",
@@ -1542,7 +2358,15 @@
         "arima_mae":null,
         "sarima_mae":null,
         "arimax_mae":null,
-        "sarimax_mae":null
+        "sarimax_mae":null,
+        "arima_val_terms":null,
+        "arima_val_preds":null,
+        "sarima_val_terms":null,
+        "sarima_val_preds":null,
+        "arimax_val_terms":null,
+        "arimax_val_preds":null,
+        "sarimax_val_terms":null,
+        "sarimax_val_preds":null
     },
     {
         "code":"CSCE A360",
@@ -1557,7 +2381,15 @@
         "arima_mae":null,
         "sarima_mae":null,
         "arimax_mae":null,
-        "sarimax_mae":null
+        "sarimax_mae":null,
+        "arima_val_terms":null,
+        "arima_val_preds":null,
+        "sarima_val_terms":null,
+        "sarima_val_preds":null,
+        "arimax_val_terms":null,
+        "arimax_val_preds":null,
+        "sarimax_val_terms":null,
+        "sarimax_val_preds":null
     },
     {
         "code":"CSCE A360",
@@ -1572,7 +2404,15 @@
         "arima_mae":null,
         "sarima_mae":null,
         "arimax_mae":null,
-        "sarimax_mae":null
+        "sarimax_mae":null,
+        "arima_val_terms":null,
+        "arima_val_preds":null,
+        "sarima_val_terms":null,
+        "sarima_val_preds":null,
+        "arimax_val_terms":null,
+        "arimax_val_preds":null,
+        "sarimax_val_terms":null,
+        "sarimax_val_preds":null
     },
     {
         "code":"CSCE A365",
@@ -1587,7 +2427,15 @@
         "arima_mae":null,
         "sarima_mae":null,
         "arimax_mae":null,
-        "sarimax_mae":null
+        "sarimax_mae":null,
+        "arima_val_terms":null,
+        "arima_val_preds":null,
+        "sarima_val_terms":null,
+        "sarima_val_preds":null,
+        "arimax_val_terms":null,
+        "arimax_val_preds":null,
+        "sarimax_val_terms":null,
+        "sarimax_val_preds":null
     },
     {
         "code":"CSCE A365",
@@ -1602,7 +2450,15 @@
         "arima_mae":null,
         "sarima_mae":null,
         "arimax_mae":null,
-        "sarimax_mae":null
+        "sarimax_mae":null,
+        "arima_val_terms":null,
+        "arima_val_preds":null,
+        "sarima_val_terms":null,
+        "sarima_val_preds":null,
+        "arimax_val_terms":null,
+        "arimax_val_preds":null,
+        "sarimax_val_terms":null,
+        "sarimax_val_preds":null
     },
     {
         "code":"CSCE A365",
@@ -1617,7 +2473,15 @@
         "arima_mae":null,
         "sarima_mae":null,
         "arimax_mae":null,
-        "sarimax_mae":null
+        "sarimax_mae":null,
+        "arima_val_terms":null,
+        "arima_val_preds":null,
+        "sarima_val_terms":null,
+        "sarima_val_preds":null,
+        "arimax_val_terms":null,
+        "arimax_val_preds":null,
+        "sarimax_val_terms":null,
+        "sarimax_val_preds":null
     },
     {
         "code":"CSCE A365",
@@ -1632,7 +2496,15 @@
         "arima_mae":null,
         "sarima_mae":null,
         "arimax_mae":null,
-        "sarimax_mae":null
+        "sarimax_mae":null,
+        "arima_val_terms":null,
+        "arima_val_preds":null,
+        "sarima_val_terms":null,
+        "sarima_val_preds":null,
+        "arimax_val_terms":null,
+        "arimax_val_preds":null,
+        "sarimax_val_terms":null,
+        "sarimax_val_preds":null
     },
     {
         "code":"CSCE A365",
@@ -1647,7 +2519,15 @@
         "arima_mae":null,
         "sarima_mae":null,
         "arimax_mae":null,
-        "sarimax_mae":null
+        "sarimax_mae":null,
+        "arima_val_terms":null,
+        "arima_val_preds":null,
+        "sarima_val_terms":null,
+        "sarima_val_preds":null,
+        "arimax_val_terms":null,
+        "arimax_val_preds":null,
+        "sarimax_val_terms":null,
+        "sarimax_val_preds":null
     },
     {
         "code":"CSCE A365",
@@ -1662,7 +2542,15 @@
         "arima_mae":null,
         "sarima_mae":null,
         "arimax_mae":null,
-        "sarimax_mae":null
+        "sarimax_mae":null,
+        "arima_val_terms":null,
+        "arima_val_preds":null,
+        "sarima_val_terms":null,
+        "sarima_val_preds":null,
+        "arimax_val_terms":null,
+        "arimax_val_preds":null,
+        "sarimax_val_terms":null,
+        "sarimax_val_preds":null
     },
     {
         "code":"CSCE A375",
@@ -1677,7 +2565,15 @@
         "arima_mae":null,
         "sarima_mae":null,
         "arimax_mae":null,
-        "sarimax_mae":null
+        "sarimax_mae":null,
+        "arima_val_terms":null,
+        "arima_val_preds":null,
+        "sarima_val_terms":null,
+        "sarima_val_preds":null,
+        "arimax_val_terms":null,
+        "arimax_val_preds":null,
+        "sarimax_val_terms":null,
+        "sarimax_val_preds":null
     },
     {
         "code":"CSCE A375",
@@ -1692,7 +2588,15 @@
         "arima_mae":null,
         "sarima_mae":null,
         "arimax_mae":null,
-        "sarimax_mae":null
+        "sarimax_mae":null,
+        "arima_val_terms":null,
+        "arima_val_preds":null,
+        "sarima_val_terms":null,
+        "sarima_val_preds":null,
+        "arimax_val_terms":null,
+        "arimax_val_preds":null,
+        "sarimax_val_terms":null,
+        "sarimax_val_preds":null
     },
     {
         "code":"CSCE A375",
@@ -1707,7 +2611,15 @@
         "arima_mae":null,
         "sarima_mae":null,
         "arimax_mae":null,
-        "sarimax_mae":null
+        "sarimax_mae":null,
+        "arima_val_terms":null,
+        "arima_val_preds":null,
+        "sarima_val_terms":null,
+        "sarima_val_preds":null,
+        "arimax_val_terms":null,
+        "arimax_val_preds":null,
+        "sarimax_val_terms":null,
+        "sarimax_val_preds":null
     },
     {
         "code":"CSCE A381",
@@ -1722,7 +2634,15 @@
         "arima_mae":null,
         "sarima_mae":null,
         "arimax_mae":null,
-        "sarimax_mae":null
+        "sarimax_mae":null,
+        "arima_val_terms":null,
+        "arima_val_preds":null,
+        "sarima_val_terms":null,
+        "sarima_val_preds":null,
+        "arimax_val_terms":null,
+        "arimax_val_preds":null,
+        "sarimax_val_terms":null,
+        "sarimax_val_preds":null
     },
     {
         "code":"CSCE A395",
@@ -1737,7 +2657,15 @@
         "arima_mae":null,
         "sarima_mae":null,
         "arimax_mae":null,
-        "sarimax_mae":null
+        "sarimax_mae":null,
+        "arima_val_terms":null,
+        "arima_val_preds":null,
+        "sarima_val_terms":null,
+        "sarima_val_preds":null,
+        "arimax_val_terms":null,
+        "arimax_val_preds":null,
+        "sarimax_val_terms":null,
+        "sarimax_val_preds":null
     },
     {
         "code":"CSCE A395",
@@ -1752,7 +2680,15 @@
         "arima_mae":null,
         "sarima_mae":null,
         "arimax_mae":null,
-        "sarimax_mae":null
+        "sarimax_mae":null,
+        "arima_val_terms":null,
+        "arima_val_preds":null,
+        "sarima_val_terms":null,
+        "sarima_val_preds":null,
+        "arimax_val_terms":null,
+        "arimax_val_preds":null,
+        "sarimax_val_terms":null,
+        "sarimax_val_preds":null
     },
     {
         "code":"CSCE A395",
@@ -1767,7 +2703,15 @@
         "arima_mae":null,
         "sarima_mae":null,
         "arimax_mae":null,
-        "sarimax_mae":null
+        "sarimax_mae":null,
+        "arima_val_terms":null,
+        "arima_val_preds":null,
+        "sarima_val_terms":null,
+        "sarima_val_preds":null,
+        "arimax_val_terms":null,
+        "arimax_val_preds":null,
+        "sarimax_val_terms":null,
+        "sarimax_val_preds":null
     },
     {
         "code":"CSCE A395",
@@ -1782,7 +2726,15 @@
         "arima_mae":null,
         "sarima_mae":null,
         "arimax_mae":null,
-        "sarimax_mae":null
+        "sarimax_mae":null,
+        "arima_val_terms":null,
+        "arima_val_preds":null,
+        "sarima_val_terms":null,
+        "sarima_val_preds":null,
+        "arimax_val_terms":null,
+        "arimax_val_preds":null,
+        "sarimax_val_terms":null,
+        "sarimax_val_preds":null
     },
     {
         "code":"CSCE A395",
@@ -1797,7 +2749,15 @@
         "arima_mae":null,
         "sarima_mae":null,
         "arimax_mae":null,
-        "sarimax_mae":null
+        "sarimax_mae":null,
+        "arima_val_terms":null,
+        "arima_val_preds":null,
+        "sarima_val_terms":null,
+        "sarima_val_preds":null,
+        "arimax_val_terms":null,
+        "arimax_val_preds":null,
+        "sarimax_val_terms":null,
+        "sarimax_val_preds":null
     },
     {
         "code":"CSCE A395",
@@ -1812,7 +2772,15 @@
         "arima_mae":null,
         "sarima_mae":null,
         "arimax_mae":null,
-        "sarimax_mae":null
+        "sarimax_mae":null,
+        "arima_val_terms":null,
+        "arima_val_preds":null,
+        "sarima_val_terms":null,
+        "sarima_val_preds":null,
+        "arimax_val_terms":null,
+        "arimax_val_preds":null,
+        "sarimax_val_terms":null,
+        "sarimax_val_preds":null
     },
     {
         "code":"CSCE A395",
@@ -1827,7 +2795,15 @@
         "arima_mae":null,
         "sarima_mae":null,
         "arimax_mae":null,
-        "sarimax_mae":null
+        "sarimax_mae":null,
+        "arima_val_terms":null,
+        "arima_val_preds":null,
+        "sarima_val_terms":null,
+        "sarima_val_preds":null,
+        "arimax_val_terms":null,
+        "arimax_val_preds":null,
+        "sarimax_val_terms":null,
+        "sarimax_val_preds":null
     },
     {
         "code":"CSCE A395",
@@ -1842,7 +2818,15 @@
         "arima_mae":null,
         "sarima_mae":null,
         "arimax_mae":null,
-        "sarimax_mae":null
+        "sarimax_mae":null,
+        "arima_val_terms":null,
+        "arima_val_preds":null,
+        "sarima_val_terms":null,
+        "sarima_val_preds":null,
+        "arimax_val_terms":null,
+        "arimax_val_preds":null,
+        "sarimax_val_terms":null,
+        "sarimax_val_preds":null
     },
     {
         "code":"CSCE A395",
@@ -1857,7 +2841,15 @@
         "arima_mae":null,
         "sarima_mae":null,
         "arimax_mae":null,
-        "sarimax_mae":null
+        "sarimax_mae":null,
+        "arima_val_terms":null,
+        "arima_val_preds":null,
+        "sarima_val_terms":null,
+        "sarima_val_preds":null,
+        "arimax_val_terms":null,
+        "arimax_val_preds":null,
+        "sarimax_val_terms":null,
+        "sarimax_val_preds":null
     },
     {
         "code":"CSCE A395",
@@ -1872,7 +2864,15 @@
         "arima_mae":null,
         "sarima_mae":null,
         "arimax_mae":null,
-        "sarimax_mae":null
+        "sarimax_mae":null,
+        "arima_val_terms":null,
+        "arima_val_preds":null,
+        "sarima_val_terms":null,
+        "sarima_val_preds":null,
+        "arimax_val_terms":null,
+        "arimax_val_preds":null,
+        "sarimax_val_terms":null,
+        "sarimax_val_preds":null
     },
     {
         "code":"CSCE A395",
@@ -1887,7 +2887,15 @@
         "arima_mae":null,
         "sarima_mae":null,
         "arimax_mae":null,
-        "sarimax_mae":null
+        "sarimax_mae":null,
+        "arima_val_terms":null,
+        "arima_val_preds":null,
+        "sarima_val_terms":null,
+        "sarima_val_preds":null,
+        "arimax_val_terms":null,
+        "arimax_val_preds":null,
+        "sarimax_val_terms":null,
+        "sarimax_val_preds":null
     },
     {
         "code":"CSCE A395",
@@ -1902,7 +2910,15 @@
         "arima_mae":null,
         "sarima_mae":null,
         "arimax_mae":null,
-        "sarimax_mae":null
+        "sarimax_mae":null,
+        "arima_val_terms":null,
+        "arima_val_preds":null,
+        "sarima_val_terms":null,
+        "sarima_val_preds":null,
+        "arimax_val_terms":null,
+        "arimax_val_preds":null,
+        "sarimax_val_terms":null,
+        "sarimax_val_preds":null
     },
     {
         "code":"CSCE A395",
@@ -1917,7 +2933,15 @@
         "arima_mae":null,
         "sarima_mae":null,
         "arimax_mae":null,
-        "sarimax_mae":null
+        "sarimax_mae":null,
+        "arima_val_terms":null,
+        "arima_val_preds":null,
+        "sarima_val_terms":null,
+        "sarima_val_preds":null,
+        "arimax_val_terms":null,
+        "arimax_val_preds":null,
+        "sarimax_val_terms":null,
+        "sarimax_val_preds":null
     },
     {
         "code":"CSCE A401",
@@ -1932,7 +2956,15 @@
         "arima_mae":null,
         "sarima_mae":null,
         "arimax_mae":null,
-        "sarimax_mae":null
+        "sarimax_mae":null,
+        "arima_val_terms":null,
+        "arima_val_preds":null,
+        "sarima_val_terms":null,
+        "sarima_val_preds":null,
+        "arimax_val_terms":null,
+        "arimax_val_preds":null,
+        "sarimax_val_terms":null,
+        "sarimax_val_preds":null
     },
     {
         "code":"CSCE A401",
@@ -1947,7 +2979,15 @@
         "arima_mae":null,
         "sarima_mae":null,
         "arimax_mae":null,
-        "sarimax_mae":null
+        "sarimax_mae":null,
+        "arima_val_terms":null,
+        "arima_val_preds":null,
+        "sarima_val_terms":null,
+        "sarima_val_preds":null,
+        "arimax_val_terms":null,
+        "arimax_val_preds":null,
+        "sarimax_val_terms":null,
+        "sarimax_val_preds":null
     },
     {
         "code":"CSCE A401",
@@ -1962,7 +3002,15 @@
         "arima_mae":null,
         "sarima_mae":null,
         "arimax_mae":null,
-        "sarimax_mae":null
+        "sarimax_mae":null,
+        "arima_val_terms":null,
+        "arima_val_preds":null,
+        "sarima_val_terms":null,
+        "sarima_val_preds":null,
+        "arimax_val_terms":null,
+        "arimax_val_preds":null,
+        "sarimax_val_terms":null,
+        "sarimax_val_preds":null
     },
     {
         "code":"CSCE A401",
@@ -1977,7 +3025,15 @@
         "arima_mae":null,
         "sarima_mae":null,
         "arimax_mae":null,
-        "sarimax_mae":null
+        "sarimax_mae":null,
+        "arima_val_terms":null,
+        "arima_val_preds":null,
+        "sarima_val_terms":null,
+        "sarima_val_preds":null,
+        "arimax_val_terms":null,
+        "arimax_val_preds":null,
+        "sarimax_val_terms":null,
+        "sarimax_val_preds":null
     },
     {
         "code":"CSCE A401",
@@ -1992,7 +3048,15 @@
         "arima_mae":null,
         "sarima_mae":null,
         "arimax_mae":null,
-        "sarimax_mae":null
+        "sarimax_mae":null,
+        "arima_val_terms":null,
+        "arima_val_preds":null,
+        "sarima_val_terms":null,
+        "sarima_val_preds":null,
+        "arimax_val_terms":null,
+        "arimax_val_preds":null,
+        "sarimax_val_terms":null,
+        "sarimax_val_preds":null
     },
     {
         "code":"CSCE A401",
@@ -2007,7 +3071,15 @@
         "arima_mae":null,
         "sarima_mae":null,
         "arimax_mae":null,
-        "sarimax_mae":null
+        "sarimax_mae":null,
+        "arima_val_terms":null,
+        "arima_val_preds":null,
+        "sarima_val_terms":null,
+        "sarima_val_preds":null,
+        "arimax_val_terms":null,
+        "arimax_val_preds":null,
+        "sarimax_val_terms":null,
+        "sarimax_val_preds":null
     },
     {
         "code":"CSCE A405",
@@ -2022,7 +3094,15 @@
         "arima_mae":null,
         "sarima_mae":null,
         "arimax_mae":null,
-        "sarimax_mae":null
+        "sarimax_mae":null,
+        "arima_val_terms":null,
+        "arima_val_preds":null,
+        "sarima_val_terms":null,
+        "sarima_val_preds":null,
+        "arimax_val_terms":null,
+        "arimax_val_preds":null,
+        "sarimax_val_terms":null,
+        "sarimax_val_preds":null
     },
     {
         "code":"CSCE A405",
@@ -2037,7 +3117,15 @@
         "arima_mae":null,
         "sarima_mae":null,
         "arimax_mae":null,
-        "sarimax_mae":null
+        "sarimax_mae":null,
+        "arima_val_terms":null,
+        "arima_val_preds":null,
+        "sarima_val_terms":null,
+        "sarima_val_preds":null,
+        "arimax_val_terms":null,
+        "arimax_val_preds":null,
+        "sarimax_val_terms":null,
+        "sarimax_val_preds":null
     },
     {
         "code":"CSCE A405",
@@ -2052,7 +3140,15 @@
         "arima_mae":null,
         "sarima_mae":null,
         "arimax_mae":null,
-        "sarimax_mae":null
+        "sarimax_mae":null,
+        "arima_val_terms":null,
+        "arima_val_preds":null,
+        "sarima_val_terms":null,
+        "sarima_val_preds":null,
+        "arimax_val_terms":null,
+        "arimax_val_preds":null,
+        "sarimax_val_terms":null,
+        "sarimax_val_preds":null
     },
     {
         "code":"CSCE A405",
@@ -2067,7 +3163,15 @@
         "arima_mae":null,
         "sarima_mae":null,
         "arimax_mae":null,
-        "sarimax_mae":null
+        "sarimax_mae":null,
+        "arima_val_terms":null,
+        "arima_val_preds":null,
+        "sarima_val_terms":null,
+        "sarima_val_preds":null,
+        "arimax_val_terms":null,
+        "arimax_val_preds":null,
+        "sarimax_val_terms":null,
+        "sarimax_val_preds":null
     },
     {
         "code":"CSCE A405",
@@ -2082,7 +3186,15 @@
         "arima_mae":null,
         "sarima_mae":null,
         "arimax_mae":null,
-        "sarimax_mae":null
+        "sarimax_mae":null,
+        "arima_val_terms":null,
+        "arima_val_preds":null,
+        "sarima_val_terms":null,
+        "sarima_val_preds":null,
+        "arimax_val_terms":null,
+        "arimax_val_preds":null,
+        "sarimax_val_terms":null,
+        "sarimax_val_preds":null
     },
     {
         "code":"CSCE A412",
@@ -2097,7 +3209,15 @@
         "arima_mae":null,
         "sarima_mae":null,
         "arimax_mae":null,
-        "sarimax_mae":null
+        "sarimax_mae":null,
+        "arima_val_terms":null,
+        "arima_val_preds":null,
+        "sarima_val_terms":null,
+        "sarima_val_preds":null,
+        "arimax_val_terms":null,
+        "arimax_val_preds":null,
+        "sarimax_val_terms":null,
+        "sarimax_val_preds":null
     },
     {
         "code":"CSCE A412",
@@ -2112,7 +3232,15 @@
         "arima_mae":null,
         "sarima_mae":null,
         "arimax_mae":null,
-        "sarimax_mae":null
+        "sarimax_mae":null,
+        "arima_val_terms":null,
+        "arima_val_preds":null,
+        "sarima_val_terms":null,
+        "sarima_val_preds":null,
+        "arimax_val_terms":null,
+        "arimax_val_preds":null,
+        "sarimax_val_terms":null,
+        "sarimax_val_preds":null
     },
     {
         "code":"CSCE A415",
@@ -2127,7 +3255,15 @@
         "arima_mae":null,
         "sarima_mae":null,
         "arimax_mae":null,
-        "sarimax_mae":null
+        "sarimax_mae":null,
+        "arima_val_terms":null,
+        "arima_val_preds":null,
+        "sarima_val_terms":null,
+        "sarima_val_preds":null,
+        "arimax_val_terms":null,
+        "arimax_val_preds":null,
+        "sarimax_val_terms":null,
+        "sarimax_val_preds":null
     },
     {
         "code":"CSCE A415",
@@ -2142,7 +3278,15 @@
         "arima_mae":null,
         "sarima_mae":null,
         "arimax_mae":null,
-        "sarimax_mae":null
+        "sarimax_mae":null,
+        "arima_val_terms":null,
+        "arima_val_preds":null,
+        "sarima_val_terms":null,
+        "sarima_val_preds":null,
+        "arimax_val_terms":null,
+        "arimax_val_preds":null,
+        "sarimax_val_terms":null,
+        "sarimax_val_preds":null
     },
     {
         "code":"CSCE A415",
@@ -2157,7 +3301,15 @@
         "arima_mae":null,
         "sarima_mae":null,
         "arimax_mae":null,
-        "sarimax_mae":null
+        "sarimax_mae":null,
+        "arima_val_terms":null,
+        "arima_val_preds":null,
+        "sarima_val_terms":null,
+        "sarima_val_preds":null,
+        "arimax_val_terms":null,
+        "arimax_val_preds":null,
+        "sarimax_val_terms":null,
+        "sarimax_val_preds":null
     },
     {
         "code":"CSCE A415",
@@ -2172,7 +3324,15 @@
         "arima_mae":null,
         "sarima_mae":null,
         "arimax_mae":null,
-        "sarimax_mae":null
+        "sarimax_mae":null,
+        "arima_val_terms":null,
+        "arima_val_preds":null,
+        "sarima_val_terms":null,
+        "sarima_val_preds":null,
+        "arimax_val_terms":null,
+        "arimax_val_preds":null,
+        "sarimax_val_terms":null,
+        "sarimax_val_preds":null
     },
     {
         "code":"CSCE A415",
@@ -2187,7 +3347,15 @@
         "arima_mae":null,
         "sarima_mae":null,
         "arimax_mae":null,
-        "sarimax_mae":null
+        "sarimax_mae":null,
+        "arima_val_terms":null,
+        "arima_val_preds":null,
+        "sarima_val_terms":null,
+        "sarima_val_preds":null,
+        "arimax_val_terms":null,
+        "arimax_val_preds":null,
+        "sarimax_val_terms":null,
+        "sarimax_val_preds":null
     },
     {
         "code":"CSCE A448",
@@ -2202,7 +3370,15 @@
         "arima_mae":null,
         "sarima_mae":null,
         "arimax_mae":null,
-        "sarimax_mae":null
+        "sarimax_mae":null,
+        "arima_val_terms":null,
+        "arima_val_preds":null,
+        "sarima_val_terms":null,
+        "sarima_val_preds":null,
+        "arimax_val_terms":null,
+        "arimax_val_preds":null,
+        "sarimax_val_terms":null,
+        "sarimax_val_preds":null
     },
     {
         "code":"CSCE A448",
@@ -2217,7 +3393,15 @@
         "arima_mae":null,
         "sarima_mae":null,
         "arimax_mae":null,
-        "sarimax_mae":null
+        "sarimax_mae":null,
+        "arima_val_terms":null,
+        "arima_val_preds":null,
+        "sarima_val_terms":null,
+        "sarima_val_preds":null,
+        "arimax_val_terms":null,
+        "arimax_val_preds":null,
+        "sarimax_val_terms":null,
+        "sarimax_val_preds":null
     },
     {
         "code":"CSCE A448",
@@ -2232,7 +3416,15 @@
         "arima_mae":null,
         "sarima_mae":null,
         "arimax_mae":null,
-        "sarimax_mae":null
+        "sarimax_mae":null,
+        "arima_val_terms":null,
+        "arima_val_preds":null,
+        "sarima_val_terms":null,
+        "sarima_val_preds":null,
+        "arimax_val_terms":null,
+        "arimax_val_preds":null,
+        "sarimax_val_terms":null,
+        "sarimax_val_preds":null
     },
     {
         "code":"CSCE A448",
@@ -2247,7 +3439,15 @@
         "arima_mae":null,
         "sarima_mae":null,
         "arimax_mae":null,
-        "sarimax_mae":null
+        "sarimax_mae":null,
+        "arima_val_terms":null,
+        "arima_val_preds":null,
+        "sarima_val_terms":null,
+        "sarima_val_preds":null,
+        "arimax_val_terms":null,
+        "arimax_val_preds":null,
+        "sarimax_val_terms":null,
+        "sarimax_val_preds":null
     },
     {
         "code":"CSCE A448",
@@ -2262,7 +3462,15 @@
         "arima_mae":null,
         "sarima_mae":null,
         "arimax_mae":null,
-        "sarimax_mae":null
+        "sarimax_mae":null,
+        "arima_val_terms":null,
+        "arima_val_preds":null,
+        "sarima_val_terms":null,
+        "sarima_val_preds":null,
+        "arimax_val_terms":null,
+        "arimax_val_preds":null,
+        "sarimax_val_terms":null,
+        "sarimax_val_preds":null
     },
     {
         "code":"CSCE A462",
@@ -2277,7 +3485,15 @@
         "arima_mae":null,
         "sarima_mae":null,
         "arimax_mae":null,
-        "sarimax_mae":null
+        "sarimax_mae":null,
+        "arima_val_terms":null,
+        "arima_val_preds":null,
+        "sarima_val_terms":null,
+        "sarima_val_preds":null,
+        "arimax_val_terms":null,
+        "arimax_val_preds":null,
+        "sarimax_val_terms":null,
+        "sarimax_val_preds":null
     },
     {
         "code":"CSCE A465",
@@ -2292,7 +3508,15 @@
         "arima_mae":null,
         "sarima_mae":null,
         "arimax_mae":null,
-        "sarimax_mae":null
+        "sarimax_mae":null,
+        "arima_val_terms":null,
+        "arima_val_preds":null,
+        "sarima_val_terms":null,
+        "sarima_val_preds":null,
+        "arimax_val_terms":null,
+        "arimax_val_preds":null,
+        "sarimax_val_terms":null,
+        "sarimax_val_preds":null
     },
     {
         "code":"CSCE A465",
@@ -2307,7 +3531,15 @@
         "arima_mae":null,
         "sarima_mae":null,
         "arimax_mae":null,
-        "sarimax_mae":null
+        "sarimax_mae":null,
+        "arima_val_terms":null,
+        "arima_val_preds":null,
+        "sarima_val_terms":null,
+        "sarima_val_preds":null,
+        "arimax_val_terms":null,
+        "arimax_val_preds":null,
+        "sarimax_val_terms":null,
+        "sarimax_val_preds":null
     },
     {
         "code":"CSCE A465",
@@ -2322,7 +3554,15 @@
         "arima_mae":null,
         "sarima_mae":null,
         "arimax_mae":null,
-        "sarimax_mae":null
+        "sarimax_mae":null,
+        "arima_val_terms":null,
+        "arima_val_preds":null,
+        "sarima_val_terms":null,
+        "sarima_val_preds":null,
+        "arimax_val_terms":null,
+        "arimax_val_preds":null,
+        "sarimax_val_terms":null,
+        "sarimax_val_preds":null
     },
     {
         "code":"CSCE A465",
@@ -2337,7 +3577,15 @@
         "arima_mae":null,
         "sarima_mae":null,
         "arimax_mae":null,
-        "sarimax_mae":null
+        "sarimax_mae":null,
+        "arima_val_terms":null,
+        "arima_val_preds":null,
+        "sarima_val_terms":null,
+        "sarima_val_preds":null,
+        "arimax_val_terms":null,
+        "arimax_val_preds":null,
+        "sarimax_val_terms":null,
+        "sarimax_val_preds":null
     },
     {
         "code":"CSCE A465",
@@ -2352,7 +3600,15 @@
         "arima_mae":null,
         "sarima_mae":null,
         "arimax_mae":null,
-        "sarimax_mae":null
+        "sarimax_mae":null,
+        "arima_val_terms":null,
+        "arima_val_preds":null,
+        "sarima_val_terms":null,
+        "sarima_val_preds":null,
+        "arimax_val_terms":null,
+        "arimax_val_preds":null,
+        "sarimax_val_terms":null,
+        "sarimax_val_preds":null
     },
     {
         "code":"CSCE A470",
@@ -2367,7 +3623,15 @@
         "arima_mae":null,
         "sarima_mae":null,
         "arimax_mae":null,
-        "sarimax_mae":null
+        "sarimax_mae":null,
+        "arima_val_terms":null,
+        "arima_val_preds":null,
+        "sarima_val_terms":null,
+        "sarima_val_preds":null,
+        "arimax_val_terms":null,
+        "arimax_val_preds":null,
+        "sarimax_val_terms":null,
+        "sarimax_val_preds":null
     },
     {
         "code":"CSCE A470",
@@ -2382,7 +3646,15 @@
         "arima_mae":null,
         "sarima_mae":null,
         "arimax_mae":null,
-        "sarimax_mae":null
+        "sarimax_mae":null,
+        "arima_val_terms":null,
+        "arima_val_preds":null,
+        "sarima_val_terms":null,
+        "sarima_val_preds":null,
+        "arimax_val_terms":null,
+        "arimax_val_preds":null,
+        "sarimax_val_terms":null,
+        "sarimax_val_preds":null
     },
     {
         "code":"CSCE A470",
@@ -2397,7 +3669,15 @@
         "arima_mae":null,
         "sarima_mae":null,
         "arimax_mae":null,
-        "sarimax_mae":null
+        "sarimax_mae":null,
+        "arima_val_terms":null,
+        "arima_val_preds":null,
+        "sarima_val_terms":null,
+        "sarima_val_preds":null,
+        "arimax_val_terms":null,
+        "arimax_val_preds":null,
+        "sarimax_val_terms":null,
+        "sarimax_val_preds":null
     },
     {
         "code":"CSCE A470",
@@ -2412,7 +3692,15 @@
         "arima_mae":null,
         "sarima_mae":null,
         "arimax_mae":null,
-        "sarimax_mae":null
+        "sarimax_mae":null,
+        "arima_val_terms":null,
+        "arima_val_preds":null,
+        "sarima_val_terms":null,
+        "sarima_val_preds":null,
+        "arimax_val_terms":null,
+        "arimax_val_preds":null,
+        "sarimax_val_terms":null,
+        "sarimax_val_preds":null
     },
     {
         "code":"CSCE A470",
@@ -2427,7 +3715,15 @@
         "arima_mae":null,
         "sarima_mae":null,
         "arimax_mae":null,
-        "sarimax_mae":null
+        "sarimax_mae":null,
+        "arima_val_terms":null,
+        "arima_val_preds":null,
+        "sarima_val_terms":null,
+        "sarima_val_preds":null,
+        "arimax_val_terms":null,
+        "arimax_val_preds":null,
+        "sarimax_val_terms":null,
+        "sarimax_val_preds":null
     },
     {
         "code":"CSCE A470",
@@ -2442,7 +3738,15 @@
         "arima_mae":null,
         "sarima_mae":null,
         "arimax_mae":null,
-        "sarimax_mae":null
+        "sarimax_mae":null,
+        "arima_val_terms":null,
+        "arima_val_preds":null,
+        "sarima_val_terms":null,
+        "sarima_val_preds":null,
+        "arimax_val_terms":null,
+        "arimax_val_preds":null,
+        "sarimax_val_terms":null,
+        "sarimax_val_preds":null
     },
     {
         "code":"CSCE A470",
@@ -2457,7 +3761,15 @@
         "arima_mae":null,
         "sarima_mae":null,
         "arimax_mae":null,
-        "sarimax_mae":null
+        "sarimax_mae":null,
+        "arima_val_terms":null,
+        "arima_val_preds":null,
+        "sarima_val_terms":null,
+        "sarima_val_preds":null,
+        "arimax_val_terms":null,
+        "arimax_val_preds":null,
+        "sarimax_val_terms":null,
+        "sarimax_val_preds":null
     },
     {
         "code":"CSCE A470",
@@ -2472,7 +3784,15 @@
         "arima_mae":null,
         "sarima_mae":null,
         "arimax_mae":null,
-        "sarimax_mae":null
+        "sarimax_mae":null,
+        "arima_val_terms":null,
+        "arima_val_preds":null,
+        "sarima_val_terms":null,
+        "sarima_val_preds":null,
+        "arimax_val_terms":null,
+        "arimax_val_preds":null,
+        "sarimax_val_terms":null,
+        "sarimax_val_preds":null
     },
     {
         "code":"CSCE A470",
@@ -2487,7 +3807,15 @@
         "arima_mae":null,
         "sarima_mae":null,
         "arimax_mae":null,
-        "sarimax_mae":null
+        "sarimax_mae":null,
+        "arima_val_terms":null,
+        "arima_val_preds":null,
+        "sarima_val_terms":null,
+        "sarima_val_preds":null,
+        "arimax_val_terms":null,
+        "arimax_val_preds":null,
+        "sarimax_val_terms":null,
+        "sarimax_val_preds":null
     },
     {
         "code":"CSCE A470",
@@ -2502,7 +3830,15 @@
         "arima_mae":null,
         "sarima_mae":null,
         "arimax_mae":null,
-        "sarimax_mae":null
+        "sarimax_mae":null,
+        "arima_val_terms":null,
+        "arima_val_preds":null,
+        "sarima_val_terms":null,
+        "sarima_val_preds":null,
+        "arimax_val_terms":null,
+        "arimax_val_preds":null,
+        "sarimax_val_terms":null,
+        "sarimax_val_preds":null
     },
     {
         "code":"CSCE A485",
@@ -2517,7 +3853,15 @@
         "arima_mae":null,
         "sarima_mae":null,
         "arimax_mae":null,
-        "sarimax_mae":null
+        "sarimax_mae":null,
+        "arima_val_terms":null,
+        "arima_val_preds":null,
+        "sarima_val_terms":null,
+        "sarima_val_preds":null,
+        "arimax_val_terms":null,
+        "arimax_val_preds":null,
+        "sarimax_val_terms":null,
+        "sarimax_val_preds":null
     },
     {
         "code":"CSCE A485",
@@ -2532,7 +3876,15 @@
         "arima_mae":null,
         "sarima_mae":null,
         "arimax_mae":null,
-        "sarimax_mae":null
+        "sarimax_mae":null,
+        "arima_val_terms":null,
+        "arima_val_preds":null,
+        "sarima_val_terms":null,
+        "sarima_val_preds":null,
+        "arimax_val_terms":null,
+        "arimax_val_preds":null,
+        "sarimax_val_terms":null,
+        "sarimax_val_preds":null
     },
     {
         "code":"CSCE A485",
@@ -2547,7 +3899,15 @@
         "arima_mae":null,
         "sarima_mae":null,
         "arimax_mae":null,
-        "sarimax_mae":null
+        "sarimax_mae":null,
+        "arima_val_terms":null,
+        "arima_val_preds":null,
+        "sarima_val_terms":null,
+        "sarima_val_preds":null,
+        "arimax_val_terms":null,
+        "arimax_val_preds":null,
+        "sarimax_val_terms":null,
+        "sarimax_val_preds":null
     },
     {
         "code":"CSCE A490",
@@ -2562,14 +3922,22 @@
         "arima_mae":null,
         "sarima_mae":null,
         "arimax_mae":null,
-        "sarimax_mae":null
+        "sarimax_mae":null,
+        "arima_val_terms":null,
+        "arima_val_preds":null,
+        "sarima_val_terms":null,
+        "sarima_val_preds":null,
+        "arimax_val_terms":null,
+        "arimax_val_preds":null,
+        "sarimax_val_terms":null,
+        "sarimax_val_preds":null
     },
     {
         "code":"CSCE A490",
         "term":202103.0,
         "term_name":"Fall 2021",
         "enrolled":23.0,
-        "title":"Bitcoin & Cryptocurrency Tech",
+        "title":"Image Analysis using Google Ea",
         "arima_forecast":null,
         "sarima_forecast":null,
         "arimax_forecast":null,
@@ -2577,14 +3945,22 @@
         "arima_mae":null,
         "sarima_mae":null,
         "arimax_mae":null,
-        "sarimax_mae":null
+        "sarimax_mae":null,
+        "arima_val_terms":null,
+        "arima_val_preds":null,
+        "sarima_val_terms":null,
+        "sarima_val_preds":null,
+        "arimax_val_terms":null,
+        "arimax_val_preds":null,
+        "sarimax_val_terms":null,
+        "sarimax_val_preds":null
     },
     {
         "code":"CSCE A490",
         "term":202203.0,
         "term_name":"Fall 2022",
         "enrolled":8.0,
-        "title":"Web App Develop using Django",
+        "title":"Image Analysis using Google Ea",
         "arima_forecast":null,
         "sarima_forecast":null,
         "arimax_forecast":null,
@@ -2592,14 +3968,22 @@
         "arima_mae":null,
         "sarima_mae":null,
         "arimax_mae":null,
-        "sarimax_mae":null
+        "sarimax_mae":null,
+        "arima_val_terms":null,
+        "arima_val_preds":null,
+        "sarima_val_terms":null,
+        "sarima_val_preds":null,
+        "arimax_val_terms":null,
+        "arimax_val_preds":null,
+        "sarimax_val_terms":null,
+        "sarimax_val_preds":null
     },
     {
         "code":"CSCE A490",
         "term":202301.0,
         "term_name":"Spring 2023",
         "enrolled":10.0,
-        "title":"Music, Comp, Tech, & Behavior",
+        "title":"Image Analysis using Google Ea",
         "arima_forecast":null,
         "sarima_forecast":null,
         "arimax_forecast":null,
@@ -2607,14 +3991,22 @@
         "arima_mae":null,
         "sarima_mae":null,
         "arimax_mae":null,
-        "sarimax_mae":null
+        "sarimax_mae":null,
+        "arima_val_terms":null,
+        "arima_val_preds":null,
+        "sarima_val_terms":null,
+        "sarima_val_preds":null,
+        "arimax_val_terms":null,
+        "arimax_val_preds":null,
+        "sarimax_val_terms":null,
+        "sarimax_val_preds":null
     },
     {
         "code":"CSCE A490",
         "term":202303.0,
         "term_name":"Fall 2023",
         "enrolled":19.0,
-        "title":"Web App Develop using Django",
+        "title":"Image Analysis using Google Ea",
         "arima_forecast":null,
         "sarima_forecast":null,
         "arimax_forecast":null,
@@ -2622,7 +4014,15 @@
         "arima_mae":null,
         "sarima_mae":null,
         "arimax_mae":null,
-        "sarimax_mae":null
+        "sarimax_mae":null,
+        "arima_val_terms":null,
+        "arima_val_preds":null,
+        "sarima_val_terms":null,
+        "sarima_val_preds":null,
+        "arimax_val_terms":null,
+        "arimax_val_preds":null,
+        "sarimax_val_terms":null,
+        "sarimax_val_preds":null
     },
     {
         "code":"CSCE A490",
@@ -2637,14 +4037,22 @@
         "arima_mae":null,
         "sarima_mae":null,
         "arimax_mae":null,
-        "sarimax_mae":null
+        "sarimax_mae":null,
+        "arima_val_terms":null,
+        "arima_val_preds":null,
+        "sarima_val_terms":null,
+        "sarima_val_preds":null,
+        "arimax_val_terms":null,
+        "arimax_val_preds":null,
+        "sarimax_val_terms":null,
+        "sarimax_val_preds":null
     },
     {
         "code":"CSCE A490",
         "term":202403.0,
         "term_name":"Fall 2024",
         "enrolled":10.0,
-        "title":"Distributed Computing",
+        "title":"Image Analysis using Google Ea",
         "arima_forecast":null,
         "sarima_forecast":null,
         "arimax_forecast":null,
@@ -2652,14 +4060,22 @@
         "arima_mae":null,
         "sarima_mae":null,
         "arimax_mae":null,
-        "sarimax_mae":null
+        "sarimax_mae":null,
+        "arima_val_terms":null,
+        "arima_val_preds":null,
+        "sarima_val_terms":null,
+        "sarima_val_preds":null,
+        "arimax_val_terms":null,
+        "arimax_val_preds":null,
+        "sarimax_val_terms":null,
+        "sarimax_val_preds":null
     },
     {
         "code":"CSCE A490",
         "term":202502.0,
         "term_name":"Summer 2025",
         "enrolled":4.0,
-        "title":"Arctic Research Train Educate",
+        "title":"Image Analysis using Google Ea",
         "arima_forecast":null,
         "sarima_forecast":null,
         "arimax_forecast":null,
@@ -2667,14 +4083,22 @@
         "arima_mae":null,
         "sarima_mae":null,
         "arimax_mae":null,
-        "sarimax_mae":null
+        "sarimax_mae":null,
+        "arima_val_terms":null,
+        "arima_val_preds":null,
+        "sarima_val_terms":null,
+        "sarima_val_preds":null,
+        "arimax_val_terms":null,
+        "arimax_val_preds":null,
+        "sarimax_val_terms":null,
+        "sarimax_val_preds":null
     },
     {
         "code":"CSCE A490",
         "term":202503.0,
         "term_name":"Fall 2025",
         "enrolled":15.0,
-        "title":"Distributed Computing",
+        "title":"Image Analysis using Google Ea",
         "arima_forecast":null,
         "sarima_forecast":null,
         "arimax_forecast":null,
@@ -2682,7 +4106,15 @@
         "arima_mae":null,
         "sarima_mae":null,
         "arimax_mae":null,
-        "sarimax_mae":null
+        "sarimax_mae":null,
+        "arima_val_terms":null,
+        "arima_val_preds":null,
+        "sarima_val_terms":null,
+        "sarima_val_preds":null,
+        "arimax_val_terms":null,
+        "arimax_val_preds":null,
+        "sarimax_val_terms":null,
+        "sarimax_val_preds":null
     },
     {
         "code":"CSCE A495",
@@ -2697,7 +4129,15 @@
         "arima_mae":null,
         "sarima_mae":null,
         "arimax_mae":null,
-        "sarimax_mae":null
+        "sarimax_mae":null,
+        "arima_val_terms":null,
+        "arima_val_preds":null,
+        "sarima_val_terms":null,
+        "sarima_val_preds":null,
+        "arimax_val_terms":null,
+        "arimax_val_preds":null,
+        "sarimax_val_terms":null,
+        "sarimax_val_preds":null
     },
     {
         "code":"CSCE A495",
@@ -2712,7 +4152,15 @@
         "arima_mae":null,
         "sarima_mae":null,
         "arimax_mae":null,
-        "sarimax_mae":null
+        "sarimax_mae":null,
+        "arima_val_terms":null,
+        "arima_val_preds":null,
+        "sarima_val_terms":null,
+        "sarima_val_preds":null,
+        "arimax_val_terms":null,
+        "arimax_val_preds":null,
+        "sarimax_val_terms":null,
+        "sarimax_val_preds":null
     },
     {
         "code":"CSCE A495",
@@ -2727,7 +4175,15 @@
         "arima_mae":null,
         "sarima_mae":null,
         "arimax_mae":null,
-        "sarimax_mae":null
+        "sarimax_mae":null,
+        "arima_val_terms":null,
+        "arima_val_preds":null,
+        "sarima_val_terms":null,
+        "sarima_val_preds":null,
+        "arimax_val_terms":null,
+        "arimax_val_preds":null,
+        "sarimax_val_terms":null,
+        "sarimax_val_preds":null
     },
     {
         "code":"CSCE A495",
@@ -2742,7 +4198,15 @@
         "arima_mae":null,
         "sarima_mae":null,
         "arimax_mae":null,
-        "sarimax_mae":null
+        "sarimax_mae":null,
+        "arima_val_terms":null,
+        "arima_val_preds":null,
+        "sarima_val_terms":null,
+        "sarima_val_preds":null,
+        "arimax_val_terms":null,
+        "arimax_val_preds":null,
+        "sarimax_val_terms":null,
+        "sarimax_val_preds":null
     },
     {
         "code":"CSCE A495",
@@ -2757,7 +4221,15 @@
         "arima_mae":null,
         "sarima_mae":null,
         "arimax_mae":null,
-        "sarimax_mae":null
+        "sarimax_mae":null,
+        "arima_val_terms":null,
+        "arima_val_preds":null,
+        "sarima_val_terms":null,
+        "sarima_val_preds":null,
+        "arimax_val_terms":null,
+        "arimax_val_preds":null,
+        "sarimax_val_terms":null,
+        "sarimax_val_preds":null
     },
     {
         "code":"CSCE A498",
@@ -2772,7 +4244,15 @@
         "arima_mae":null,
         "sarima_mae":null,
         "arimax_mae":null,
-        "sarimax_mae":null
+        "sarimax_mae":null,
+        "arima_val_terms":null,
+        "arima_val_preds":null,
+        "sarima_val_terms":null,
+        "sarima_val_preds":null,
+        "arimax_val_terms":null,
+        "arimax_val_preds":null,
+        "sarimax_val_terms":null,
+        "sarimax_val_preds":null
     },
     {
         "code":"CSCE A498",
@@ -2787,7 +4267,15 @@
         "arima_mae":null,
         "sarima_mae":null,
         "arimax_mae":null,
-        "sarimax_mae":null
+        "sarimax_mae":null,
+        "arima_val_terms":null,
+        "arima_val_preds":null,
+        "sarima_val_terms":null,
+        "sarima_val_preds":null,
+        "arimax_val_terms":null,
+        "arimax_val_preds":null,
+        "sarimax_val_terms":null,
+        "sarimax_val_preds":null
     },
     {
         "code":"CSCE A498",
@@ -2802,7 +4290,15 @@
         "arima_mae":null,
         "sarima_mae":null,
         "arimax_mae":null,
-        "sarimax_mae":null
+        "sarimax_mae":null,
+        "arima_val_terms":null,
+        "arima_val_preds":null,
+        "sarima_val_terms":null,
+        "sarima_val_preds":null,
+        "arimax_val_terms":null,
+        "arimax_val_preds":null,
+        "sarimax_val_terms":null,
+        "sarimax_val_preds":null
     },
     {
         "code":"CSCE A498",
@@ -2817,7 +4313,15 @@
         "arima_mae":null,
         "sarima_mae":null,
         "arimax_mae":null,
-        "sarimax_mae":null
+        "sarimax_mae":null,
+        "arima_val_terms":null,
+        "arima_val_preds":null,
+        "sarima_val_terms":null,
+        "sarima_val_preds":null,
+        "arimax_val_terms":null,
+        "arimax_val_preds":null,
+        "sarimax_val_terms":null,
+        "sarimax_val_preds":null
     },
     {
         "code":"CSCE A498",
@@ -2832,7 +4336,15 @@
         "arima_mae":null,
         "sarima_mae":null,
         "arimax_mae":null,
-        "sarimax_mae":null
+        "sarimax_mae":null,
+        "arima_val_terms":null,
+        "arima_val_preds":null,
+        "sarima_val_terms":null,
+        "sarima_val_preds":null,
+        "arimax_val_terms":null,
+        "arimax_val_preds":null,
+        "sarimax_val_terms":null,
+        "sarimax_val_preds":null
     },
     {
         "code":"CSCE A498",
@@ -2847,7 +4359,15 @@
         "arima_mae":null,
         "sarima_mae":null,
         "arimax_mae":null,
-        "sarimax_mae":null
+        "sarimax_mae":null,
+        "arima_val_terms":null,
+        "arima_val_preds":null,
+        "sarima_val_terms":null,
+        "sarima_val_preds":null,
+        "arimax_val_terms":null,
+        "arimax_val_preds":null,
+        "sarimax_val_terms":null,
+        "sarimax_val_preds":null
     },
     {
         "code":"CSCE A498",
@@ -2862,7 +4382,15 @@
         "arima_mae":null,
         "sarima_mae":null,
         "arimax_mae":null,
-        "sarimax_mae":null
+        "sarimax_mae":null,
+        "arima_val_terms":null,
+        "arima_val_preds":null,
+        "sarima_val_terms":null,
+        "sarima_val_preds":null,
+        "arimax_val_terms":null,
+        "arimax_val_preds":null,
+        "sarimax_val_terms":null,
+        "sarimax_val_preds":null
     },
     {
         "code":"CSCE A498",
@@ -2877,7 +4405,15 @@
         "arima_mae":null,
         "sarima_mae":null,
         "arimax_mae":null,
-        "sarimax_mae":null
+        "sarimax_mae":null,
+        "arima_val_terms":null,
+        "arima_val_preds":null,
+        "sarima_val_terms":null,
+        "sarima_val_preds":null,
+        "arimax_val_terms":null,
+        "arimax_val_preds":null,
+        "sarimax_val_terms":null,
+        "sarimax_val_preds":null
     },
     {
         "code":"CSCE A101",
@@ -2889,10 +4425,42 @@
         "sarima_forecast":42.0,
         "arimax_forecast":55.0,
         "sarimax_forecast":42.0,
-        "arima_mae":33.5,
-        "sarima_mae":19.7,
-        "arimax_mae":33.5,
-        "sarimax_mae":19.7
+        "arima_mae":33.54,
+        "sarima_mae":19.73,
+        "arimax_mae":33.54,
+        "sarimax_mae":19.73,
+        "arima_val_terms":[
+            202502,
+            202503
+        ],
+        "arima_val_preds":[
+            71.0,
+            70.0
+        ],
+        "sarima_val_terms":[
+            202502,
+            202503
+        ],
+        "sarima_val_preds":[
+            5.0,
+            80.0
+        ],
+        "arimax_val_terms":[
+            202502,
+            202503
+        ],
+        "arimax_val_preds":[
+            71.0,
+            70.0
+        ],
+        "sarimax_val_terms":[
+            202502,
+            202503
+        ],
+        "sarimax_val_preds":[
+            5.0,
+            80.0
+        ]
     },
     {
         "code":"CSCE A115",
@@ -2907,7 +4475,15 @@
         "arima_mae":null,
         "sarima_mae":null,
         "arimax_mae":null,
-        "sarimax_mae":null
+        "sarimax_mae":null,
+        "arima_val_terms":null,
+        "arima_val_preds":null,
+        "sarima_val_terms":null,
+        "sarima_val_preds":null,
+        "arimax_val_terms":null,
+        "arimax_val_preds":null,
+        "sarimax_val_terms":null,
+        "sarimax_val_preds":null
     },
     {
         "code":"CSCE A201",
@@ -2919,10 +4495,42 @@
         "sarima_forecast":20.0,
         "arimax_forecast":27.0,
         "sarimax_forecast":0.0,
-        "arima_mae":23.0,
+        "arima_mae":22.95,
         "sarima_mae":7.5,
-        "arimax_mae":18.9,
-        "sarimax_mae":26.1
+        "arimax_mae":18.87,
+        "sarimax_mae":26.09,
+        "arima_val_terms":[
+            202502,
+            202503
+        ],
+        "arima_val_preds":[
+            41.0,
+            40.0
+        ],
+        "sarima_val_terms":[
+            202502,
+            202503
+        ],
+        "sarima_val_preds":[
+            10.0,
+            30.0
+        ],
+        "arimax_val_terms":[
+            202502,
+            202503
+        ],
+        "arimax_val_preds":[
+            40.0,
+            33.0
+        ],
+        "sarimax_val_terms":[
+            202502,
+            202503
+        ],
+        "sarimax_val_preds":[
+            31.0,
+            56.0
+        ]
     },
     {
         "code":"CSCE A211",
@@ -2934,10 +4542,42 @@
         "sarima_forecast":32.0,
         "arimax_forecast":34.0,
         "sarimax_forecast":35.0,
-        "arima_mae":2.8,
+        "arima_mae":2.75,
         "sarima_mae":7.7,
-        "arimax_mae":6.3,
-        "sarimax_mae":6.7
+        "arimax_mae":6.26,
+        "sarimax_mae":6.74,
+        "arima_val_terms":[
+            202501,
+            202503
+        ],
+        "arima_val_preds":[
+            27.0,
+            38.0
+        ],
+        "sarima_val_terms":[
+            202501,
+            202503
+        ],
+        "sarima_val_preds":[
+            28.0,
+            47.0
+        ],
+        "arimax_val_terms":[
+            202501,
+            202503
+        ],
+        "arimax_val_preds":[
+            34.0,
+            38.0
+        ],
+        "sarimax_val_terms":[
+            202501,
+            202503
+        ],
+        "sarimax_val_preds":[
+            29.0,
+            43.0
+        ]
     },
     {
         "code":"CSCE A241",
@@ -2949,10 +4589,42 @@
         "sarima_forecast":29.0,
         "arimax_forecast":32.0,
         "sarimax_forecast":30.0,
-        "arima_mae":2.7,
-        "sarima_mae":11.3,
-        "arimax_mae":2.9,
-        "sarimax_mae":4.3
+        "arima_mae":2.66,
+        "sarima_mae":11.34,
+        "arimax_mae":2.89,
+        "sarimax_mae":4.29,
+        "arima_val_terms":[
+            202501,
+            202503
+        ],
+        "arima_val_preds":[
+            29.0,
+            29.0
+        ],
+        "sarima_val_terms":[
+            202501,
+            202503
+        ],
+        "sarima_val_preds":[
+            43.0,
+            44.0
+        ],
+        "arimax_val_terms":[
+            202501,
+            202503
+        ],
+        "arimax_val_preds":[
+            29.0,
+            29.0
+        ],
+        "sarimax_val_terms":[
+            202501,
+            202503
+        ],
+        "sarimax_val_preds":[
+            38.0,
+            34.0
+        ]
     },
     {
         "code":"CSCE A248",
@@ -2964,10 +4636,42 @@
         "sarima_forecast":44.0,
         "arimax_forecast":38.0,
         "sarimax_forecast":45.0,
-        "arima_mae":6.9,
-        "sarima_mae":24.9,
-        "arimax_mae":6.8,
-        "sarimax_mae":5.0
+        "arima_mae":6.88,
+        "sarima_mae":24.94,
+        "arimax_mae":6.85,
+        "sarimax_mae":4.98,
+        "arima_val_terms":[
+            202501,
+            202503
+        ],
+        "arima_val_preds":[
+            33.0,
+            33.0
+        ],
+        "sarima_val_terms":[
+            202501,
+            202503
+        ],
+        "sarima_val_preds":[
+            13.0,
+            7.0
+        ],
+        "arimax_val_terms":[
+            202501,
+            202503
+        ],
+        "arimax_val_preds":[
+            33.0,
+            33.0
+        ],
+        "sarimax_val_terms":[
+            202501,
+            202503
+        ],
+        "sarimax_val_preds":[
+            42.0,
+            38.0
+        ]
     },
     {
         "code":"CSCE A311",
@@ -2979,10 +4683,42 @@
         "sarima_forecast":35.0,
         "arimax_forecast":31.0,
         "sarimax_forecast":25.0,
-        "arima_mae":8.7,
+        "arima_mae":8.69,
         "sarima_mae":9.5,
-        "arimax_mae":5.1,
-        "sarimax_mae":11.3
+        "arimax_mae":5.07,
+        "sarimax_mae":11.34,
+        "arima_val_terms":[
+            202501,
+            202503
+        ],
+        "arima_val_preds":[
+            27.0,
+            27.0
+        ],
+        "sarima_val_terms":[
+            202501,
+            202503
+        ],
+        "sarima_val_preds":[
+            23.0,
+            15.0
+        ],
+        "arimax_val_terms":[
+            202501,
+            202503
+        ],
+        "arimax_val_preds":[
+            33.0,
+            26.0
+        ],
+        "sarimax_val_terms":[
+            202501,
+            202503
+        ],
+        "sarimax_val_preds":[
+            20.0,
+            15.0
+        ]
     },
     {
         "code":"CSCE A321",
@@ -2994,10 +4730,42 @@
         "sarima_forecast":50.0,
         "arimax_forecast":40.0,
         "sarimax_forecast":51.0,
-        "arima_mae":7.3,
+        "arima_mae":7.35,
         "sarima_mae":5.0,
-        "arimax_mae":7.0,
-        "sarimax_mae":5.0
+        "arimax_mae":7.03,
+        "sarimax_mae":5.0,
+        "arima_val_terms":[
+            202401,
+            202501
+        ],
+        "arima_val_preds":[
+            32.0,
+            35.0
+        ],
+        "sarima_val_terms":[
+            202401,
+            202501
+        ],
+        "sarima_val_preds":[
+            34.0,
+            38.0
+        ],
+        "arimax_val_terms":[
+            202401,
+            202501
+        ],
+        "arimax_val_preds":[
+            33.0,
+            35.0
+        ],
+        "sarimax_val_terms":[
+            202401,
+            202501
+        ],
+        "sarimax_val_preds":[
+            34.0,
+            38.0
+        ]
     },
     {
         "code":"CSCE A331",
@@ -3009,10 +4777,42 @@
         "sarima_forecast":59.0,
         "arimax_forecast":36.0,
         "sarimax_forecast":57.0,
-        "arima_mae":9.9,
+        "arima_mae":9.88,
         "sarima_mae":10.5,
-        "arimax_mae":11.1,
-        "sarimax_mae":10.5
+        "arimax_mae":11.07,
+        "sarimax_mae":10.5,
+        "arima_val_terms":[
+            202401,
+            202501
+        ],
+        "arima_val_preds":[
+            27.0,
+            36.0
+        ],
+        "sarima_val_terms":[
+            202401,
+            202501
+        ],
+        "sarima_val_preds":[
+            24.0,
+            34.0
+        ],
+        "arimax_val_terms":[
+            202401,
+            202501
+        ],
+        "arimax_val_preds":[
+            25.0,
+            37.0
+        ],
+        "sarimax_val_terms":[
+            202401,
+            202501
+        ],
+        "sarimax_val_preds":[
+            24.0,
+            34.0
+        ]
     },
     {
         "code":"CSCE A342",
@@ -3026,8 +4826,40 @@
         "sarimax_forecast":21.0,
         "arima_mae":6.3,
         "sarima_mae":7.0,
-        "arimax_mae":1.7,
-        "sarimax_mae":7.0
+        "arimax_mae":1.75,
+        "sarimax_mae":7.0,
+        "arima_val_terms":[
+            202403,
+            202503
+        ],
+        "arima_val_preds":[
+            15.0,
+            14.0
+        ],
+        "sarima_val_terms":[
+            202403,
+            202503
+        ],
+        "sarima_val_preds":[
+            29.0,
+            27.0
+        ],
+        "arimax_val_terms":[
+            202403,
+            202503
+        ],
+        "arimax_val_preds":[
+            20.0,
+            18.0
+        ],
+        "sarimax_val_terms":[
+            202403,
+            202503
+        ],
+        "sarimax_val_preds":[
+            29.0,
+            27.0
+        ]
     },
     {
         "code":"CSCE A351",
@@ -3039,10 +4871,42 @@
         "sarima_forecast":30.0,
         "arimax_forecast":40.0,
         "sarimax_forecast":42.0,
-        "arima_mae":5.2,
+        "arima_mae":5.16,
         "sarima_mae":15.0,
-        "arimax_mae":4.8,
-        "sarimax_mae":15.0
+        "arimax_mae":4.79,
+        "sarimax_mae":15.0,
+        "arima_val_terms":[
+            202403,
+            202503
+        ],
+        "arima_val_preds":[
+            40.0,
+            40.0
+        ],
+        "sarima_val_terms":[
+            202403,
+            202503
+        ],
+        "sarima_val_preds":[
+            48.0,
+            51.0
+        ],
+        "arimax_val_terms":[
+            202403,
+            202503
+        ],
+        "arimax_val_preds":[
+            35.0,
+            43.0
+        ],
+        "sarimax_val_terms":[
+            202403,
+            202503
+        ],
+        "sarimax_val_preds":[
+            48.0,
+            51.0
+        ]
     },
     {
         "code":"CSCE A360",
@@ -3054,10 +4918,42 @@
         "sarima_forecast":36.0,
         "arimax_forecast":20.0,
         "sarimax_forecast":36.0,
-        "arima_mae":8.8,
-        "sarima_mae":4.5,
-        "arimax_mae":7.3,
-        "sarimax_mae":8.2
+        "arima_mae":8.78,
+        "sarima_mae":4.45,
+        "arimax_mae":7.31,
+        "sarimax_mae":8.18,
+        "arima_val_terms":[
+            202501,
+            202503
+        ],
+        "arima_val_preds":[
+            22.0,
+            22.0
+        ],
+        "sarima_val_terms":[
+            202501,
+            202503
+        ],
+        "sarima_val_preds":[
+            29.0,
+            23.0
+        ],
+        "arimax_val_terms":[
+            202501,
+            202503
+        ],
+        "arimax_val_preds":[
+            26.0,
+            21.0
+        ],
+        "sarimax_val_terms":[
+            202501,
+            202503
+        ],
+        "sarimax_val_preds":[
+            32.0,
+            15.0
+        ]
     },
     {
         "code":"CSCE A365",
@@ -3069,10 +4965,42 @@
         "sarima_forecast":65.0,
         "arimax_forecast":46.0,
         "sarimax_forecast":42.0,
-        "arima_mae":7.6,
+        "arima_mae":7.59,
         "sarima_mae":5.5,
-        "arimax_mae":7.4,
-        "sarimax_mae":5.5
+        "arimax_mae":7.36,
+        "sarimax_mae":5.5,
+        "arima_val_terms":[
+            202403,
+            202503
+        ],
+        "arima_val_preds":[
+            42.0,
+            43.0
+        ],
+        "sarima_val_terms":[
+            202403,
+            202503
+        ],
+        "sarima_val_preds":[
+            43.0,
+            46.0
+        ],
+        "arimax_val_terms":[
+            202403,
+            202503
+        ],
+        "arimax_val_preds":[
+            41.0,
+            45.0
+        ],
+        "sarimax_val_terms":[
+            202403,
+            202503
+        ],
+        "sarimax_val_preds":[
+            43.0,
+            46.0
+        ]
     },
     {
         "code":"CSCE A375",
@@ -3087,7 +5015,15 @@
         "arima_mae":null,
         "sarima_mae":null,
         "arimax_mae":null,
-        "sarimax_mae":null
+        "sarimax_mae":null,
+        "arima_val_terms":null,
+        "arima_val_preds":null,
+        "sarima_val_terms":null,
+        "sarima_val_preds":null,
+        "arimax_val_terms":null,
+        "arimax_val_preds":null,
+        "sarimax_val_terms":null,
+        "sarimax_val_preds":null
     },
     {
         "code":"CSCE A381",
@@ -3102,7 +5038,15 @@
         "arima_mae":null,
         "sarima_mae":null,
         "arimax_mae":null,
-        "sarimax_mae":null
+        "sarimax_mae":null,
+        "arima_val_terms":null,
+        "arima_val_preds":null,
+        "sarima_val_terms":null,
+        "sarima_val_preds":null,
+        "arimax_val_terms":null,
+        "arimax_val_preds":null,
+        "sarimax_val_terms":null,
+        "sarimax_val_preds":null
     },
     {
         "code":"CSCE A395",
@@ -3115,9 +5059,41 @@
         "arimax_forecast":0.0,
         "sarimax_forecast":2.0,
         "arima_mae":1.0,
-        "sarima_mae":1.8,
-        "arimax_mae":1.5,
-        "sarimax_mae":1.8
+        "sarima_mae":1.82,
+        "arimax_mae":1.46,
+        "sarimax_mae":1.83,
+        "arima_val_terms":[
+            202501,
+            202503
+        ],
+        "arima_val_preds":[
+            1.0,
+            1.0
+        ],
+        "sarima_val_terms":[
+            202501,
+            202503
+        ],
+        "sarima_val_preds":[
+            1.0,
+            0.0
+        ],
+        "arimax_val_terms":[
+            202501,
+            202503
+        ],
+        "arimax_val_preds":[
+            1.0,
+            1.0
+        ],
+        "sarimax_val_terms":[
+            202501,
+            202503
+        ],
+        "sarimax_val_preds":[
+            0.0,
+            0.0
+        ]
     },
     {
         "code":"CSCE A401",
@@ -3129,10 +5105,42 @@
         "sarima_forecast":34.0,
         "arimax_forecast":38.0,
         "sarimax_forecast":40.0,
-        "arima_mae":4.2,
+        "arima_mae":4.25,
         "sarima_mae":9.0,
-        "arimax_mae":4.4,
-        "sarimax_mae":9.0
+        "arimax_mae":4.36,
+        "sarimax_mae":9.0,
+        "arima_val_terms":[
+            202403,
+            202503
+        ],
+        "arima_val_preds":[
+            28.0,
+            30.0
+        ],
+        "sarima_val_terms":[
+            202403,
+            202503
+        ],
+        "sarima_val_preds":[
+            21.0,
+            26.0
+        ],
+        "arimax_val_terms":[
+            202403,
+            202503
+        ],
+        "arimax_val_preds":[
+            27.0,
+            30.0
+        ],
+        "sarimax_val_terms":[
+            202403,
+            202503
+        ],
+        "sarimax_val_preds":[
+            21.0,
+            26.0
+        ]
     },
     {
         "code":"CSCE A405",
@@ -3144,10 +5152,42 @@
         "sarima_forecast":30.0,
         "arimax_forecast":32.0,
         "sarimax_forecast":32.0,
-        "arima_mae":1.4,
+        "arima_mae":1.43,
         "sarima_mae":7.0,
-        "arimax_mae":2.3,
-        "sarimax_mae":7.0
+        "arimax_mae":2.29,
+        "sarimax_mae":7.0,
+        "arima_val_terms":[
+            202403,
+            202503
+        ],
+        "arima_val_preds":[
+            27.0,
+            27.0
+        ],
+        "sarima_val_terms":[
+            202403,
+            202503
+        ],
+        "sarima_val_preds":[
+            34.0,
+            37.0
+        ],
+        "arimax_val_terms":[
+            202403,
+            202503
+        ],
+        "arimax_val_preds":[
+            23.0,
+            30.0
+        ],
+        "sarimax_val_terms":[
+            202403,
+            202503
+        ],
+        "sarimax_val_preds":[
+            34.0,
+            37.0
+        ]
     },
     {
         "code":"CSCE A412",
@@ -3162,7 +5202,15 @@
         "arima_mae":null,
         "sarima_mae":null,
         "arimax_mae":null,
-        "sarimax_mae":null
+        "sarimax_mae":null,
+        "arima_val_terms":null,
+        "arima_val_preds":null,
+        "sarima_val_terms":null,
+        "sarima_val_preds":null,
+        "arimax_val_terms":null,
+        "arimax_val_preds":null,
+        "sarimax_val_terms":null,
+        "sarimax_val_preds":null
     },
     {
         "code":"CSCE A415",
@@ -3174,10 +5222,42 @@
         "sarima_forecast":31.0,
         "arimax_forecast":20.0,
         "sarimax_forecast":31.0,
-        "arima_mae":3.7,
+        "arima_mae":3.71,
         "sarima_mae":2.5,
-        "arimax_mae":3.5,
-        "sarimax_mae":2.5
+        "arimax_mae":3.52,
+        "sarimax_mae":2.5,
+        "arima_val_terms":[
+            202401,
+            202501
+        ],
+        "arima_val_preds":[
+            18.0,
+            17.0
+        ],
+        "sarima_val_terms":[
+            202401,
+            202501
+        ],
+        "sarima_val_preds":[
+            20.0,
+            18.0
+        ],
+        "arimax_val_terms":[
+            202401,
+            202501
+        ],
+        "arimax_val_preds":[
+            19.0,
+            17.0
+        ],
+        "sarimax_val_terms":[
+            202401,
+            202501
+        ],
+        "sarimax_val_preds":[
+            20.0,
+            18.0
+        ]
     },
     {
         "code":"CSCE A448",
@@ -3191,8 +5271,40 @@
         "sarimax_forecast":9.0,
         "arima_mae":1.0,
         "sarima_mae":5.0,
-        "arimax_mae":1.6,
-        "sarimax_mae":5.0
+        "arimax_mae":1.62,
+        "sarimax_mae":5.0,
+        "arima_val_terms":[
+            202401,
+            202501
+        ],
+        "arima_val_preds":[
+            18.0,
+            18.0
+        ],
+        "sarima_val_terms":[
+            202401,
+            202501
+        ],
+        "sarima_val_preds":[
+            18.0,
+            26.0
+        ],
+        "arimax_val_terms":[
+            202401,
+            202501
+        ],
+        "arimax_val_preds":[
+            17.0,
+            20.0
+        ],
+        "sarimax_val_terms":[
+            202401,
+            202501
+        ],
+        "sarimax_val_preds":[
+            18.0,
+            26.0
+        ]
     },
     {
         "code":"CSCE A462",
@@ -3207,7 +5319,15 @@
         "arima_mae":null,
         "sarima_mae":null,
         "arimax_mae":null,
-        "sarimax_mae":null
+        "sarimax_mae":null,
+        "arima_val_terms":null,
+        "arima_val_preds":null,
+        "sarima_val_terms":null,
+        "sarima_val_preds":null,
+        "arimax_val_terms":null,
+        "arimax_val_preds":null,
+        "sarimax_val_terms":null,
+        "sarimax_val_preds":null
     },
     {
         "code":"CSCE A465",
@@ -3219,10 +5339,42 @@
         "sarima_forecast":38.0,
         "arimax_forecast":39.0,
         "sarimax_forecast":51.0,
-        "arima_mae":6.6,
+        "arima_mae":6.62,
         "sarima_mae":4.5,
-        "arimax_mae":5.0,
-        "sarimax_mae":4.5
+        "arimax_mae":4.97,
+        "sarimax_mae":4.5,
+        "arima_val_terms":[
+            202401,
+            202501
+        ],
+        "arima_val_preds":[
+            37.0,
+            40.0
+        ],
+        "sarima_val_terms":[
+            202401,
+            202501
+        ],
+        "sarima_val_preds":[
+            34.0,
+            41.0
+        ],
+        "arimax_val_terms":[
+            202401,
+            202501
+        ],
+        "arimax_val_preds":[
+            38.0,
+            44.0
+        ],
+        "sarimax_val_terms":[
+            202401,
+            202501
+        ],
+        "sarimax_val_preds":[
+            34.0,
+            41.0
+        ]
     },
     {
         "code":"CSCE A470",
@@ -3234,10 +5386,42 @@
         "sarima_forecast":15.0,
         "arimax_forecast":19.0,
         "sarimax_forecast":16.0,
-        "arima_mae":1.1,
+        "arima_mae":1.07,
         "sarima_mae":2.0,
-        "arimax_mae":1.0,
-        "sarimax_mae":1.4
+        "arimax_mae":0.96,
+        "sarimax_mae":1.38,
+        "arima_val_terms":[
+            202501,
+            202503
+        ],
+        "arima_val_preds":[
+            16.0,
+            14.0
+        ],
+        "sarima_val_terms":[
+            202501,
+            202503
+        ],
+        "sarima_val_preds":[
+            15.0,
+            13.0
+        ],
+        "arimax_val_terms":[
+            202501,
+            202503
+        ],
+        "arimax_val_preds":[
+            16.0,
+            14.0
+        ],
+        "sarimax_val_terms":[
+            202501,
+            202503
+        ],
+        "sarimax_val_preds":[
+            18.0,
+            16.0
+        ]
     },
     {
         "code":"CSCE A485",
@@ -3252,7 +5436,15 @@
         "arima_mae":null,
         "sarima_mae":null,
         "arimax_mae":null,
-        "sarimax_mae":null
+        "sarimax_mae":null,
+        "arima_val_terms":null,
+        "arima_val_preds":null,
+        "sarima_val_terms":null,
+        "sarima_val_preds":null,
+        "arimax_val_terms":null,
+        "arimax_val_preds":null,
+        "sarimax_val_terms":null,
+        "sarimax_val_preds":null
     },
     {
         "code":"CSCE A490",
@@ -3264,10 +5456,42 @@
         "sarima_forecast":11.0,
         "arimax_forecast":13.0,
         "sarimax_forecast":12.0,
-        "arima_mae":2.5,
-        "sarima_mae":24.9,
-        "arimax_mae":2.5,
-        "sarimax_mae":24.9
+        "arima_mae":2.45,
+        "sarima_mae":24.89,
+        "arimax_mae":2.45,
+        "sarimax_mae":24.89,
+        "arima_val_terms":[
+            202403,
+            202503
+        ],
+        "arima_val_preds":[
+            14.0,
+            14.0
+        ],
+        "sarima_val_terms":[
+            202403,
+            202503
+        ],
+        "sarima_val_preds":[
+            41.0,
+            34.0
+        ],
+        "arimax_val_terms":[
+            202403,
+            202503
+        ],
+        "arimax_val_preds":[
+            14.0,
+            14.0
+        ],
+        "sarimax_val_terms":[
+            202403,
+            202503
+        ],
+        "sarimax_val_preds":[
+            41.0,
+            34.0
+        ]
     },
     {
         "code":"CSCE A498",
@@ -3282,6 +5506,38 @@
         "arima_mae":0.5,
         "sarima_mae":1.0,
         "arimax_mae":0.5,
-        "sarimax_mae":1.0
+        "sarimax_mae":1.0,
+        "arima_val_terms":[
+            202501,
+            202503
+        ],
+        "arima_val_preds":[
+            2.0,
+            2.0
+        ],
+        "sarima_val_terms":[
+            202501,
+            202503
+        ],
+        "sarima_val_preds":[
+            2.0,
+            3.0
+        ],
+        "arimax_val_terms":[
+            202501,
+            202503
+        ],
+        "arimax_val_preds":[
+            2.0,
+            2.0
+        ],
+        "sarimax_val_terms":[
+            202501,
+            202503
+        ],
+        "sarimax_val_preds":[
+            2.0,
+            3.0
+        ]
     }
 ]

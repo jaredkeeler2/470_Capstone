@@ -161,10 +161,12 @@ for code, group in df.groupby('code'):
         fit = model.fit()
         arima_forecast = fit.forecast(steps=1)[0]
         arima_forecast = max(round(arima_forecast, 0), 0)
+        arima_val_terms, arima_val_preds = None, None  #store testing info
 
         if len(y) >= 4:
             try:
                 train, test = y[:-2], y[-2:]
+                train_terms, test_terms = terms[:-2], terms[-2:]
                 model_eval = ARIMA(train, order=(1, 1, 1)).fit()
                 preds = model_eval.forecast(steps=len(test))
                 test = np.ravel(test)
@@ -173,6 +175,10 @@ for code, group in df.groupby('code'):
                 arima_mae = mean_absolute_error(test, preds)
 
                 all_MAES["arima"].append(arima_mae)
+                preds = [max(round(p, 0), 0) for p in preds]
+                arima_val_terms = test_terms.tolist()
+                arima_val_preds = preds
+                
                 print(f"{code}: ARIMA MAE={arima_mae:.1f}")
             except Exception as inner_e:
                 print(f"Metrics didn't calculate for {code}: {inner_e}")
@@ -182,10 +188,12 @@ for code, group in df.groupby('code'):
         fit = model.fit(disp=False)
         sarima_forecast = fit.forecast(steps=1)[0]
         sarima_forecast = max(round(sarima_forecast, 0), 0)
+        sarima_val_terms, sarima_val_preds = None, None
 
         if len(y) >= 4:
             try:
                 train, test = y[:-2], y[-2:]
+                train_terms, test_terms = terms[:-2], terms[-2:]
                 model_eval = SARIMAX(train, order=(1, 1, 1), seasonal_order=(1, 1, 1, m)).fit()
                 preds = model_eval.forecast(steps=len(test))
                 test = np.ravel(test)
@@ -194,6 +202,9 @@ for code, group in df.groupby('code'):
                 sarima_mae = mean_absolute_error(test, preds)
 
                 all_MAES["sarima"].append(sarima_mae)
+                preds = [max(round(p, 0), 0) for p in preds]
+                sarima_val_terms = test_terms.tolist()
+                sarima_val_preds = preds
                 print(f"{code}: SARIMA MAE={sarima_mae:.1f}")
             except Exception as inner_e:
                 print(f"Metrics didn't calculate for {code}: {inner_e}")
@@ -204,11 +215,13 @@ for code, group in df.groupby('code'):
         next_exog = exog[-1].reshape(1, -1)
         arimax_forecast = fit.forecast(steps=1, exog=next_exog)[0]
         arimax_forecast = max(round(arimax_forecast, 0), 0)
+        arimax_val_terms, arimax_val_preds = None, None
 
         if len(y) >= 4:
             try:
                 train, test = y[:-2], y[-2:]
                 train_exog, test_exog = exog[:-2], exog[-2:]
+                train_terms, test_terms = terms[:-2], terms[-2:]
                 model_eval = ARIMA(train, exog=train_exog, order=(1, 1, 1)).fit()
                 preds = model_eval.forecast(steps=len(test), exog=test_exog)
                 test = np.ravel(test)
@@ -217,6 +230,9 @@ for code, group in df.groupby('code'):
                 arimax_mae = mean_absolute_error(test, preds)
 
                 all_MAES.setdefault("arimax", []).append(arimax_mae)
+                preds = [max(round(p, 0), 0) for p in preds]
+                arimax_val_terms = test_terms.tolist()
+                arimax_val_preds = preds
                 print(f"{code}: ARIMAX MAE={arimax_mae:.1f}")
             except Exception as inner_e:
                 print(f"Metrics didn't calculate for {code} (ARIMAX): {inner_e}")
@@ -227,11 +243,13 @@ for code, group in df.groupby('code'):
         next_exog = exog[-1].reshape(1, -1)
         sarimax_forecast = fit.forecast(steps=1, exog = next_exog)[0]
         sarimax_forecast = max(round(sarimax_forecast, 0), 0)
+        sarimax_val_terms, sarimax_val_preds = None, None
 
         if len(y) >= 4:
             try:
                 train, test = y[:-2], y[-2:]
                 train_exog, test_exog = exog[:-2], exog[-2:]
+                train_terms, test_terms = terms[:-2], terms[-2:]
                 model_eval = SARIMAX(train, exog=train_exog, order=(1, 1, 1), seasonal_order=(1, 1, 1, m)).fit()
                 preds = model_eval.forecast(steps=len(test), exog=test_exog)
                 test = np.ravel(test)
@@ -240,18 +258,21 @@ for code, group in df.groupby('code'):
                 sarimax_mae = mean_absolute_error(test, preds)
 
                 all_MAES["sarimax"].append(sarimax_mae)
+                preds = [max(round(p, 0), 0) for p in preds]
+                sarimax_val_terms = test_terms.tolist()
+                sarimax_val_preds = preds
                 print(f"{code}: SARIMAX MAE={sarimax_mae:.1f}")
             except Exception as inner_e:
                 print(f"Metrics didn't calculate for {code}: {inner_e}")
 
         if arima_mae is not None:
-            arima_mae = round(arima_mae, 1)
+            arima_mae = round(arima_mae, 2)
         if sarima_mae is not None:
-            sarima_mae = round(sarima_mae, 1)
+            sarima_mae = round(sarima_mae, 2)
         if arimax_mae is not None: 
-            arimax_mae = round(arimax_mae, 1)
+            arimax_mae = round(arimax_mae, 2)
         if sarimax_mae is not None:
-            sarimax_mae = round(sarimax_mae, 1)
+            sarimax_mae = round(sarimax_mae, 2)
 
         results.append({
             "code": code,
@@ -265,7 +286,15 @@ for code, group in df.groupby('code'):
             "arima_mae": arima_mae,
             "sarima_mae": sarima_mae,
             "arimax_mae": arimax_mae,
-            "sarimax_mae": sarimax_mae
+            "sarimax_mae": sarimax_mae,
+            "arima_val_terms": arima_val_terms,
+            "arima_val_preds": arima_val_preds,
+            "sarima_val_terms": sarima_val_terms,
+            "sarima_val_preds": sarima_val_preds,
+            "arimax_val_terms": arimax_val_terms,
+            "arimax_val_preds": arimax_val_preds,
+            "sarimax_val_terms": sarimax_val_terms,
+            "sarimax_val_preds": sarimax_val_preds,
         })
 
     except Exception as e:
@@ -280,7 +309,7 @@ combined_df.to_json(output_path, orient="records", indent=4)
 print(f"Saved combined data to {output_path}")
 print(f"Generated forecasts for {len(results)} courses.")
 
-# === AVERAGE MODEL PERFORMANCE SUMMARY ===
+#average model performance
 print("\n===== Average Model Performance =====")
 for model_name in ["arima", "sarima", "arimax", "sarimax"]:
     mae_list = all_MAES.get(model_name, [])
