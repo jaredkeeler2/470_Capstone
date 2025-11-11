@@ -53,17 +53,16 @@ def home(request):
     
 def rescrape_data(request):
     if request.method == 'POST':
+        # Delete all existing course data
+        Course.objects.all().delete()
+
+        # Scrape all terms for past 5 years
         all_terms = [term for term, label in build_term_codes_past_years(years=5)]
-        existing_terms = set(Course.objects.values_list('term', flat=True))
-        missing_terms = [term for term in all_terms if term not in existing_terms]
+        Course.save_courses(subj="CSCE")  # your existing scraping function
 
-        if missing_terms:
-            Course.save_courses(subj="CSCE")
-            messages.success(request, f"Rescraped missing terms: {', '.join(missing_terms)}")
-        else:
-            messages.info(request, "No missing terms to rescrape.")
+        messages.success(request, f"All courses have been removed and rescraped for terms: {', '.join(all_terms)}")
 
-    return redirect('data')
+    return redirect('home')
 
 def graduate_data(request):
     error = None
@@ -109,9 +108,9 @@ def data(request):
     error = None
     UPLOAD_PASSWORD = getattr(settings, 'UPLOAD_PASSWORD', 'admin123')
 
+    # Handle CSV upload
     if request.method == 'POST' and 'csv_file' in request.FILES:
         password = request.POST.get('upload_password', '').strip()
-
         if password != UPLOAD_PASSWORD:
             error = "Invalid password."
         else:
@@ -124,60 +123,86 @@ def data(request):
                     io_string = io.StringIO(data_set)
                     reader = csv.DictReader(io_string)
 
-                    required_columns = {'Term', 'Code', 'Title', 'Enrolled'}
-                    if not required_columns.issubset(reader.fieldnames):
-                        error = f"Error: CSV must contain columns: {', '.join(required_columns)}."
+                    if not reader.fieldnames or len(reader.fieldnames) < 3:
+                        error = "CSV must have at least Code, Title, and one Term column."
                     else:
+                        term_columns = reader.fieldnames[2:]  # Columns after Code and Title
                         updated_count = 0
                         skipped_count = 0
                         for row in reader:
-                            term = sanitize_csv_value(row.get('Term', ''))
                             code = sanitize_csv_value(row.get('Code', ''))
                             title = sanitize_csv_value(row.get('Title', ''))
-                            enrolled = row.get('Enrolled', '').strip()
-                            if not term or not code or not title or not enrolled:
+                            if not code or not title:
                                 skipped_count += 1
                                 continue
-                            try:
-                                enrolled = int(enrolled)
-                                if enrolled < 0:
+
+                            for term in term_columns:
+                                enrolled = row.get(term, '').strip()
+                                if enrolled in ('', '-'):
+                                    continue
+                                try:
+                                    enrolled = int(enrolled)
+                                except ValueError:
                                     skipped_count += 1
                                     continue
-                            except ValueError:
-                                skipped_count += 1
-                                continue
-                            Course.objects.update_or_create(
-                                code=code,
-                                term=term,
-                                defaults={'title': title, 'enrolled': enrolled}
-                            )
-                            updated_count += 1
-                        message = f"CSV uploaded successfully. {updated_count} rows updated, {skipped_count} rows skipped."
+
+                                # Update or create course
+                                Course.objects.update_or_create(
+                                    code=code,
+                                    term=term,
+                                    defaults={'title': title, 'enrolled': enrolled}
+                                )
+                                updated_count += 1
+                        message = f"CSV uploaded successfully. {updated_count} values updated, {skipped_count} skipped."
+
                 except Exception as e:
                     error = f"Error processing CSV: {str(e)}"
 
-    courses = Course.objects.all().order_by('-term', 'code')
-    terms = {}
-    for c in courses:
-        terms.setdefault(c.term, []).append(c)
+    # Prepare pivot table for display
+    all_terms = sorted(Course.objects.values_list('term', flat=True).distinct(), reverse=True)
+    courses_dict = {}
 
-    return render(request, 'data.html', {'terms': terms, 'message': message, 'error': error})
+    for c in Course.objects.all().order_by('code'):
+        if c.code not in courses_dict:
+            courses_dict[c.code] = {'title': c.title, 'enrolled_list': []}
+
+    for code, info in courses_dict.items():
+        enrolled_list = []
+        for term in all_terms:
+            course = Course.objects.filter(code=code, term=term).first()
+            enrolled_list.append(course.enrolled if course else '-')
+        info['enrolled_list'] = enrolled_list
+
+    return render(request, 'data.html', {
+        'courses_dict': courses_dict,
+        'all_terms': all_terms,
+        'message': message,
+        'error': error
+    })
 
 
 def download_data(request):
-    # Download all courses as CSV
+    all_terms = sorted(Course.objects.values_list('term', flat=True).distinct(), reverse=True)
+    courses_dict = {}
+
+    for c in Course.objects.all().order_by('code'):
+        if c.code not in courses_dict:
+            courses_dict[c.code] = {'title': c.title, 'enrolled_list': []}
+
+    for code, info in courses_dict.items():
+        enrolled_list = []
+        for term in all_terms:
+            course = Course.objects.filter(code=code, term=term).first()
+            enrolled_list.append(course.enrolled if course else '-')
+        info['enrolled_list'] = enrolled_list
+
     response = HttpResponse(content_type='text/csv')
     response['Content-Disposition'] = 'attachment; filename="course_data.csv"'
-
     writer = csv.writer(response)
-    writer.writerow(['Term', 'Code', 'Title', 'Enrolled'])
+    writer.writerow(['Code', 'Title'] + all_terms)
 
-    for course in Course.objects.all().order_by('-term', 'code'):
-        writer.writerow([
-            sanitize_csv_value(course.term),
-            sanitize_csv_value(course.code),
-            sanitize_csv_value(course.title),
-            course.enrolled
-        ])
+    for code, course in courses_dict.items():
+        writer.writerow([code, course['title']] + course['enrolled_list'])
 
     return response
+
