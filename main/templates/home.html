@@ -12,9 +12,9 @@
     <!--Title and navigation buttons-->
     <h1>Enrollment Trend Dashboard</h1>
     <p>
-      <a href="/data/"><button>View Data</button></a>
-      <a href="/graduates/"><button>Graduates Data</button></a>
-      <a href="/model_info/"><button>Model Information</button></a>
+      <a href="{% url 'data' %}"><button>View Data</button></a>
+      <a href="{% url 'graduates' %}"><button>Graduates Data</button></a>
+      <a href="{% url 'model_info' %}"><button>Model Information</button></a>
     </p>
     <!--Dropdown menu for course form selection-->
     <form>
