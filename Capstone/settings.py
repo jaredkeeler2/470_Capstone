@@ -127,3 +127,7 @@ UPLOAD_PASSWORD = "Coursetrend123"
 
 #Password required for uploading graduate number
 GRADUATE_PASSWORD = "NewGraduate123"
+
+# Prefix URLs only when running on the UAA server
+USE_PREFIX = not DEBUG
+URL_PREFIX = "course_trends" if USE_PREFIX else ""
