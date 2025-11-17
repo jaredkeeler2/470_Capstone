@@ -206,3 +206,5 @@ def download_data(request):
 
     return response
 
+def model_info(request):
+    return render(request, 'model_info.html')

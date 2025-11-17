@@ -14,6 +14,7 @@
     <p>
       <a href="/data/"><button>View Data</button></a>
       <a href="/graduates/"><button>Graduates Data</button></a>
+      <a href="/model_info/"><button>Model Information</button></a>
     </p>
     <!--Dropdown menu for course form selection-->
     <form>
@@ -138,7 +139,7 @@
       textposition: "top center",
       line: { width: 3, color: "#ff5733", dash: "dot" },
       marker: { size: [0, 14], color: "#ff5733", symbol: data.arima_mae === minMae ? "star" : "circle" },
-      opacity: data.arima_mae === minMae ? 1 : 0.2
+      opacity: data.arima_mae === minMae ? 1 : 0.5
     };
 
     //SARIMA forecast
@@ -153,7 +154,7 @@
       textposition: "bottom center",
       line: { width: 3, color: "#ffa500", dash: "dot" },
       marker: { size: [0, 14], color: "#ffa500", symbol: data.sarima_mae === minMae ? "star" : "circle" },
-      opacity: data.sarima_mae === minMae ? 1 : 0.2
+      opacity: data.sarima_mae === minMae ? 1 : 0.5
     };
 
     //ARIMAX forecast
@@ -168,7 +169,7 @@
       textposition: "top center",
       line: { width: 3, color: "#8000ff", dash: "dot" },
       marker: { size: [0, 14], color: "#8000ff", symbol: (data.arimax_mae ?? 0) === minMae ? "star" : "circle" },
-      opacity: data.arimax_mae === minMae ? 1 : 0.2
+      opacity: data.arimax_mae === minMae ? 1 : 0.5
     };
 
     //SARIMAX forecast
@@ -183,7 +184,7 @@
       textposition: "bottom center",
       line: { width: 3, color: "#00cc44", dash: "dot" },
       marker: { size: [0, 14], color: "#00cc44", symbol: (data.sarimax_mae ?? 0) === minMae ? "star" : "circle" },
-      opacity: data.sarimax_mae === minMae ? 1 : 0.2
+      opacity: data.sarimax_mae === minMae ? 1 : 0.5
     };
 
     let validationTrace = null;
@@ -213,7 +214,6 @@
           hoverinfo: "x+y",
           x: termLabels,
           y: valPreds,
-          text: ["Validation 1", "Validation 2"],
           textposition: "top center",
           marker: {
             size: 12,
@@ -240,7 +240,8 @@
         x: 1.05,
         y: 1,
         bgcolor: "rgba(255,255,255,0)",
-        bordercolor: "rgba(0,0,0,0)"
+        bordercolor: "rgba(0,0,0,0)",
+        title: { text: "   ℹ️ Click legend items to hide or show models<br>", font: { size: 12, color: "#777"}}
       }
     };
 

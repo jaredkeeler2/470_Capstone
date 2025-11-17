@@ -16,7 +16,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from main.views import home, graduate_data, data, download_data,rescrape_data
+from main.views import home, graduate_data, data, download_data,rescrape_data, model_info
 
 
 #url routes
@@ -25,6 +25,7 @@ urlpatterns = [
     path('', home, name='home'),
     path('graduates/', graduate_data, name='graduates'),
     path('data/', data, name='data'),
+    path('model_info/', model_info, name='model_info'),
     path('download/', download_data, name='download_data'),
-    path('rescrape/',rescrape_data, name='rescrape_data'), # Rescrape missing terms 
+    path('rescrape/',rescrape_data, name='rescrape_data'), #Rescrape missing terms 
 ]

@@ -1,0 +1,47 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Model Information</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <style>
+        body { font-family: Arial; margin: 30px; background: #f9f9f9; }
+        h1 { color: #333; }
+        table { border-collapse: collapse; width: 100%; background: #fff; margin-top: 20px; }
+        th, td { padding: 8px 10px; border: 1px solid #ccc; text-align: left; }
+        th { background: #e0e0e0; }
+        button { background: #007bff; border: none; padding: 8px 12px; color: white; border-radius: 5px; cursor: pointer; }
+        button:hover { background: #0056b3; }
+        .msg { padding: 10px; background: #e7f3ff; border-left: 5px solid #2196F3; margin-bottom: 10px; }
+        .error { padding: 10px; background: #ffe7e7; border-left: 5px solid #f44336; margin-bottom: 10px; }
+        .section { margin-bottom: 20px; }
+    </style>
+</head>
+<body>
+    <h1>Model Information</h1>
+
+        <!-- Navigation Button -->
+    <p>
+        <a href="/"><button>Back to Dashboard</button></a>
+    </p>
+
+    <h2>ARIMA</h2>
+    <p>Definition: An ARIMA (AutoRegressive Integrated Moving Average) model is a statistical technique for forecasting time series data, using its historical values to predict future ones.</p>
+    <p><a href="https://www.statsmodels.org/stable/generated/statsmodels.tsa.arima.model.ARIMA.html" target="_blank">https://www.statsmodels.org/stable/generated/statsmodels.tsa.arima.model.ARIMA.html</a></p>
+    <p><a href="https://www.youtube.com/watch?v=-_2wOrEuFaM&t=602s" target="_blank">https://www.youtube.com/watch?v=-_2wOrEuFaM&t=602s</a></p>
+
+    <h2>ARIMAX</h2>
+    <p>Definition: An ARIMAX model is an Autoregressive Integrated Moving Average with Explanatory Variables, a statistical model used for time series forecasting.</p>
+    <p><a href="https://www.statsmodels.org/stable/generated/statsmodels.tsa.statespace.sarimax.SARIMAX.html" target="_blank">https://www.statsmodels.org/stable/generated/statsmodels.tsa.statespace.sarimax.SARIMAX.html</a></p>
+
+    <h2>SARIMA</h2>
+    <p>Definition: A SARIMA model is a time series forecasting model that accounts for both non-seasonal and seasonal patterns by combining autoregressive (AR), integrated (I), and moving average (MA) components.</p>
+    <p><a href="https://www.statsmodels.org/stable/generated/statsmodels.tsa.statespace.sarimax.SARIMAX.html" target="_blank">https://www.statsmodels.org/stable/generated/statsmodels.tsa.statespace.sarimax.SARIMAX.html</a></p>
+    <p><a href="https://www.youtube.com/watch?v=_Tc2IDEzbDE" target="_blank">https://www.youtube.com/watch?v=_Tc2IDEzbDE</a></p>
+
+    <h2>SARIMAX</h2>
+    <p>Definition: A SARIMAX model is a time series forecasting model that combines the Seasonal Autoregressive Integrated Moving Average (SARIMA) model with Exogenous variables.</p>
+    <p><a href="https://www.statsmodels.org/stable/generated/statsmodels.tsa.statespace.sarimax.SARIMAX.html" target="_blank">https://www.statsmodels.org/stable/generated/statsmodels.tsa.statespace.sarimax.SARIMAX.html</a></p>
+</body>
+</html>
