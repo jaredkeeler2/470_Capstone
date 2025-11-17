@@ -11,11 +11,20 @@
   <body>
     <!--Title and navigation buttons-->
     <h1>Enrollment Trend Dashboard</h1>
-    <p>
-      <a href="{% url 'data' %}"><button>View Data</button></a>
-      <a href="{% url 'graduates' %}"><button>Graduates Data</button></a>
-      <a href="{% url 'model_info' %}"><button>Model Information</button></a>
-    </p>
+  <p>
+      <a href="{% if URL_PREFIX %}/{{ URL_PREFIX }}/data/{% else %}/data/{% endif %}">
+          <button>View Data</button>
+      </a>
+
+      <a href="{% if URL_PREFIX %}/{{ URL_PREFIX }}/graduates/{% else %}/graduates/{% endif %}">
+          <button>Graduates Data</button>
+      </a>
+
+      <a href="{% if URL_PREFIX %}/{{ URL_PREFIX }}/model_info/{% else %}/model_info/{% endif %}">
+          <button>Model Information</button>
+      </a>
+  </p>
+
     <!--Dropdown menu for course form selection-->
     <form>
       {% csrf_token %}

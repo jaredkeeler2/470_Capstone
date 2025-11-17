@@ -23,7 +23,7 @@
 
     <!-- Navigation Buttons -->
     <p>
-        <a href="/"><button>Back to Dashboard</button></a>
+        <a href="{% if URL_PREFIX %}/{{ URL_PREFIX }}/{% else %}/{% endif %}"><button>Back to Dashboard</button></a>
         <a href="{% url 'download_data' %}"><button>Download CSV</button></a>
     </p>
 

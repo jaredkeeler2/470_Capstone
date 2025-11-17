@@ -18,15 +18,31 @@ from django.contrib import admin
 from django.urls import path
 from main.views import home, graduate_data, data, download_data,rescrape_data, model_info
 from django.conf import settings
+from main import views
+from django.conf import settings
 
 prefix = settings.URL_PREFIX
 
-#url routes
-urlpatterns = [
-    path(f'{prefix}/', home, name='home'),
-    path(f'{prefix}/graduates/', graduate_data, name='graduates'),
-    path(f'{prefix}/data/', data, name='data'),
-    path(f'{prefix}/model_info/', model_info, name='model_info'),
-    path(f'{prefix}/download/', download_data, name='download_data'),
-    path(f'{prefix}/rescrape/', rescrape_data, name='rescrape_data'),
-]
+urlpatterns = []
+
+# If prefix is empty, use normal URLs (local)
+if prefix == "":
+    urlpatterns += [
+        path('', views.home, name='home'),
+        path('graduates/', views.graduate_data, name='graduates'),
+        path('data/', views.data, name='data'),
+        path('model_info/', views.model_info, name='model_info'),
+        path('download/', views.download_data, name='download_data'),
+        path('rescrape/', views.rescrape_data, name='rescrape_data'),
+    ]
+
+# If prefix exists (server), wrap ALL URLs inside it
+else:
+    urlpatterns += [
+        path(f"{prefix}/", views.home, name='home'),
+        path(f"{prefix}/graduates/", views.graduate_data, name='graduates'),
+        path(f"{prefix}/data/", views.data, name='data'),
+        path(f"{prefix}/model_info/", views.model_info, name='model_info'),
+        path(f"{prefix}/download/", views.download_data, name='download_data'),
+        path(f"{prefix}/rescrape/", views.rescrape_data, name='rescrape_data'),
+    ]

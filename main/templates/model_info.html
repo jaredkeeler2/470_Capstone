@@ -23,7 +23,7 @@
 
         <!-- Navigation Button -->
     <p>
-        <a href="/"><button>Back to Dashboard</button></a>
+        <a href="{% if URL_PREFIX %}/{{ URL_PREFIX }}/{% else %}/{% endif %}"><button>Back to Dashboard</button></a>
     </p>
 
     <h2>ARIMA</h2>
