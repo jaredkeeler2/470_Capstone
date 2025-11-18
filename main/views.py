@@ -66,7 +66,7 @@ def rescrape_data(request):
 
 def graduate_data(request):
     error = None
-    GRADUATE_PASSWORD = getattr(settings, 'GRADUATE_PASSWORD', 'grad123')  # new key
+    GRADUATE_PASSWORD = getattr(settings, 'GRADUATE_PASSWORD', 'grad123')
 
     # Auto-fill database
     current_year = datetime.now().year
@@ -75,15 +75,19 @@ def graduate_data(request):
 
     if request.method == 'POST':
         password = request.POST.get('graduate_password', '').strip()
+
+        # If password is wrong → stay on same page + show message
         if password != GRADUATE_PASSWORD:
-            error = "Invalid password. You are not authorized to submit graduation data."
+            error = "Invalid password."
+            form = GraduationForm(request.POST)  # keeps the values user typed
         else:
             form = GraduationForm(request.POST)
             if form.is_valid():
                 year = form.cleaned_data['year']
                 graduates = form.cleaned_data['graduates']
                 GraduationData.objects.update_or_create(
-                    year=year, defaults={'graduates': graduates}
+                    year=year,
+                    defaults={'graduates': graduates}
                 )
                 return redirect('graduates')
     else:
@@ -91,7 +95,11 @@ def graduate_data(request):
 
     data = GraduationData.objects.all().order_by('-year')
 
-    return render(request, "graduates.html", {'form': form, 'data': data, 'error': error})
+    return render(request, "graduates.html", {
+        'form': form,
+        'data': data,
+        'error': error
+    })
 
 
 
