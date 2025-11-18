@@ -7,7 +7,7 @@ class GraduationForm(forms.ModelForm):
 
     #Dropdown choices: start with blank placeholder, then valid years
     YEAR_CHOICES = [("", "Select a Year")] + [
-        (y, str(y)) for y in range(2021, current_year + 1)
+        (y, str(y)) for y in range(current_year, 2020, -1)
     ]
 
     #Dropdown field
