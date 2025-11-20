@@ -18,6 +18,22 @@ os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'Capstone.settings')
 django.setup()
 
 from main.models import Course, Prerequisite
+from main.models import GraduationData
+
+hs_qs = GraduationData.objects.all().values('year', 'graduates')
+hs_map = {row['year']: row['graduates'] for row in hs_qs}
+
+def hs_value_for_term(term):
+    term = int(term)
+    year, sem = divmod(term, 100)
+
+    # Spring term uses previous year's graduates
+    if sem == 1:
+        hs_year = year - 1
+    else:
+        hs_year = year
+
+    return hs_map.get(hs_year, np.nan)
 
 #converts numeric term to non-numeric term (e.g. 202503 ---> Fall 2025)
 def term_name_from_code(term):
@@ -78,6 +94,15 @@ prereq_df = pd.DataFrame(prereq_qs)
 #clean + sort chronologically
 df['term'] = df['term'].astype(int)
 df['term_name'] = df['term'].apply(term_name_from_code)
+# Add numeric course number column
+df['course_num'] = df['code'].str.extract(r'A(\d+)').astype(int)
+
+#Remove Summer terms for upper-level courses (A211+)
+df = df[~(
+    (df['course_num'] > 201) &
+    (df['term_name'].str.contains("Summer", case=False, na=False))
+)]
+
 df = df.sort_values(['code', 'term'])
 
 all_MAES = {"arima": [], "sarima": [], "arimax": [], "sarimax": []}
@@ -86,8 +111,6 @@ results = []
 
 for code, group in df.groupby('code'):
     course_num = int(code.split('A')[-1])
-    if course_num > 201:
-        group = group[~group['term_name'].str.contains("Summer", case=False, na=False)]
 
     prereqs = prereq_map.get(code, {})
     pr1, pr2 = prereqs.get('prereq_1'), prereqs.get('prereq_2')
@@ -96,6 +119,20 @@ for code, group in df.groupby('code'):
     terms = group['term'].astype(int).values
 
     exog_values = []
+    # --- Add HS grads as exog ONLY for A101 ---
+    if code == "CSCE A101":
+        hs_vals = []
+        for term in group['term']:
+            hs_raw = hs_value_for_term(term)
+
+            # If we have data → scale it (HS grads ~1200, enrollments ~100)
+            if not np.isnan(hs_raw):
+                hs_vals.append(hs_raw / 50)   # scale reduces dominance
+            else:
+                hs_vals.append(0)
+
+        exog_values.append(hs_vals)
+
     #Only prereq_1 → lag 1 (one-term back)
     for i, prereq_code in enumerate([pr1]):
         if prereq_code:
@@ -237,20 +274,41 @@ for code, group in df.groupby('code'):
             except Exception as inner_e:
                 print(f"Metrics didn't calculate for {code} (ARIMAX): {inner_e}")
 
-        #SARIMAX forecast
-        model = SARIMAX(y, exog=exog, order=(1, 1, 1), seasonal_order=(1, 1, 1, m))
+        # === SARIMAX forecast ===
+
+        # Special case: A201 performs badly with seasonal SARIMAX → use NON-seasonal
+        if code == "CSCE A201":
+            model = SARIMAX(y, exog=exog,
+                            order=(1, 1, 1),
+                            seasonal_order=(1, 0, 1, 2))
+        else:
+            model = SARIMAX(y, exog=exog,
+                            order=(1, 1, 1),
+                            seasonal_order=(1, 1, 1, m))
+
         fit = model.fit(disp=False)
         next_exog = exog[-1].reshape(1, -1)
-        sarimax_forecast = fit.forecast(steps=1, exog = next_exog)[0]
+        sarimax_forecast = fit.forecast(steps=1, exog=next_exog)[0]
         sarimax_forecast = max(round(sarimax_forecast, 0), 0)
         sarimax_val_terms, sarimax_val_preds = None, None
 
+        # === SARIMAX validation ===
         if len(y) >= 4:
             try:
                 train, test = y[:-2], y[-2:]
                 train_exog, test_exog = exog[:-2], exog[-2:]
                 train_terms, test_terms = terms[:-2], terms[-2:]
-                model_eval = SARIMAX(train, exog=train_exog, order=(1, 1, 1), seasonal_order=(1, 1, 1, m)).fit()
+
+                # Special case for A201 again in validation
+                if code == "CSCE A201":
+                    model_eval = SARIMAX(train, exog=train_exog,
+                                        order=(1, 1, 1),
+                                        seasonal_order=(1, 0, 1, 2)).fit()
+                else:
+                    model_eval = SARIMAX(train, exog=train_exog,
+                                        order=(1, 1, 1),
+                                        seasonal_order=(1, 1, 1, m)).fit()
+
                 preds = model_eval.forecast(steps=len(test), exog=test_exog)
                 test = np.ravel(test)
                 preds = np.ravel(preds)
@@ -261,9 +319,12 @@ for code, group in df.groupby('code'):
                 preds = [max(round(p, 0), 0) for p in preds]
                 sarimax_val_terms = test_terms.tolist()
                 sarimax_val_preds = preds
+
                 print(f"{code}: SARIMAX MAE={sarimax_mae:.1f}")
+
             except Exception as inner_e:
                 print(f"Metrics didn't calculate for {code}: {inner_e}")
+
 
         if arima_mae is not None:
             arima_mae = round(arima_mae, 2)
