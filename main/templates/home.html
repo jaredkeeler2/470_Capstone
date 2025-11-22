@@ -128,11 +128,15 @@
       marker: { size: 8 }
     };
 
-    const maes = [data.arima_mae, data.sarima_mae, data.arimax_mae, data.sarimax_mae].filter(v => v !== null && !isNaN(v));
+    let maes = [data.arima_mae, data.arimax_mae];
+    if (!data.yearly_course) {
+      maes.push(data.sarima_mae, data.sarimax_mae);
+    }
+    maes = maes.filter(v => v !== null && !isNaN(v));
     const minMae = maes.length ? Math.min(...maes) : null;
     let bestModel = null;
     if (minMae !== null) {
-      if (data.arima_mae === minMae) bestModel = "arima";
+      if (data.arima_mae === minMae ) bestModel = "arima";
       else if (data.sarima_mae === minMae) bestModel = "sarima";
       else if (data.arimax_mae === minMae) bestModel = "arimax";
       else if (data.sarimax_mae === minMae) bestModel = "sarimax";
