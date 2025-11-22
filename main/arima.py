@@ -27,7 +27,7 @@ def hs_value_for_term(term):
     term = int(term)
     year, sem = divmod(term, 100)
 
-    # Spring term uses previous year's graduates
+    #Spring term uses previous year's graduates
     if sem == 1:
         hs_year = year - 1
     else:
@@ -119,15 +119,15 @@ for code, group in df.groupby('code'):
     terms = group['term'].astype(int).values
 
     exog_values = []
-    # --- Add HS grads as exog ONLY for A101 ---
+    #dd HS grads as exog ONLY for A101
     if code == "CSCE A101":
         hs_vals = []
         for term in group['term']:
             hs_raw = hs_value_for_term(term)
 
-            # If we have data → scale it (HS grads ~1200, enrollments ~100)
+            #If we have data → scale it (HS grads ~1200, enrollments ~100)
             if not np.isnan(hs_raw):
-                hs_vals.append(hs_raw / 50)   # scale reduces dominance
+                hs_vals.append(hs_raw / 50)   #scale reduces dominance
             else:
                 hs_vals.append(0)
 
@@ -221,6 +221,27 @@ for code, group in df.groupby('code'):
                 print(f"Metrics didn't calculate for {code}: {inner_e}")
 
         #SARIMA forecast
+        spring_count = 0 
+        summer_count = 0 
+        fall_count = 0 
+        yearly_course = False
+        for term in group['term']: 
+            temp = divmod(term, 100) 
+            temp = temp[1] 
+            if temp == 1: 
+                spring_count += 1 
+            elif temp == 2: 
+                summer_count += 1 
+            elif temp == 3: fall_count += 1 
+        if spring_count > 0 and summer_count == 0 and fall_count == 0: 
+            yearly_course = True
+        elif spring_count == 0 and summer_count > 0 and fall_count == 0: 
+            yearly_course = True
+        elif spring_count == 0 and summer_count == 0 and fall_count > 0: 
+            yearly_course = True
+        else:
+            yearly_course = False
+
         model = SARIMAX(y, order=(1, 1, 1), seasonal_order=(1, 1, 1, m))
         fit = model.fit(disp=False)
         sarima_forecast = fit.forecast(steps=1)[0]
@@ -356,6 +377,7 @@ for code, group in df.groupby('code'):
             "arimax_val_preds": arimax_val_preds,
             "sarimax_val_terms": sarimax_val_terms,
             "sarimax_val_preds": sarimax_val_preds,
+            "yearly_course": yearly_course
         })
 
     except Exception as e:

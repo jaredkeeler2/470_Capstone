@@ -67,7 +67,8 @@
         arima_mae: null,
         sarima_mae: null,
         arimax_mae: null,
-        sarimax_mae: null
+        sarimax_mae: null,
+        yearly_course: false
       };
     }
 
@@ -96,6 +97,7 @@
       groupedData[code].arimax_val_preds = entry.arimax_val_preds;
       groupedData[code].sarimax_val_terms = entry.sarimax_val_terms;
       groupedData[code].sarimax_val_preds = entry.sarimax_val_preds;
+      groupedData[code].yearly_course = entry.yearly_course;
     }
   }
 
@@ -148,7 +150,8 @@
       textposition: "top center",
       line: { width: 3, color: "#ff5733", dash: "dot" },
       marker: { size: [0, 14], color: "#ff5733", symbol: data.arima_mae === minMae ? "star" : "circle" },
-      opacity: data.arima_mae === minMae ? 1 : 0.5
+      opacity: data.arima_mae === minMae ? 1 : 0.5,
+      showlegend: data.arima_forecast !== null && !isNaN(data.arima_forecast) ? true : false
     };
 
     //SARIMA forecast
@@ -163,7 +166,8 @@
       textposition: "bottom center",
       line: { width: 3, color: "#ffa500", dash: "dot" },
       marker: { size: [0, 14], color: "#ffa500", symbol: data.sarima_mae === minMae ? "star" : "circle" },
-      opacity: data.sarima_mae === minMae ? 1 : 0.5
+      opacity: data.sarima_mae === minMae ? 1 : 0.5,
+      showlegend: (data.sarima_forecast !== null && !isNaN(data.sarima_forecast) ? true : false)
     };
 
     //ARIMAX forecast
@@ -178,7 +182,8 @@
       textposition: "top center",
       line: { width: 3, color: "#8000ff", dash: "dot" },
       marker: { size: [0, 14], color: "#8000ff", symbol: (data.arimax_mae ?? 0) === minMae ? "star" : "circle" },
-      opacity: data.arimax_mae === minMae ? 1 : 0.5
+      opacity: data.arimax_mae === minMae ? 1 : 0.5,
+      showlegend: data.arimax_forecast !== null && !isNaN(data.arimax_forecast) ? true : false
     };
 
     //SARIMAX forecast
@@ -193,7 +198,8 @@
       textposition: "bottom center",
       line: { width: 3, color: "#00cc44", dash: "dot" },
       marker: { size: [0, 14], color: "#00cc44", symbol: (data.sarimax_mae ?? 0) === minMae ? "star" : "circle" },
-      opacity: data.sarimax_mae === minMae ? 1 : 0.5
+      opacity: data.sarimax_mae === minMae ? 1 : 0.5,
+      showlegend: data.sarimax_forecast !== null && !isNaN(data.sarimax_forecast) ? true : false
     };
 
     let validationTrace = null;
@@ -236,7 +242,7 @@
     //Chart layout
     const layout = {
       title: { text: data.title || selected },
-      xaxis: { title: "Term" },
+      xaxis: { title: "Term", automargin: true, tickfont: { size: 12 } },
       yaxis: { 
         title: "Enrollment Count",
         range: [0, null]
@@ -250,17 +256,23 @@
         y: 1,
         bgcolor: "rgba(255,255,255,0)",
         bordercolor: "rgba(0,0,0,0)",
-        title: { text: "   ℹ️ Click legend items to hide or show models<br>", font: { size: 12, color: "#777"}}
+        title: { text: "   ℹ️ Click legend items to hide or show data<br>", font: { size: 12, color: "#777"}}
       }
     };
 
-    const traces = [tracePast, traceArima, traceSarima, traceArimax, traceSarimax];
+    //Checks if the course is yearly to avoid plotting SARIMA/SARIMAX for those courses
+    const traces = [tracePast, traceArima, traceArimax];
+    if (!data.yearly_course) {
+      traces.push(traceSarima, traceSarimax);
+    }
+
     if (validationTrace) traces.push(validationTrace);
+    var config = {responsive: true};
 
     Plotly.newPlot(chartDiv, traces, layout, {
       displayModeBar: true,
       responsive: true
-    });
+    }, config);
   });
 
   dropdown.value = "CSCE A101";
