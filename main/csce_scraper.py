@@ -4,35 +4,13 @@ from collections import defaultdict
 import re
 from datetime import datetime
 
-'''
-#Catalog CSCE page
-URL = "https://catalog.uaa.alaska.edu/undergraduateprograms/coeng/bs-computerscience/"
-
-#CSCE catalog scraper function
-def csce_courses(url=URL):
-    response = requests.get(url, timeout=20)    #downloads the html (will wait 20 seconds before timeout)
-    response.raise_for_status()    #throws error if the download failed
-    soup = BeautifulSoup(response.text, "html.parser")     #converts html page into a searchable object
-    codes = set()   #The set will only store unique values without duplicated
-
-    #this loops through all of the <a> tags in <td class="codecol">
-    for a in soup.select("td.codecol a"):   #got the class links in code column
-        text = a.get_text(" ", strip=True).replace("\xa0", " ")    #retrieves the text and replaces weird \xa0 spaces with normal spaces
-        if not text.startswith(("CSCE", "CSCE/")):    #skips anything not starting with CSCE or CSCE/
-            continue
-
-        parts = text.split()    #this splits the text into parts and reconstructs anything like CSCE/EE A241 ---> CSCE A241
-        if "/" in parts[0] and len(parts) > 1:
-            text = "CSCE " + " ".join(parts[1:])
-        codes.add(text)    #adds and saves the new text to the course codes
-
-    return sorted(codes)    #sorted order of the list
-'''
 
 def build_term_codes_past_years(years=5, include_current=True):
     now = datetime.now()    #get the current semester
     y_now = now.year
-    m = now.month #determine wheter its spring/summer/fall
+    m = now.month #determine whether its spring/summer/fall
+    
+    # Determine current semester codes
     if m <= 4:
         sem_now = "01" 
     elif m <= 8:
@@ -47,20 +25,26 @@ def build_term_codes_past_years(years=5, include_current=True):
 
     #Build all terms for the last n years
     for year in range(start_year, y_now + 1):
-        for s in ("01", "02", "03"):
-            code = str(year) + s
+        for sem in ("01", "02", "03"):
+            code = str(year) + sem
             code_int = int(code)
-            if code_int > cutoff:
+            #excludes future zero enrolled terms
+            if code_int > cutoff: 
                 continue
-            label = semester_map[s] + " " + str(year)
+            label = semester_map[sem] + " " + str(year)
             terms.append((code, label))  #oldest -> newest
     return terms
 
 def schedule_scraper(term="202503", subj="CSCE"):
-    url = "https://curric.uaa.alaska.edu/ajax/ajaxScheduleSearch.php"   #API url
+    url = "https://curric.uaa.alaska.edu/ajax/ajaxScheduleSearch.php"   #API url might change in the near future a point of failure
     params = {"term": term, "subj": subj}
-    response = requests.get(url, params=params, timeout=20)     #requesting the specific parameters from the API, timeout if it takes more than 20s
-    response.raise_for_status() #throws error if the download failed
+    
+    try:
+        response = requests.get(url, params=params, timeout=20) #time out after 20s 
+        response.raise_for_status()  
+    except requests.RequestException as e:
+        # API unavailable, slow, wrong URL, network error, etc.
+        return {"error": f"API request failed: {e}"}
 
     rows = response.json()  #convert json array of objects to python list of dictionaries
     totals = defaultdict(int)   #totals keep track of total students per course, each new key value is set to 0
@@ -78,29 +62,5 @@ def schedule_scraper(term="202503", subj="CSCE"):
     for key, total in sorted(totals.items()):
         code, title = key
         results.append((code, title, total))
-    
-    """for item in sorted(totals.items()):
-        #current item looks like (("CSCE A101", "Intro to CS"), 54)
-        key = item[0]       #first index of item is ("CSCE A101", "Intro to CS")
-        total = item[1]     #second index is the enrollment count (e.g. 54)
-        code = key[0]       #first part in the key is the course name (e.g. "CSCE A101")
-        title = key[1]      #second part in the key is course title (e.g. "Intro to CS")
-
-        course_data = (code, title, total)
-        results.append(course_data)     #add the data to the results list
-    """
     return results
 
-#Example usage
-
-"""
-if __name__ == "__main__":
-    subj = "CSCE"
-    terms = build_term_codes_past_years(years=5, include_current=True)
-
-for code, label in terms:
-    results = schedule_scraper(term=code, subj=subj)
-    print("\n===== " + label + " (" + code + ") (" + subj + ") =====")
-    print("\n".join(map(str, results)))
-    
-"""
