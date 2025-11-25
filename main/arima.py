@@ -43,26 +43,34 @@ def term_name_from_code(term):
     return f"{names.get(sem, 'Unknown')} {year}"
 
 #builds next term based on current term 
-def next_term_code(course_num):
-    terms = build_term_codes_past_years(years=1, include_current=True)
-    current_real_term = int(terms[-1][0])
-    year, sem = divmod(current_real_term, 100)
+def next_term_code(course_num, spring_count, summer_count, fall_count, yearly_course):
+    last_term = int(group['term'].max())
+    year, sem = divmod(last_term, 100)
     
+    if yearly_course:
+        if spring_count > 0 and summer_count == 0 and fall_count == 0: 
+            return (year + 1) * 100 + 1 if sem == 1 else year * 100 + 1
+        if spring_count == 0 and summer_count > 0 and fall_count == 0: 
+            return (year + 1) * 100 + 2 if sem == 2 else year * 100 + 2
+        if spring_count == 0 and summer_count == 0 and fall_count > 0: 
+            return (year + 1) * 100 + 3 if sem == 3 else year * 100 + 3
+
     if course_num > 201:
         if sem == 1:      #Spring → Fall
             return year * 100 + 3
         elif sem == 2:    #Summer → Fall
             return year * 100 + 3
-        elif sem == 3:    #Fall → next Spring
+        else:
             return (year + 1) * 100 + 1
     else:
         if sem == 1:      #Spring → Summer
             return year * 100 + 2
         elif sem == 2:    #Summer → Fall
             return year * 100 + 3
-        elif sem == 3:    #Fall → next Spring
+        else:
             return (year + 1) * 100 + 1
-        
+
+#calculates previous term code        
 def previous_term_code(term_code):
     term_code = int(term_code)
     year, sem = divmod(term_code, 100)
@@ -73,6 +81,7 @@ def previous_term_code(term_code):
     elif sem == 3: #Fall → same year Summer
         return year * 100 + 2
 
+#get previous term code with option to skip summers for upper-level courses
 def get_previous_term(term, steps_back, upper_level=False):
     lag_term = term
     for _ in range(steps_back):
@@ -88,6 +97,7 @@ def get_previous_term(term, steps_back, upper_level=False):
 qs = Course.objects.all().values('code', 'term', 'enrolled', 'title')
 df = pd.DataFrame(qs)
 
+#load prerequisite data into a DataFrame
 prereq_qs = Prerequisite.objects.all().values('course_code', 'prereq_1', 'prereq_2')
 prereq_df = pd.DataFrame(prereq_qs)
 
@@ -119,7 +129,7 @@ for code, group in df.groupby('code'):
     terms = group['term'].astype(int).values
 
     exog_values = []
-    #dd HS grads as exog ONLY for A101
+    #Add HS grads as exog ONLY for A101
     if code == "CSCE A101":
         hs_vals = []
         for term in group['term']:
@@ -191,7 +201,27 @@ for code, group in df.groupby('code'):
             })
             continue
         
-        next_term = next_term_code(course_num)
+        spring_count = 0 
+        summer_count = 0 
+        fall_count = 0 
+        yearly_course = False
+        for term in group['term']: 
+            temp = divmod(term, 100) 
+            temp = temp[1] 
+            if temp == 1: 
+                spring_count += 1 
+            elif temp == 2: 
+                summer_count += 1 
+            elif temp == 3: fall_count += 1 
+        if spring_count > 0 and summer_count == 0 and fall_count == 0: 
+            yearly_course = True
+        elif spring_count == 0 and summer_count > 0 and fall_count == 0: 
+            yearly_course = True
+        elif spring_count == 0 and summer_count == 0 and fall_count > 0: 
+            yearly_course = True
+        else:
+            yearly_course = False
+        next_term = next_term_code(course_num, spring_count, summer_count, fall_count, yearly_course)
 
         #ARIMA forecast
         model = ARIMA(y, order=(1, 1, 1))
@@ -221,27 +251,6 @@ for code, group in df.groupby('code'):
                 print(f"Metrics didn't calculate for {code}: {inner_e}")
 
         #SARIMA forecast
-        spring_count = 0 
-        summer_count = 0 
-        fall_count = 0 
-        yearly_course = False
-        for term in group['term']: 
-            temp = divmod(term, 100) 
-            temp = temp[1] 
-            if temp == 1: 
-                spring_count += 1 
-            elif temp == 2: 
-                summer_count += 1 
-            elif temp == 3: fall_count += 1 
-        if spring_count > 0 and summer_count == 0 and fall_count == 0: 
-            yearly_course = True
-        elif spring_count == 0 and summer_count > 0 and fall_count == 0: 
-            yearly_course = True
-        elif spring_count == 0 and summer_count == 0 and fall_count > 0: 
-            yearly_course = True
-        else:
-            yearly_course = False
-
         model = SARIMAX(y, order=(1, 1, 1), seasonal_order=(1, 1, 1, m))
         fit = model.fit(disp=False)
         sarima_forecast = fit.forecast(steps=1)[0]
@@ -295,9 +304,8 @@ for code, group in df.groupby('code'):
             except Exception as inner_e:
                 print(f"Metrics didn't calculate for {code} (ARIMAX): {inner_e}")
 
-        # === SARIMAX forecast ===
-
-        # Special case: A201 performs badly with seasonal SARIMAX → use NON-seasonal
+        #SARIMAX forecast
+        #Special case: A201 performs badly with seasonal SARIMAX → use NON-seasonal
         if code == "CSCE A201":
             model = SARIMAX(y, exog=exog,
                             order=(1, 1, 1),
@@ -313,14 +321,14 @@ for code, group in df.groupby('code'):
         sarimax_forecast = max(round(sarimax_forecast, 0), 0)
         sarimax_val_terms, sarimax_val_preds = None, None
 
-        # === SARIMAX validation ===
+        #SARIMAX validation
         if len(y) >= 4:
             try:
                 train, test = y[:-2], y[-2:]
                 train_exog, test_exog = exog[:-2], exog[-2:]
                 train_terms, test_terms = terms[:-2], terms[-2:]
 
-                # Special case for A201 again in validation
+                #Special case for A201 again in validation
                 if code == "CSCE A201":
                     model_eval = SARIMAX(train, exog=train_exog,
                                         order=(1, 1, 1),
@@ -356,6 +364,7 @@ for code, group in df.groupby('code'):
         if sarimax_mae is not None:
             sarimax_mae = round(sarimax_mae, 2)
 
+        #json data storage
         results.append({
             "code": code,
             "title": group['title'].iloc[0],
@@ -389,6 +398,7 @@ combined_df = pd.concat([df[['code', 'term', 'term_name', 'enrolled', 'title']],
 output_path = os.path.join("main", "forecast_data.json")
 combined_df.to_json(output_path, orient="records", indent=4)
 
+'''
 print(f"Saved combined data to {output_path}")
 print(f"Generated forecasts for {len(results)} courses.")
 
@@ -402,3 +412,4 @@ for model_name in ["arima", "sarima", "arimax", "sarimax"]:
     else:
         print(f"{model_name.upper():6} → No valid results")
 print("======================================\n")
+'''
