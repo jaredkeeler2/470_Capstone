@@ -135,16 +135,15 @@ for code, group in df.groupby('code'):
         for term in group['term']:
             hs_raw = hs_value_for_term(term)
 
-            #If we have data → scale it (HS grads ~1200, enrollments ~100)
             if not np.isnan(hs_raw):
-                hs_vals.append(hs_raw / 50)   #scale reduces dominance
+                hs_vals.append(hs_raw / 50)
             else:
                 hs_vals.append(0)
 
         exog_values.append(hs_vals)
 
-    #Only prereq_1 → lag 1 (one-term back)
-    for i, prereq_code in enumerate([pr1]):
+    #Prereq_1/2 → lag 1/2 (two-term back)
+    for i, prereq_code in enumerate([pr1, pr2]):
         if prereq_code:
             lagged_values = []
             for term in group['term']:
@@ -177,6 +176,8 @@ for code, group in df.groupby('code'):
     else:
         #For upper-level courses like A470, fill missing prereq enrollments with 0
         exog = np.nan_to_num(exog, nan=0.0)
+    
+    #Skip exogenous variables for courses with no prerequisites (except A101)
 
     arima_mae = None
     sarima_mae = None
@@ -305,7 +306,6 @@ for code, group in df.groupby('code'):
                 print(f"Metrics didn't calculate for {code} (ARIMAX): {inner_e}")
 
         #SARIMAX forecast
-        #Special case: A201 performs badly with seasonal SARIMAX → use NON-seasonal
         if code == "CSCE A201":
             model = SARIMAX(y, exog=exog,
                             order=(1, 1, 1),
