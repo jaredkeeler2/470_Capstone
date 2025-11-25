@@ -26,7 +26,7 @@
         <a href="{% if URL_PREFIX %}/{{ URL_PREFIX }}/{% else %}/{% endif %}"><button>Back to Dashboard</button></a>
     </p>
     <h2>Validation</h2>
-    <p>Each model's accuracy is displayed via the Mean Absolute Error (MAE). To evaluate the models we <br>trained on all but the last two terms, then forecasted the last two terms. We displayed those predictions as <br>the validation points. We then calculated the MAE by averaging the discrepancy between the predictions<br>and the actual enrollments.</p>
+    <p>Each model's accuracy is displayed via the Mean Absolute Error (MAE). To evaluate the models we <br>trained on all but the last two terms, then forecasted the last two terms. We displayed those predictions as <br>the validation points. We then calculated the MAE by averaging the difference between the predictions<br>and the actual enrollments.</p>
     <h2>ARIMA</h2>
     <p>Definition: An ARIMA (AutoRegressive Integrated Moving Average) model is a statistical technique for forecasting time series data, using its historical values to predict future ones.</p>
     <p><a href="https://www.statsmodels.org/stable/generated/statsmodels.tsa.arima.model.ARIMA.html" target="_blank">https://www.statsmodels.org/stable/generated/statsmodels.tsa.arima.model.ARIMA.html</a></p>
