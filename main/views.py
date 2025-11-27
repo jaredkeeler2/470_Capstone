@@ -11,6 +11,8 @@ from .forms import GraduationForm
 from datetime import datetime
 import json
 import os
+import sys
+import subprocess
 import io
 
 #homepage
@@ -60,7 +62,11 @@ def rescrape_data(request):
         all_terms = [term for term, label in build_term_codes_past_years(years=5)]
         Course.save_courses(subj="CSCE")  # your existing scraping function
 
+        script_path = os.path.join(settings.BASE_DIR, "main", "arima.py")
+        subprocess.run([sys.executable, script_path], check=True)
+        
         messages.success(request, f"All courses have been removed and rescraped for terms: {', '.join(all_terms)}")
+        
 
     return redirect('home')
 
