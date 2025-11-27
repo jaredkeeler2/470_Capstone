@@ -4207,12 +4207,12 @@
         "title":"Intro to Computer Science",
         "arima_forecast":55.0,
         "sarima_forecast":42.0,
-        "arimax_forecast":41.0,
-        "sarimax_forecast":42.0,
+        "arimax_forecast":40.0,
+        "sarimax_forecast":41.0,
         "arima_mae":33.54,
         "sarima_mae":19.73,
-        "arimax_mae":45.36,
-        "sarimax_mae":20.66,
+        "arimax_mae":44.03,
+        "sarimax_mae":20.81,
         "arima_val_terms":[
             202502,
             202503
@@ -4234,15 +4234,15 @@
             202503
         ],
         "arimax_val_preds":[
-            82.0,
-            82.0
+            81.0,
+            80.0
         ],
         "sarimax_val_terms":[
             202502,
             202503
         ],
         "sarimax_val_preds":[
-            19.0,
+            18.0,
             95.0
         ],
         "yearly_course":false
