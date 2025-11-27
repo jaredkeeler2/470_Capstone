@@ -9,6 +9,7 @@
   </head>
 
   <body>
+    <div id="header" style="position: top;"></div>
     <!--Title and navigation buttons-->
     <h1>Enrollment Trend Dashboard</h1>
   <p>
@@ -103,6 +104,13 @@
 
   const dropdown = document.getElementById("dropdown");
   const chartDiv = document.getElementById("enrollmentChart");
+  const header = document.createElement("header");
+  img = document.createElement("img");
+  img.src = "https://www.uaa.alaska.edu/_template/assets/img/uaa_logo.svg";
+  header.appendChild(img);
+  document.getElementById("header").appendChild(header);
+
+  
 
   dropdown.addEventListener("change", () => {
     const selected = dropdown.value;
@@ -273,12 +281,12 @@
     }
 
     if (validationTrace) traces.push(validationTrace);
-    var config = {responsive: true};
-
-    Plotly.newPlot(chartDiv, traces, layout, {
+    var config = {
+      responsive: true,
       displayModeBar: true,
-      responsive: true
-    }, config);
+      scrollZoom: true};
+
+    Plotly.newPlot(chartDiv, traces, layout, header, config);
   });
 
   dropdown.value = "CSCE A101";
