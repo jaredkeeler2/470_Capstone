@@ -2,7 +2,7 @@
 body {
     font-family: Arial, sans-serif;
     margin: 40px;
-    background-color: #f9f9f9;
+    background: white;
 }
 
 /* Headings */
@@ -15,16 +15,16 @@ h1 {
 button {
     padding: 8px 16px;
     cursor: pointer;
-    border: none;
+    border: 1px solid lightgrey;
     border-radius: 4px;
-    background-color: #007BFF;
+    background: radial-gradient(ellipse at 95% 95%, white, #002F2A);
     color: white;
     font-size: 16px;
     transition: background-color 0.2s ease;
 }
 
 button:hover {
-    background-color: #0056b3;
+    background: radial-gradient(ellipse at 95% 95%, #FFC425, #002F2A);
 }
 
 /* Dropdown */
