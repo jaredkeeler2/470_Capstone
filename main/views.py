@@ -18,6 +18,7 @@ import io
 #homepage
 def home(request):
     #get all terms for the past 5 years
+    data_changed = False
     all_terms = [term for term, label in build_term_codes_past_years(years=5)]
 
     #determine which terms are already in the database
@@ -32,6 +33,12 @@ def home(request):
         Course.save_courses(subj="CSCE")
     else:
         print("All terms already present. No scraping needed.")
+        
+    if data_changed:
+        script_path = os.path.join(settings.BASE_DIR, "main", "arima.py")
+        subprocess.run([sys.executable, script_path], check=True)
+    else:
+        print("No change in database.")
 
     #get unique course codes for dropdown
     courses = Course.objects.values_list('code', flat=True).distinct().order_by('code')
@@ -95,7 +102,10 @@ def graduate_data(request):
                     year=year,
                     defaults={'graduates': graduates}
                 )
+                script_path = os.path.join(settings.BASE_DIR, "main", "arima.py") #Run Arima.py when ASD data is change. 
+                subprocess.run([sys.executable, script_path], check=True)
                 return redirect('graduates')
+        
     else:
         form = GraduationForm()
 
