@@ -177,6 +177,8 @@ def data(request):
                                     defaults={'title': title, 'enrolled': enrolled}
                                 )
                                 updated_count += 1
+                        script_path = os.path.join(settings.BASE_DIR, "main", "arima.py") #Run Arima.py when data is change before return
+                        subprocess.run([sys.executable, script_path], check=True)
                         message = f"CSV uploaded successfully. {updated_count} values updated, {skipped_count} skipped."
 
                 except Exception as e:
@@ -196,7 +198,8 @@ def data(request):
             course = Course.objects.filter(code=code, term=term).first()
             enrolled_list.append(course.enrolled if course else '-')
         info['enrolled_list'] = enrolled_list
-
+        
+    
     return render(request, 'data.html', {
         'courses_dict': courses_dict,
         'all_terms': all_terms,
