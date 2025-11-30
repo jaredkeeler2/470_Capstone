@@ -24,7 +24,7 @@
         <a href="{% if URL_PREFIX %}/{{ URL_PREFIX }}/{% else %}/{% endif %}"><button>Home</button></a>
     </p>
     <h2>Validation</h2>
-    <p style="max-width: 670px;">Each model's accuracy is displayed via the Mean Absolute Error (<span class="tooltip tooltip-validation"><span class="tooltip-label">MAE</span><span class="tooltiptext">A MAE closer to 0 is ideal. The higher the number, the less accurate the prediction.</span></span>). To evaluate the models we trained on all but the last two terms, then forecasted the last two terms. We displayed those predictions as the validation points. We then calculated the MAE by averaging the difference between the predictions and the actual enrollments.</p>
+    <p style="max-width: 670px;">Each model's accuracy is displayed via the Mean Absolute Error (<span class="tooltip tooltip-validation"><span class="tooltip-label">MAE</span><span class="tooltiptext">A MAE closer to 0 is ideal. The higher the number, the less accurate the prediction.</span></span>). To evaluate the models we trained on all but the last two terms, then forecasted the last two terms. We displayed those predictions as the validation points. We then calculated the MAE by averaging the difference between the predictions and the number of actual enrollments.</p>
     <h2>ARIMA</h2>
     <p style="max-width: 670px;">Definition: An ARIMA (AutoRegressive Integrated Moving Average) model is a statistical technique for forecasting time series data, using its historical values to predict future ones.
     <span class="tooltip tooltip-block">
