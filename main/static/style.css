@@ -46,3 +46,52 @@ select {
 a {
     text-decoration: none;
 }
+
+.tooltip {
+  font-size: 12px;        
+  color: #777;             
+  cursor: pointer;
+  position: relative;
+  display: inline-flex;   
+  align-items: center;
+  gap: 4px;        
+}
+
+.tooltip-validation {
+  font-size: 14px;      
+  display: inline;  
+}
+
+.tooltip-label {
+  text-decoration: none;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 260px;
+  background-color: #333;
+  color: #fff;
+  text-align: left;
+  border-radius: 6px;
+  padding: 10px;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+.tooltip-block {
+  display: block;   
+}
+
+.info-icon {
+  font-size: 12px; 
+  margin-right: 0;  
+}
