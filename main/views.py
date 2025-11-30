@@ -234,4 +234,13 @@ def download_data(request):
     return response
 
 def model_info(request):
-    return render(request, 'model_info.html')
+    forecast_path = os.path.join("main", "forecast_data.json")
+    if os.path.exists(forecast_path):
+        with open(forecast_path, "r") as f:
+            results_json = json.dumps(json.load(f))
+    else:
+        results_json = "[]"
+
+    return render(request, 'model_info.html', {
+        "results_json": results_json
+    })

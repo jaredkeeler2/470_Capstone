@@ -24,7 +24,8 @@
         <a href="{% if URL_PREFIX %}/{{ URL_PREFIX }}/{% else %}/{% endif %}"><button>Home</button></a>
     </p>
     <h2>Validation</h2>
-    <p style="max-width: 670px;">Each model's accuracy is displayed via the Mean Absolute Error (<span class="tooltip tooltip-validation"><span class="tooltip-label">MAE</span><span class="tooltiptext">A MAE closer to 0 is ideal. The higher the number, the less accurate the prediction.</span></span>). To evaluate the models we trained on all but the last two terms, then forecasted the last two terms. We displayed those predictions as the validation points. We then calculated the MAE by averaging the difference between the predictions and the number of actual enrollments.</p>
+    <p style="max-width: 670px;">Each model's accuracy is displayed via the Mean Absolute Error (<span class="tooltip tooltip-validation"><span class="tooltip-label">MAE</span><span class="tooltiptext">A MAE closer to 0 is ideal. The higher the number, the less accurate the prediction.</span></span>). To evaluate the models we trained on all but the last two terms, then forecasted the last two terms. We displayed those predictions as the validation points. We then calculated the MAE by averaging the difference between the predictions and the number of actual enrollments. The overall accuracy is calculated by averaging the accuracy for the best model for each course.</p>
+    <p id="avgAccuracy" style="font-size: 14px;"></p>
     <h2>ARIMA</h2>
     <p style="max-width: 670px;">Definition: An ARIMA (AutoRegressive Integrated Moving Average) model is a statistical technique for forecasting time series data, using its historical values to predict future ones.
     <span class="tooltip tooltip-block">
@@ -91,4 +92,25 @@
     </p>
     <p><a href="https://www.statsmodels.org/stable/generated/statsmodels.tsa.statespace.sarimax.SARIMAX.html" target="_blank">https://www.statsmodels.org/stable/generated/statsmodels.tsa.statespace.sarimax.SARIMAX.html</a></p>
 </body>
+<script>
+    // Django gives you "results" as a Python object.
+    // You need to convert it to JSON for JS:
+    const results = JSON.parse('{{ results_json|safe }}');
+
+    // Grab all non-null best_accuracy values
+    const accuracies = results
+        .map(r => r.best_accuracy)
+        .filter(a => a !== null);
+
+    let avg = "N/A";
+
+    if (accuracies.length > 0) {
+        const total = accuracies.reduce((sum, val) => sum + val, 0);
+        avg = (total / accuracies.length).toFixed(1);  // round to 1 decimal
+    }
+
+    // Display it in the placeholder
+    document.getElementById("avgAccuracy").textContent =
+        `Overall Accuracy: ${avg}%`;
+</script>
 </html>

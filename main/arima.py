@@ -198,7 +198,8 @@ for code, group in df.groupby('code'):
                 "arima_mae": None,
                 "sarima_mae": None,
                 "arimax_mae": None,
-                "sarimax_mae": None
+                "sarimax_mae": None,
+                "best_accuracy": None
             })
             continue
         
@@ -224,6 +225,8 @@ for code, group in df.groupby('code'):
             yearly_course = False
         next_term = next_term_code(course_num, spring_count, summer_count, fall_count, yearly_course)
 
+        models_accuracy = []
+
         #ARIMA forecast
         model = ARIMA(y, order=(1, 1, 1))
         fit = model.fit()
@@ -246,7 +249,9 @@ for code, group in df.groupby('code'):
                 preds = [max(round(p, 0), 0) for p in preds]
                 arima_val_terms = test_terms.tolist()
                 arima_val_preds = preds
-                
+
+                arima_accuracy = 100 - (arima_mae / y[-2:].mean() * 100)
+                models_accuracy.append(arima_accuracy)
                 print(f"{code}: ARIMA MAE={arima_mae:.1f}")
             except Exception as inner_e:
                 print(f"Metrics didn't calculate for {code}: {inner_e}")
@@ -273,6 +278,8 @@ for code, group in df.groupby('code'):
                 preds = [max(round(p, 0), 0) for p in preds]
                 sarima_val_terms = test_terms.tolist()
                 sarima_val_preds = preds
+                sarima_accuracy = 100 - (sarima_mae / y[-2:].mean() * 100)
+                models_accuracy.append(sarima_accuracy)
                 print(f"{code}: SARIMA MAE={sarima_mae:.1f}")
             except Exception as inner_e:
                 print(f"Metrics didn't calculate for {code}: {inner_e}")
@@ -301,6 +308,8 @@ for code, group in df.groupby('code'):
                 preds = [max(round(p, 0), 0) for p in preds]
                 arimax_val_terms = test_terms.tolist()
                 arimax_val_preds = preds
+                arimax_accuracy = 100 - (arimax_mae / y[-2:].mean() * 100)
+                models_accuracy.append(arimax_accuracy)
                 print(f"{code}: ARIMAX MAE={arimax_mae:.1f}")
             except Exception as inner_e:
                 print(f"Metrics didn't calculate for {code} (ARIMAX): {inner_e}")
@@ -348,6 +357,8 @@ for code, group in df.groupby('code'):
                 preds = [max(round(p, 0), 0) for p in preds]
                 sarimax_val_terms = test_terms.tolist()
                 sarimax_val_preds = preds
+                sarimax_accuracy = 100 - (sarimax_mae / y[-2:].mean() * 100)
+                models_accuracy.append(sarimax_accuracy)
 
                 print(f"{code}: SARIMAX MAE={sarimax_mae:.1f}")
 
@@ -364,6 +375,9 @@ for code, group in df.groupby('code'):
         if sarimax_mae is not None:
             sarimax_mae = round(sarimax_mae, 2)
 
+        best_accuracy = max(models_accuracy) if models_accuracy else None
+
+        
         #json data storage
         results.append({
             "code": code,
@@ -386,7 +400,8 @@ for code, group in df.groupby('code'):
             "arimax_val_preds": arimax_val_preds,
             "sarimax_val_terms": sarimax_val_terms,
             "sarimax_val_preds": sarimax_val_preds,
-            "yearly_course": yearly_course
+            "yearly_course": yearly_course,
+            "best_accuracy": best_accuracy
         })
 
     except Exception as e:
