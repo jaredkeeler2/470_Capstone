@@ -24,80 +24,43 @@
         <a href="{% if URL_PREFIX %}/{{ URL_PREFIX }}/{% else %}/{% endif %}"><button>Home</button></a>
     </p>
     <h2>Validation</h2>
-    <p style="max-width: 670px;">Each model's accuracy is displayed via the Mean Absolute Error (<span class="tooltip tooltip-validation"><span class="tooltip-label">MAE</span><span class="tooltiptext">A MAE closer to 0 is ideal. The higher the number, the less accurate the prediction.</span></span>). To evaluate the models we trained on all but the last two terms, then forecasted the last two terms. We displayed those predictions as the validation points. We then calculated the MAE by averaging the difference between the predictions and the number of actual enrollments. The overall accuracy is calculated by averaging the accuracy for the best model for each course.</p>
+    <p style="max-width: 670px;">Each model's accuracy is displayed via the Mean Absolute Error, a MAE closer to 0 is ideal. To evaluate the models we trained on all but the last two terms, then forecasted the last two terms. We displayed those predictions as the validation points. We then calculated the MAE by averaging the difference between the predictions and the number of actual enrollments. The overall accuracy is calculated by averaging the accuracy for the best model for each course.</p>
     <p id="avgAccuracy" style="font-size: 14px;"></p>
     <h2>ARIMA</h2>
-    <p style="max-width: 670px;">Definition: An ARIMA (AutoRegressive Integrated Moving Average) model is a statistical technique for forecasting time series data, using its historical values to predict future ones.
-    <span class="tooltip tooltip-block">
-        <span class="info-icon">ℹ️</span> 
-        <span class="tooltip-label">Hover for model info</span>
-        <span class="tooltiptext">
-            Our model used historical data. We trained on all terms except 
-            the last two and forecasted those two for validation.
-        </span>
-    </span>
-    </p>
+    <p style="max-width: 670px;">Definition: An ARIMA (AutoRegressive Integrated Moving Average) model is a statistical technique for forecasting time series data, using its historical values to predict future ones.</p>
 
     <p><a href="https://www.statsmodels.org/stable/generated/statsmodels.tsa.arima.model.ARIMA.html" target="_blank">https://www.statsmodels.org/stable/generated/statsmodels.tsa.arima.model.ARIMA.html</a></p>
     <p><a href="https://youtu.be/-_2wOrEuFaM?si=ZH3SkE3EBabSA4eW" target="_blank">https://youtu.be/-_2wOrEuFaM?si=ZH3SkE3EBabSA4eW</a></p>
 
+    <p style="max-width: 670px;">For our model we implemented we used historical data. We trained on all terms except the last two and forecasted those two for validation.</p>
+
     <h2>ARIMAX</h2>
-    <p style="max-width: 670px;">Definition: An ARIMAX model is an Autoregressive Integrated Moving Average with Explanatory Variables, a statistical model used for time series forecasting. 
-    <span class="tooltip tooltip-block">
-        <span class="info-icon">ℹ️</span> 
-        <span class="tooltip-label">Hover for model info</span>
-        <span class="tooltiptext">
-            Our model used historical data along with highschool
-            data and course prerequisites as exogenous variables.
-            Highschool data was only included for courses below
-            and including 201. For courses above 201, we only used
-            prerequisites. We trained on all terms except the last 
-            two and forecasted those two for validation.
-        </span>
-    </span>
-    </p>
+    <p style="max-width: 670px;">Definition: An ARIMAX model is an Autoregressive Integrated Moving Average with Explanatory Variables, a statistical model used for time series forecasting.</p>
     
     <p><a href="https://www.statsmodels.org/stable/generated/statsmodels.tsa.statespace.sarimax.SARIMAX.html" target="_blank">https://www.statsmodels.org/stable/generated/statsmodels.tsa.statespace.sarimax.SARIMAX.html</a>
+    <p style="max-width: 670px;">For our model we implemented we used historical data along with high school data and course prerequisites as exogenous variables. High school data was only included for courses below and including 201. For courses above 201, we only used prerequisites. We trained on all terms except the last two and forecasted those two for validation.</p>
 
     <h2>SARIMA</h2>
-    <p style="max-width: 670px;">Definition: A SARIMA model is a time series forecasting model that accounts for both non-seasonal and seasonal patterns by combining autoregressive (AR), integrated (I), and moving average (MA) components.
-    <span class="tooltip tooltip-block">
-        <span class="info-icon">ℹ️</span> 
-        <span class="tooltip-label">Hover for model info</span>
-        <span class="tooltiptext">
-            Our model used a seasonal period of m=3 for courses below
-            and including 201 and m=2 for courses above 201. We 
-            trained on all terms except the last two and forecasted 
-            those two for validation.
-        </span>
-    </span>
-    </p>
+    <p style="max-width: 670px;">Definition: A SARIMA model is a time series forecasting model that accounts for both non-seasonal and seasonal patterns by combining autoregressive (AR), integrated (I), and moving average (MA) components.</p>
+    
     <p><a href="https://www.statsmodels.org/stable/generated/statsmodels.tsa.statespace.sarimax.SARIMAX.html" target="_blank">https://www.statsmodels.org/stable/generated/statsmodels.tsa.statespace.sarimax.SARIMAX.html</a></p>
     <p><a href="https://www.youtube.com/watch?v=_Tc2IDEzbDE" target="_blank">https://www.youtube.com/watch?v=_Tc2IDEzbDE</a></p>
 
+    <p style="max-width: 670px;">For our model we implemented we used a seasonal period of m=3 for courses below and including 201 and m=2 for courses above 201. We trained on all terms except the last two and forecasted those two for validation.</p>
+
     <h2>SARIMAX</h2>
-    <p style="max-width: 670px;">Definition: A SARIMAX model is a time series forecasting model that combines the Seasonal Autoregressive Integrated Moving Average (SARIMA) model with Exogenous variables.
-    <span class="tooltip">
-        <span class="info-icon">ℹ️</span> 
-        <span class="tooltip-label">Hover for model info</span>
-        <span class="tooltiptext">
-            Our model used a seasonal period of m=3 for courses 
-            below and including 201 and m=2 for courses above 201. 
-            Highschool data was only included for courses below
-            and including 201. For courses above 201, we only used 
-            prerequisites. We trained on all terms except the last 
-            two and forecasted those two for validation.
-        </span>
-    </span>
-    </p>
+    <p style="max-width: 670px;">Definition: A SARIMAX model is a time series forecasting model that combines the Seasonal Autoregressive Integrated Moving Average (SARIMA) model with Exogenous variables.</p>
+
     <p><a href="https://www.statsmodels.org/stable/generated/statsmodels.tsa.statespace.sarimax.SARIMAX.html" target="_blank">https://www.statsmodels.org/stable/generated/statsmodels.tsa.statespace.sarimax.SARIMAX.html</a></p>
+
+    <p style="max-width: 670px;">For our model we implemented we used a seasonal period of m=3 for courses below and including 201 and m=2 for courses above 201. High school data was only included for courses below and including 201. For courses above 201, we only used prerequisites. We trained on all terms except the last two and forecasted those two for validation.</p>
 </body>
 <script>
-    // Django gives you "results" as a Python object.
-    // You need to convert it to JSON for JS:
+    //Django gives you "results" as a Python object.
+    //You need to convert it to JSON for JS:
     const results = JSON.parse('{{ results_json|safe }}');
 
-    // Grab all non-null best_accuracy values
+    //Grab all non-null best_accuracy values
     const accuracies = results
         .map(r => r.best_accuracy)
         .filter(a => a !== null);
@@ -109,7 +72,7 @@
         avg = (total / accuracies.length).toFixed(1);  // round to 1 decimal
     }
 
-    // Display it in the placeholder
+    //Display it in the placeholder
     document.getElementById("avgAccuracy").textContent =
         `Overall Accuracy: ${avg}%`;
 </script>

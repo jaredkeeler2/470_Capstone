@@ -17,14 +17,14 @@ button {
     cursor: pointer;
     border: 1px solid lightgrey;
     border-radius: 4px;
-    background: radial-gradient(ellipse at 95% 95%, white, #002F2A);
+    background: #00483D;
     color: white;
     font-size: 16px;
     transition: background-color 0.2s ease;
 }
 
 button:hover {
-    background: radial-gradient(ellipse at 95% 95%, #FFC425, #002F2A);
+    background: #FFC425;
 }
 
 /* Dropdown */
