@@ -15,45 +15,33 @@ import sys
 import subprocess
 import io
 
-#homepage
 def home(request):
-    #get all terms for the past 5 years
-    data_changed = False
+    # Build all expected terms
     all_terms = [term for term, label in build_term_codes_past_years(years=5)]
 
-    #determine which terms are already in the database
+    # Look at which terms we actually have in the DB
     existing_terms = set(Course.objects.values_list('term', flat=True))
 
-    #find missing terms
-    missing_terms = [term for term in all_terms if term not in existing_terms]
+    # Identify missing terms by TERM CODE only
+    missing_terms = [t for t in all_terms if t not in existing_terms]
 
-    #only scrape missing terms
     if missing_terms:
         print(f"Scraping missing terms: {missing_terms}")
+        # Call your scraper once – it will scrape ALL missing internally
         Course.save_courses(subj="CSCE")
     else:
-        print("All terms already present. No scraping needed.")
-        
-    if data_changed:
-        script_path = os.path.join(settings.BASE_DIR, "main", "arima.py")
-        subprocess.run([sys.executable, script_path], check=True)
-    else:
-        print("No change in database.")
+        print("No missing terms. All caught up.")
 
-    #get unique course codes for dropdown
+    # Load course list and data for the page
     courses = Course.objects.values_list('code', flat=True).distinct().order_by('code')
 
-    #load ARIMA forecast data for Plotly
     forecast_path = os.path.join("main", "forecast_data.json")
     if os.path.exists(forecast_path):
         with open(forecast_path, "r") as f:
-            raw_data = json.load(f)
-            course_data = json.dumps(raw_data)  #convert to JSON string
+            course_data = json.dumps(json.load(f))
     else:
-        print("No forecast_data.json found. Run arima.py first.")
         course_data = "[]"
 
-    #render home page with dropdown + chart data
     return render(request, 'home.html', {
         'courses': courses,
         'course_data': course_data
