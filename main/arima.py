@@ -128,6 +128,24 @@ for code, group in df.groupby('code'):
     y = group['enrolled'].astype(float).values
     terms = group['term'].astype(int).values
 
+    if len(y) < 4:
+        results.append({
+            "code": code,
+            "title": group['title'].iloc[0],
+            "term": None,
+            "term_name": "Insufficient data",
+            "arima_forecast": None,
+            "sarima_forecast": None,
+            "arimax_forecast": None,
+            "sarimax_forecast": None,
+            "arima_mae": None,
+            "sarima_mae": None,
+            "arimax_mae": None,
+            "sarimax_mae": None,
+            "best_accuracy": None
+        })
+        continue
+
     exog_values = []
     #Add HS grads as exog ONLY for A101
     if code == "CSCE A101":
@@ -377,7 +395,20 @@ for code, group in df.groupby('code'):
 
         best_accuracy = max(models_accuracy) if models_accuracy else None
 
-        
+        group['year'] = group['term'] // 100
+        year_counts = group['year'].value_counts()
+
+        valid_years = []
+        for year, count in year_counts.items():
+            if count >= 2:
+                valid_years.append(year)
+                
+        yearly_totals = (
+            group[group['year'].isin(valid_years)]
+            .groupby('year')['enrolled']
+            .sum()
+            .to_dict()
+        )      
         #json data storage
         results.append({
             "code": code,
@@ -401,7 +432,8 @@ for code, group in df.groupby('code'):
             "sarimax_val_terms": sarimax_val_terms,
             "sarimax_val_preds": sarimax_val_preds,
             "yearly_course": yearly_course,
-            "best_accuracy": best_accuracy
+            "best_accuracy": best_accuracy,
+            "yearly_totals": yearly_totals
         })
 
     except Exception as e:
