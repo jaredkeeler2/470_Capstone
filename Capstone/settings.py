@@ -123,11 +123,12 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-#Password required for uploading CSV files
-UPLOAD_PASSWORD = "Coursetrend456@"
+#Password required for webpages
+UPLOAD_PASSWORD_HASH = 'pbkdf2_sha256$1000000$nCaBc6mlTtFmFGpyrPTYLe$Q6mr1SOrx6mFCI3D/Mj14GB8X5qDMB1V+HsL3dDHdTs='
 
-#Password required for uploading graduate number
-GRADUATE_PASSWORD = "GraduateNumber456@"
+
+
+
 
 # Prefix URLs only when running on the UAA server
 USE_PREFIX = not DEBUG

@@ -16,6 +16,7 @@
         .section { margin-bottom: 20px; }
     </style>
 </head>
+
 <body>
     <h1>Course Data</h1>
 
@@ -42,10 +43,11 @@
 
     <hr>
 
-    <!-- Full Remove & Rescrape Button -->
+    <!-- Rescrape Button WITH Password Protection -->
     <div class="section">
         <form method="POST" action="{% url 'rescrape_data' %}" style="display:inline;">
             {% csrf_token %}
+            <input type="password" name="rescrape_password" placeholder="Password" required>
             <button type="submit" onclick="return confirmRescrape();">
                 Rescrape All Courses
             </button>
@@ -54,6 +56,7 @@
 
     <!-- Courses Pivot Table -->
     <h3>All Courses</h3>
+
     <table>
         <tr>
             <th>Code</th>
@@ -67,6 +70,7 @@
             <tr>
                 <td>{{ code }}</td>
                 <td>{{ course.title }}</td>
+
                 {% for enrolled in course.enrolled_list %}
                     <td>{{ enrolled }}</td>
                 {% endfor %}

@@ -21,7 +21,9 @@
         "arimax_val_preds":null,
         "sarimax_val_terms":null,
         "sarimax_val_preds":null,
-        "yearly_course":null
+        "yearly_course":null,
+        "best_accuracy":null,
+        "yearly_totals":null
     },
     {
         "code":"CSCE A101",
@@ -45,7 +47,9 @@
         "arimax_val_preds":null,
         "sarimax_val_terms":null,
         "sarimax_val_preds":null,
-        "yearly_course":null
+        "yearly_course":null,
+        "best_accuracy":null,
+        "yearly_totals":null
     },
     {
         "code":"CSCE A101",
@@ -69,7 +73,9 @@
         "arimax_val_preds":null,
         "sarimax_val_terms":null,
         "sarimax_val_preds":null,
-        "yearly_course":null
+        "yearly_course":null,
+        "best_accuracy":null,
+        "yearly_totals":null
     },
     {
         "code":"CSCE A101",
@@ -93,7 +99,9 @@
         "arimax_val_preds":null,
         "sarimax_val_terms":null,
         "sarimax_val_preds":null,
-        "yearly_course":null
+        "yearly_course":null,
+        "best_accuracy":null,
+        "yearly_totals":null
     },
     {
         "code":"CSCE A101",
@@ -117,7 +125,9 @@
         "arimax_val_preds":null,
         "sarimax_val_terms":null,
         "sarimax_val_preds":null,
-        "yearly_course":null
+        "yearly_course":null,
+        "best_accuracy":null,
+        "yearly_totals":null
     },
     {
         "code":"CSCE A101",
@@ -141,7 +151,9 @@
         "arimax_val_preds":null,
         "sarimax_val_terms":null,
         "sarimax_val_preds":null,
-        "yearly_course":null
+        "yearly_course":null,
+        "best_accuracy":null,
+        "yearly_totals":null
     },
     {
         "code":"CSCE A101",
@@ -165,7 +177,9 @@
         "arimax_val_preds":null,
         "sarimax_val_terms":null,
         "sarimax_val_preds":null,
-        "yearly_course":null
+        "yearly_course":null,
+        "best_accuracy":null,
+        "yearly_totals":null
     },
     {
         "code":"CSCE A101",
@@ -189,7 +203,9 @@
         "arimax_val_preds":null,
         "sarimax_val_terms":null,
         "sarimax_val_preds":null,
-        "yearly_course":null
+        "yearly_course":null,
+        "best_accuracy":null,
+        "yearly_totals":null
     },
     {
         "code":"CSCE A101",
@@ -213,7 +229,9 @@
         "arimax_val_preds":null,
         "sarimax_val_terms":null,
         "sarimax_val_preds":null,
-        "yearly_course":null
+        "yearly_course":null,
+        "best_accuracy":null,
+        "yearly_totals":null
     },
     {
         "code":"CSCE A101",
@@ -237,7 +255,9 @@
         "arimax_val_preds":null,
         "sarimax_val_terms":null,
         "sarimax_val_preds":null,
-        "yearly_course":null
+        "yearly_course":null,
+        "best_accuracy":null,
+        "yearly_totals":null
     },
     {
         "code":"CSCE A101",
@@ -261,7 +281,9 @@
         "arimax_val_preds":null,
         "sarimax_val_terms":null,
         "sarimax_val_preds":null,
-        "yearly_course":null
+        "yearly_course":null,
+        "best_accuracy":null,
+        "yearly_totals":null
     },
     {
         "code":"CSCE A101",
@@ -285,7 +307,9 @@
         "arimax_val_preds":null,
         "sarimax_val_terms":null,
         "sarimax_val_preds":null,
-        "yearly_course":null
+        "yearly_course":null,
+        "best_accuracy":null,
+        "yearly_totals":null
     },
     {
         "code":"CSCE A101",
@@ -309,7 +333,9 @@
         "arimax_val_preds":null,
         "sarimax_val_terms":null,
         "sarimax_val_preds":null,
-        "yearly_course":null
+        "yearly_course":null,
+        "best_accuracy":null,
+        "yearly_totals":null
     },
     {
         "code":"CSCE A101",
@@ -333,7 +359,9 @@
         "arimax_val_preds":null,
         "sarimax_val_terms":null,
         "sarimax_val_preds":null,
-        "yearly_course":null
+        "yearly_course":null,
+        "best_accuracy":null,
+        "yearly_totals":null
     },
     {
         "code":"CSCE A115",
@@ -357,7 +385,9 @@
         "arimax_val_preds":null,
         "sarimax_val_terms":null,
         "sarimax_val_preds":null,
-        "yearly_course":null
+        "yearly_course":null,
+        "best_accuracy":null,
+        "yearly_totals":null
     },
     {
         "code":"CSCE A115",
@@ -381,7 +411,9 @@
         "arimax_val_preds":null,
         "sarimax_val_terms":null,
         "sarimax_val_preds":null,
-        "yearly_course":null
+        "yearly_course":null,
+        "best_accuracy":null,
+        "yearly_totals":null
     },
     {
         "code":"CSCE A115",
@@ -405,7 +437,9 @@
         "arimax_val_preds":null,
         "sarimax_val_terms":null,
         "sarimax_val_preds":null,
-        "yearly_course":null
+        "yearly_course":null,
+        "best_accuracy":null,
+        "yearly_totals":null
     },
     {
         "code":"CSCE A201",
@@ -429,7 +463,9 @@
         "arimax_val_preds":null,
         "sarimax_val_terms":null,
         "sarimax_val_preds":null,
-        "yearly_course":null
+        "yearly_course":null,
+        "best_accuracy":null,
+        "yearly_totals":null
     },
     {
         "code":"CSCE A201",
@@ -453,7 +489,9 @@
         "arimax_val_preds":null,
         "sarimax_val_terms":null,
         "sarimax_val_preds":null,
-        "yearly_course":null
+        "yearly_course":null,
+        "best_accuracy":null,
+        "yearly_totals":null
     },
     {
         "code":"CSCE A201",
@@ -477,7 +515,9 @@
         "arimax_val_preds":null,
         "sarimax_val_terms":null,
         "sarimax_val_preds":null,
-        "yearly_course":null
+        "yearly_course":null,
+        "best_accuracy":null,
+        "yearly_totals":null
     },
     {
         "code":"CSCE A201",
@@ -501,7 +541,9 @@
         "arimax_val_preds":null,
         "sarimax_val_terms":null,
         "sarimax_val_preds":null,
-        "yearly_course":null
+        "yearly_course":null,
+        "best_accuracy":null,
+        "yearly_totals":null
     },
     {
         "code":"CSCE A201",
@@ -525,7 +567,9 @@
         "arimax_val_preds":null,
         "sarimax_val_terms":null,
         "sarimax_val_preds":null,
-        "yearly_course":null
+        "yearly_course":null,
+        "best_accuracy":null,
+        "yearly_totals":null
     },
     {
         "code":"CSCE A201",
@@ -549,7 +593,9 @@
         "arimax_val_preds":null,
         "sarimax_val_terms":null,
         "sarimax_val_preds":null,
-        "yearly_course":null
+        "yearly_course":null,
+        "best_accuracy":null,
+        "yearly_totals":null
     },
     {
         "code":"CSCE A201",
@@ -573,7 +619,9 @@
         "arimax_val_preds":null,
         "sarimax_val_terms":null,
         "sarimax_val_preds":null,
-        "yearly_course":null
+        "yearly_course":null,
+        "best_accuracy":null,
+        "yearly_totals":null
     },
     {
         "code":"CSCE A201",
@@ -597,7 +645,9 @@
         "arimax_val_preds":null,
         "sarimax_val_terms":null,
         "sarimax_val_preds":null,
-        "yearly_course":null
+        "yearly_course":null,
+        "best_accuracy":null,
+        "yearly_totals":null
     },
     {
         "code":"CSCE A201",
@@ -621,7 +671,9 @@
         "arimax_val_preds":null,
         "sarimax_val_terms":null,
         "sarimax_val_preds":null,
-        "yearly_course":null
+        "yearly_course":null,
+        "best_accuracy":null,
+        "yearly_totals":null
     },
     {
         "code":"CSCE A201",
@@ -645,7 +697,9 @@
         "arimax_val_preds":null,
         "sarimax_val_terms":null,
         "sarimax_val_preds":null,
-        "yearly_course":null
+        "yearly_course":null,
+        "best_accuracy":null,
+        "yearly_totals":null
     },
     {
         "code":"CSCE A201",
@@ -669,7 +723,9 @@
         "arimax_val_preds":null,
         "sarimax_val_terms":null,
         "sarimax_val_preds":null,
-        "yearly_course":null
+        "yearly_course":null,
+        "best_accuracy":null,
+        "yearly_totals":null
     },
     {
         "code":"CSCE A201",
@@ -693,7 +749,9 @@
         "arimax_val_preds":null,
         "sarimax_val_terms":null,
         "sarimax_val_preds":null,
-        "yearly_course":null
+        "yearly_course":null,
+        "best_accuracy":null,
+        "yearly_totals":null
     },
     {
         "code":"CSCE A201",
@@ -717,7 +775,9 @@
         "arimax_val_preds":null,
         "sarimax_val_terms":null,
         "sarimax_val_preds":null,
-        "yearly_course":null
+        "yearly_course":null,
+        "best_accuracy":null,
+        "yearly_totals":null
     },
     {
         "code":"CSCE A211",
@@ -741,7 +801,9 @@
         "arimax_val_preds":null,
         "sarimax_val_terms":null,
         "sarimax_val_preds":null,
-        "yearly_course":null
+        "yearly_course":null,
+        "best_accuracy":null,
+        "yearly_totals":null
     },
     {
         "code":"CSCE A211",
@@ -765,7 +827,9 @@
         "arimax_val_preds":null,
         "sarimax_val_terms":null,
         "sarimax_val_preds":null,
-        "yearly_course":null
+        "yearly_course":null,
+        "best_accuracy":null,
+        "yearly_totals":null
     },
     {
         "code":"CSCE A211",
@@ -789,7 +853,9 @@
         "arimax_val_preds":null,
         "sarimax_val_terms":null,
         "sarimax_val_preds":null,
-        "yearly_course":null
+        "yearly_course":null,
+        "best_accuracy":null,
+        "yearly_totals":null
     },
     {
         "code":"CSCE A211",
@@ -813,7 +879,9 @@
         "arimax_val_preds":null,
         "sarimax_val_terms":null,
         "sarimax_val_preds":null,
-        "yearly_course":null
+        "yearly_course":null,
+        "best_accuracy":null,
+        "yearly_totals":null
     },
     {
         "code":"CSCE A211",
@@ -837,7 +905,9 @@
         "arimax_val_preds":null,
         "sarimax_val_terms":null,
         "sarimax_val_preds":null,
-        "yearly_course":null
+        "yearly_course":null,
+        "best_accuracy":null,
+        "yearly_totals":null
     },
     {
         "code":"CSCE A211",
@@ -861,7 +931,9 @@
         "arimax_val_preds":null,
         "sarimax_val_terms":null,
         "sarimax_val_preds":null,
-        "yearly_course":null
+        "yearly_course":null,
+        "best_accuracy":null,
+        "yearly_totals":null
     },
     {
         "code":"CSCE A211",
@@ -885,7 +957,9 @@
         "arimax_val_preds":null,
         "sarimax_val_terms":null,
         "sarimax_val_preds":null,
-        "yearly_course":null
+        "yearly_course":null,
+        "best_accuracy":null,
+        "yearly_totals":null
     },
     {
         "code":"CSCE A211",
@@ -909,7 +983,9 @@
         "arimax_val_preds":null,
         "sarimax_val_terms":null,
         "sarimax_val_preds":null,
-        "yearly_course":null
+        "yearly_course":null,
+        "best_accuracy":null,
+        "yearly_totals":null
     },
     {
         "code":"CSCE A211",
@@ -933,7 +1009,9 @@
         "arimax_val_preds":null,
         "sarimax_val_terms":null,
         "sarimax_val_preds":null,
-        "yearly_course":null
+        "yearly_course":null,
+        "best_accuracy":null,
+        "yearly_totals":null
     },
     {
         "code":"CSCE A211",
@@ -957,7 +1035,9 @@
         "arimax_val_preds":null,
         "sarimax_val_terms":null,
         "sarimax_val_preds":null,
-        "yearly_course":null
+        "yearly_course":null,
+        "best_accuracy":null,
+        "yearly_totals":null
     },
     {
         "code":"CSCE A241",
@@ -981,7 +1061,9 @@
         "arimax_val_preds":null,
         "sarimax_val_terms":null,
         "sarimax_val_preds":null,
-        "yearly_course":null
+        "yearly_course":null,
+        "best_accuracy":null,
+        "yearly_totals":null
     },
     {
         "code":"CSCE A241",
@@ -1005,7 +1087,9 @@
         "arimax_val_preds":null,
         "sarimax_val_terms":null,
         "sarimax_val_preds":null,
-        "yearly_course":null
+        "yearly_course":null,
+        "best_accuracy":null,
+        "yearly_totals":null
     },
     {
         "code":"CSCE A241",
@@ -1029,7 +1113,9 @@
         "arimax_val_preds":null,
         "sarimax_val_terms":null,
         "sarimax_val_preds":null,
-        "yearly_course":null
+        "yearly_course":null,
+        "best_accuracy":null,
+        "yearly_totals":null
     },
     {
         "code":"CSCE A241",
@@ -1053,7 +1139,9 @@
         "arimax_val_preds":null,
         "sarimax_val_terms":null,
         "sarimax_val_preds":null,
-        "yearly_course":null
+        "yearly_course":null,
+        "best_accuracy":null,
+        "yearly_totals":null
     },
     {
         "code":"CSCE A241",
@@ -1077,7 +1165,9 @@
         "arimax_val_preds":null,
         "sarimax_val_terms":null,
         "sarimax_val_preds":null,
-        "yearly_course":null
+        "yearly_course":null,
+        "best_accuracy":null,
+        "yearly_totals":null
     },
     {
         "code":"CSCE A241",
@@ -1101,7 +1191,9 @@
         "arimax_val_preds":null,
         "sarimax_val_terms":null,
         "sarimax_val_preds":null,
-        "yearly_course":null
+        "yearly_course":null,
+        "best_accuracy":null,
+        "yearly_totals":null
     },
     {
         "code":"CSCE A241",
@@ -1125,7 +1217,9 @@
         "arimax_val_preds":null,
         "sarimax_val_terms":null,
         "sarimax_val_preds":null,
-        "yearly_course":null
+        "yearly_course":null,
+        "best_accuracy":null,
+        "yearly_totals":null
     },
     {
         "code":"CSCE A241",
@@ -1149,7 +1243,9 @@
         "arimax_val_preds":null,
         "sarimax_val_terms":null,
         "sarimax_val_preds":null,
-        "yearly_course":null
+        "yearly_course":null,
+        "best_accuracy":null,
+        "yearly_totals":null
     },
     {
         "code":"CSCE A241",
@@ -1173,7 +1269,9 @@
         "arimax_val_preds":null,
         "sarimax_val_terms":null,
         "sarimax_val_preds":null,
-        "yearly_course":null
+        "yearly_course":null,
+        "best_accuracy":null,
+        "yearly_totals":null
     },
     {
         "code":"CSCE A241",
@@ -1197,7 +1295,9 @@
         "arimax_val_preds":null,
         "sarimax_val_terms":null,
         "sarimax_val_preds":null,
-        "yearly_course":null
+        "yearly_course":null,
+        "best_accuracy":null,
+        "yearly_totals":null
     },
     {
         "code":"CSCE A248",
@@ -1221,7 +1321,9 @@
         "arimax_val_preds":null,
         "sarimax_val_terms":null,
         "sarimax_val_preds":null,
-        "yearly_course":null
+        "yearly_course":null,
+        "best_accuracy":null,
+        "yearly_totals":null
     },
     {
         "code":"CSCE A248",
@@ -1245,7 +1347,9 @@
         "arimax_val_preds":null,
         "sarimax_val_terms":null,
         "sarimax_val_preds":null,
-        "yearly_course":null
+        "yearly_course":null,
+        "best_accuracy":null,
+        "yearly_totals":null
     },
     {
         "code":"CSCE A248",
@@ -1269,7 +1373,9 @@
         "arimax_val_preds":null,
         "sarimax_val_terms":null,
         "sarimax_val_preds":null,
-        "yearly_course":null
+        "yearly_course":null,
+        "best_accuracy":null,
+        "yearly_totals":null
     },
     {
         "code":"CSCE A248",
@@ -1293,7 +1399,9 @@
         "arimax_val_preds":null,
         "sarimax_val_terms":null,
         "sarimax_val_preds":null,
-        "yearly_course":null
+        "yearly_course":null,
+        "best_accuracy":null,
+        "yearly_totals":null
     },
     {
         "code":"CSCE A248",
@@ -1317,7 +1425,9 @@
         "arimax_val_preds":null,
         "sarimax_val_terms":null,
         "sarimax_val_preds":null,
-        "yearly_course":null
+        "yearly_course":null,
+        "best_accuracy":null,
+        "yearly_totals":null
     },
     {
         "code":"CSCE A248",
@@ -1341,7 +1451,9 @@
         "arimax_val_preds":null,
         "sarimax_val_terms":null,
         "sarimax_val_preds":null,
-        "yearly_course":null
+        "yearly_course":null,
+        "best_accuracy":null,
+        "yearly_totals":null
     },
     {
         "code":"CSCE A248",
@@ -1365,7 +1477,9 @@
         "arimax_val_preds":null,
         "sarimax_val_terms":null,
         "sarimax_val_preds":null,
-        "yearly_course":null
+        "yearly_course":null,
+        "best_accuracy":null,
+        "yearly_totals":null
     },
     {
         "code":"CSCE A248",
@@ -1389,7 +1503,9 @@
         "arimax_val_preds":null,
         "sarimax_val_terms":null,
         "sarimax_val_preds":null,
-        "yearly_course":null
+        "yearly_course":null,
+        "best_accuracy":null,
+        "yearly_totals":null
     },
     {
         "code":"CSCE A248",
@@ -1413,7 +1529,9 @@
         "arimax_val_preds":null,
         "sarimax_val_terms":null,
         "sarimax_val_preds":null,
-        "yearly_course":null
+        "yearly_course":null,
+        "best_accuracy":null,
+        "yearly_totals":null
     },
     {
         "code":"CSCE A248",
@@ -1437,7 +1555,9 @@
         "arimax_val_preds":null,
         "sarimax_val_terms":null,
         "sarimax_val_preds":null,
-        "yearly_course":null
+        "yearly_course":null,
+        "best_accuracy":null,
+        "yearly_totals":null
     },
     {
         "code":"CSCE A311",
@@ -1461,7 +1581,9 @@
         "arimax_val_preds":null,
         "sarimax_val_terms":null,
         "sarimax_val_preds":null,
-        "yearly_course":null
+        "yearly_course":null,
+        "best_accuracy":null,
+        "yearly_totals":null
     },
     {
         "code":"CSCE A311",
@@ -1485,7 +1607,9 @@
         "arimax_val_preds":null,
         "sarimax_val_terms":null,
         "sarimax_val_preds":null,
-        "yearly_course":null
+        "yearly_course":null,
+        "best_accuracy":null,
+        "yearly_totals":null
     },
     {
         "code":"CSCE A311",
@@ -1509,7 +1633,9 @@
         "arimax_val_preds":null,
         "sarimax_val_terms":null,
         "sarimax_val_preds":null,
-        "yearly_course":null
+        "yearly_course":null,
+        "best_accuracy":null,
+        "yearly_totals":null
     },
     {
         "code":"CSCE A311",
@@ -1533,7 +1659,9 @@
         "arimax_val_preds":null,
         "sarimax_val_terms":null,
         "sarimax_val_preds":null,
-        "yearly_course":null
+        "yearly_course":null,
+        "best_accuracy":null,
+        "yearly_totals":null
     },
     {
         "code":"CSCE A311",
@@ -1557,7 +1685,9 @@
         "arimax_val_preds":null,
         "sarimax_val_terms":null,
         "sarimax_val_preds":null,
-        "yearly_course":null
+        "yearly_course":null,
+        "best_accuracy":null,
+        "yearly_totals":null
     },
     {
         "code":"CSCE A311",
@@ -1581,7 +1711,9 @@
         "arimax_val_preds":null,
         "sarimax_val_terms":null,
         "sarimax_val_preds":null,
-        "yearly_course":null
+        "yearly_course":null,
+        "best_accuracy":null,
+        "yearly_totals":null
     },
     {
         "code":"CSCE A311",
@@ -1605,7 +1737,9 @@
         "arimax_val_preds":null,
         "sarimax_val_terms":null,
         "sarimax_val_preds":null,
-        "yearly_course":null
+        "yearly_course":null,
+        "best_accuracy":null,
+        "yearly_totals":null
     },
     {
         "code":"CSCE A311",
@@ -1629,7 +1763,9 @@
         "arimax_val_preds":null,
         "sarimax_val_terms":null,
         "sarimax_val_preds":null,
-        "yearly_course":null
+        "yearly_course":null,
+        "best_accuracy":null,
+        "yearly_totals":null
     },
     {
         "code":"CSCE A311",
@@ -1653,7 +1789,9 @@
         "arimax_val_preds":null,
         "sarimax_val_terms":null,
         "sarimax_val_preds":null,
-        "yearly_course":null
+        "yearly_course":null,
+        "best_accuracy":null,
+        "yearly_totals":null
     },
     {
         "code":"CSCE A311",
@@ -1677,7 +1815,9 @@
         "arimax_val_preds":null,
         "sarimax_val_terms":null,
         "sarimax_val_preds":null,
-        "yearly_course":null
+        "yearly_course":null,
+        "best_accuracy":null,
+        "yearly_totals":null
     },
     {
         "code":"CSCE A321",
@@ -1701,7 +1841,9 @@
         "arimax_val_preds":null,
         "sarimax_val_terms":null,
         "sarimax_val_preds":null,
-        "yearly_course":null
+        "yearly_course":null,
+        "best_accuracy":null,
+        "yearly_totals":null
     },
     {
         "code":"CSCE A321",
@@ -1725,7 +1867,9 @@
         "arimax_val_preds":null,
         "sarimax_val_terms":null,
         "sarimax_val_preds":null,
-        "yearly_course":null
+        "yearly_course":null,
+        "best_accuracy":null,
+        "yearly_totals":null
     },
     {
         "code":"CSCE A321",
@@ -1749,7 +1893,9 @@
         "arimax_val_preds":null,
         "sarimax_val_terms":null,
         "sarimax_val_preds":null,
-        "yearly_course":null
+        "yearly_course":null,
+        "best_accuracy":null,
+        "yearly_totals":null
     },
     {
         "code":"CSCE A321",
@@ -1773,7 +1919,9 @@
         "arimax_val_preds":null,
         "sarimax_val_terms":null,
         "sarimax_val_preds":null,
-        "yearly_course":null
+        "yearly_course":null,
+        "best_accuracy":null,
+        "yearly_totals":null
     },
     {
         "code":"CSCE A321",
@@ -1797,7 +1945,9 @@
         "arimax_val_preds":null,
         "sarimax_val_terms":null,
         "sarimax_val_preds":null,
-        "yearly_course":null
+        "yearly_course":null,
+        "best_accuracy":null,
+        "yearly_totals":null
     },
     {
         "code":"CSCE A331",
@@ -1821,7 +1971,9 @@
         "arimax_val_preds":null,
         "sarimax_val_terms":null,
         "sarimax_val_preds":null,
-        "yearly_course":null
+        "yearly_course":null,
+        "best_accuracy":null,
+        "yearly_totals":null
     },
     {
         "code":"CSCE A331",
@@ -1845,7 +1997,9 @@
         "arimax_val_preds":null,
         "sarimax_val_terms":null,
         "sarimax_val_preds":null,
-        "yearly_course":null
+        "yearly_course":null,
+        "best_accuracy":null,
+        "yearly_totals":null
     },
     {
         "code":"CSCE A331",
@@ -1869,7 +2023,9 @@
         "arimax_val_preds":null,
         "sarimax_val_terms":null,
         "sarimax_val_preds":null,
-        "yearly_course":null
+        "yearly_course":null,
+        "best_accuracy":null,
+        "yearly_totals":null
     },
     {
         "code":"CSCE A331",
@@ -1893,7 +2049,9 @@
         "arimax_val_preds":null,
         "sarimax_val_terms":null,
         "sarimax_val_preds":null,
-        "yearly_course":null
+        "yearly_course":null,
+        "best_accuracy":null,
+        "yearly_totals":null
     },
     {
         "code":"CSCE A331",
@@ -1917,7 +2075,9 @@
         "arimax_val_preds":null,
         "sarimax_val_terms":null,
         "sarimax_val_preds":null,
-        "yearly_course":null
+        "yearly_course":null,
+        "best_accuracy":null,
+        "yearly_totals":null
     },
     {
         "code":"CSCE A342",
@@ -1941,7 +2101,9 @@
         "arimax_val_preds":null,
         "sarimax_val_terms":null,
         "sarimax_val_preds":null,
-        "yearly_course":null
+        "yearly_course":null,
+        "best_accuracy":null,
+        "yearly_totals":null
     },
     {
         "code":"CSCE A342",
@@ -1965,7 +2127,9 @@
         "arimax_val_preds":null,
         "sarimax_val_terms":null,
         "sarimax_val_preds":null,
-        "yearly_course":null
+        "yearly_course":null,
+        "best_accuracy":null,
+        "yearly_totals":null
     },
     {
         "code":"CSCE A342",
@@ -1989,7 +2153,9 @@
         "arimax_val_preds":null,
         "sarimax_val_terms":null,
         "sarimax_val_preds":null,
-        "yearly_course":null
+        "yearly_course":null,
+        "best_accuracy":null,
+        "yearly_totals":null
     },
     {
         "code":"CSCE A342",
@@ -2013,7 +2179,9 @@
         "arimax_val_preds":null,
         "sarimax_val_terms":null,
         "sarimax_val_preds":null,
-        "yearly_course":null
+        "yearly_course":null,
+        "best_accuracy":null,
+        "yearly_totals":null
     },
     {
         "code":"CSCE A342",
@@ -2037,7 +2205,9 @@
         "arimax_val_preds":null,
         "sarimax_val_terms":null,
         "sarimax_val_preds":null,
-        "yearly_course":null
+        "yearly_course":null,
+        "best_accuracy":null,
+        "yearly_totals":null
     },
     {
         "code":"CSCE A351",
@@ -2061,7 +2231,9 @@
         "arimax_val_preds":null,
         "sarimax_val_terms":null,
         "sarimax_val_preds":null,
-        "yearly_course":null
+        "yearly_course":null,
+        "best_accuracy":null,
+        "yearly_totals":null
     },
     {
         "code":"CSCE A351",
@@ -2085,7 +2257,9 @@
         "arimax_val_preds":null,
         "sarimax_val_terms":null,
         "sarimax_val_preds":null,
-        "yearly_course":null
+        "yearly_course":null,
+        "best_accuracy":null,
+        "yearly_totals":null
     },
     {
         "code":"CSCE A351",
@@ -2109,7 +2283,9 @@
         "arimax_val_preds":null,
         "sarimax_val_terms":null,
         "sarimax_val_preds":null,
-        "yearly_course":null
+        "yearly_course":null,
+        "best_accuracy":null,
+        "yearly_totals":null
     },
     {
         "code":"CSCE A351",
@@ -2133,7 +2309,9 @@
         "arimax_val_preds":null,
         "sarimax_val_terms":null,
         "sarimax_val_preds":null,
-        "yearly_course":null
+        "yearly_course":null,
+        "best_accuracy":null,
+        "yearly_totals":null
     },
     {
         "code":"CSCE A351",
@@ -2157,7 +2335,9 @@
         "arimax_val_preds":null,
         "sarimax_val_terms":null,
         "sarimax_val_preds":null,
-        "yearly_course":null
+        "yearly_course":null,
+        "best_accuracy":null,
+        "yearly_totals":null
     },
     {
         "code":"CSCE A360",
@@ -2181,7 +2361,9 @@
         "arimax_val_preds":null,
         "sarimax_val_terms":null,
         "sarimax_val_preds":null,
-        "yearly_course":null
+        "yearly_course":null,
+        "best_accuracy":null,
+        "yearly_totals":null
     },
     {
         "code":"CSCE A360",
@@ -2205,7 +2387,9 @@
         "arimax_val_preds":null,
         "sarimax_val_terms":null,
         "sarimax_val_preds":null,
-        "yearly_course":null
+        "yearly_course":null,
+        "best_accuracy":null,
+        "yearly_totals":null
     },
     {
         "code":"CSCE A360",
@@ -2229,7 +2413,9 @@
         "arimax_val_preds":null,
         "sarimax_val_terms":null,
         "sarimax_val_preds":null,
-        "yearly_course":null
+        "yearly_course":null,
+        "best_accuracy":null,
+        "yearly_totals":null
     },
     {
         "code":"CSCE A360",
@@ -2253,7 +2439,9 @@
         "arimax_val_preds":null,
         "sarimax_val_terms":null,
         "sarimax_val_preds":null,
-        "yearly_course":null
+        "yearly_course":null,
+        "best_accuracy":null,
+        "yearly_totals":null
     },
     {
         "code":"CSCE A360",
@@ -2277,7 +2465,9 @@
         "arimax_val_preds":null,
         "sarimax_val_terms":null,
         "sarimax_val_preds":null,
-        "yearly_course":null
+        "yearly_course":null,
+        "best_accuracy":null,
+        "yearly_totals":null
     },
     {
         "code":"CSCE A360",
@@ -2301,7 +2491,9 @@
         "arimax_val_preds":null,
         "sarimax_val_terms":null,
         "sarimax_val_preds":null,
-        "yearly_course":null
+        "yearly_course":null,
+        "best_accuracy":null,
+        "yearly_totals":null
     },
     {
         "code":"CSCE A360",
@@ -2325,7 +2517,9 @@
         "arimax_val_preds":null,
         "sarimax_val_terms":null,
         "sarimax_val_preds":null,
-        "yearly_course":null
+        "yearly_course":null,
+        "best_accuracy":null,
+        "yearly_totals":null
     },
     {
         "code":"CSCE A360",
@@ -2349,7 +2543,9 @@
         "arimax_val_preds":null,
         "sarimax_val_terms":null,
         "sarimax_val_preds":null,
-        "yearly_course":null
+        "yearly_course":null,
+        "best_accuracy":null,
+        "yearly_totals":null
     },
     {
         "code":"CSCE A360",
@@ -2373,7 +2569,9 @@
         "arimax_val_preds":null,
         "sarimax_val_terms":null,
         "sarimax_val_preds":null,
-        "yearly_course":null
+        "yearly_course":null,
+        "best_accuracy":null,
+        "yearly_totals":null
     },
     {
         "code":"CSCE A360",
@@ -2397,7 +2595,9 @@
         "arimax_val_preds":null,
         "sarimax_val_terms":null,
         "sarimax_val_preds":null,
-        "yearly_course":null
+        "yearly_course":null,
+        "best_accuracy":null,
+        "yearly_totals":null
     },
     {
         "code":"CSCE A365",
@@ -2421,7 +2621,9 @@
         "arimax_val_preds":null,
         "sarimax_val_terms":null,
         "sarimax_val_preds":null,
-        "yearly_course":null
+        "yearly_course":null,
+        "best_accuracy":null,
+        "yearly_totals":null
     },
     {
         "code":"CSCE A365",
@@ -2445,7 +2647,9 @@
         "arimax_val_preds":null,
         "sarimax_val_terms":null,
         "sarimax_val_preds":null,
-        "yearly_course":null
+        "yearly_course":null,
+        "best_accuracy":null,
+        "yearly_totals":null
     },
     {
         "code":"CSCE A365",
@@ -2469,7 +2673,9 @@
         "arimax_val_preds":null,
         "sarimax_val_terms":null,
         "sarimax_val_preds":null,
-        "yearly_course":null
+        "yearly_course":null,
+        "best_accuracy":null,
+        "yearly_totals":null
     },
     {
         "code":"CSCE A365",
@@ -2493,7 +2699,9 @@
         "arimax_val_preds":null,
         "sarimax_val_terms":null,
         "sarimax_val_preds":null,
-        "yearly_course":null
+        "yearly_course":null,
+        "best_accuracy":null,
+        "yearly_totals":null
     },
     {
         "code":"CSCE A365",
@@ -2517,7 +2725,9 @@
         "arimax_val_preds":null,
         "sarimax_val_terms":null,
         "sarimax_val_preds":null,
-        "yearly_course":null
+        "yearly_course":null,
+        "best_accuracy":null,
+        "yearly_totals":null
     },
     {
         "code":"CSCE A375",
@@ -2541,7 +2751,9 @@
         "arimax_val_preds":null,
         "sarimax_val_terms":null,
         "sarimax_val_preds":null,
-        "yearly_course":null
+        "yearly_course":null,
+        "best_accuracy":null,
+        "yearly_totals":null
     },
     {
         "code":"CSCE A375",
@@ -2565,7 +2777,9 @@
         "arimax_val_preds":null,
         "sarimax_val_terms":null,
         "sarimax_val_preds":null,
-        "yearly_course":null
+        "yearly_course":null,
+        "best_accuracy":null,
+        "yearly_totals":null
     },
     {
         "code":"CSCE A375",
@@ -2589,7 +2803,9 @@
         "arimax_val_preds":null,
         "sarimax_val_terms":null,
         "sarimax_val_preds":null,
-        "yearly_course":null
+        "yearly_course":null,
+        "best_accuracy":null,
+        "yearly_totals":null
     },
     {
         "code":"CSCE A381",
@@ -2613,7 +2829,9 @@
         "arimax_val_preds":null,
         "sarimax_val_terms":null,
         "sarimax_val_preds":null,
-        "yearly_course":null
+        "yearly_course":null,
+        "best_accuracy":null,
+        "yearly_totals":null
     },
     {
         "code":"CSCE A395",
@@ -2637,7 +2855,9 @@
         "arimax_val_preds":null,
         "sarimax_val_terms":null,
         "sarimax_val_preds":null,
-        "yearly_course":null
+        "yearly_course":null,
+        "best_accuracy":null,
+        "yearly_totals":null
     },
     {
         "code":"CSCE A395",
@@ -2661,7 +2881,9 @@
         "arimax_val_preds":null,
         "sarimax_val_terms":null,
         "sarimax_val_preds":null,
-        "yearly_course":null
+        "yearly_course":null,
+        "best_accuracy":null,
+        "yearly_totals":null
     },
     {
         "code":"CSCE A395",
@@ -2685,7 +2907,9 @@
         "arimax_val_preds":null,
         "sarimax_val_terms":null,
         "sarimax_val_preds":null,
-        "yearly_course":null
+        "yearly_course":null,
+        "best_accuracy":null,
+        "yearly_totals":null
     },
     {
         "code":"CSCE A395",
@@ -2709,7 +2933,9 @@
         "arimax_val_preds":null,
         "sarimax_val_terms":null,
         "sarimax_val_preds":null,
-        "yearly_course":null
+        "yearly_course":null,
+        "best_accuracy":null,
+        "yearly_totals":null
     },
     {
         "code":"CSCE A395",
@@ -2733,7 +2959,9 @@
         "arimax_val_preds":null,
         "sarimax_val_terms":null,
         "sarimax_val_preds":null,
-        "yearly_course":null
+        "yearly_course":null,
+        "best_accuracy":null,
+        "yearly_totals":null
     },
     {
         "code":"CSCE A395",
@@ -2757,7 +2985,9 @@
         "arimax_val_preds":null,
         "sarimax_val_terms":null,
         "sarimax_val_preds":null,
-        "yearly_course":null
+        "yearly_course":null,
+        "best_accuracy":null,
+        "yearly_totals":null
     },
     {
         "code":"CSCE A395",
@@ -2781,7 +3011,9 @@
         "arimax_val_preds":null,
         "sarimax_val_terms":null,
         "sarimax_val_preds":null,
-        "yearly_course":null
+        "yearly_course":null,
+        "best_accuracy":null,
+        "yearly_totals":null
     },
     {
         "code":"CSCE A395",
@@ -2805,7 +3037,9 @@
         "arimax_val_preds":null,
         "sarimax_val_terms":null,
         "sarimax_val_preds":null,
-        "yearly_course":null
+        "yearly_course":null,
+        "best_accuracy":null,
+        "yearly_totals":null
     },
     {
         "code":"CSCE A401",
@@ -2829,7 +3063,9 @@
         "arimax_val_preds":null,
         "sarimax_val_terms":null,
         "sarimax_val_preds":null,
-        "yearly_course":null
+        "yearly_course":null,
+        "best_accuracy":null,
+        "yearly_totals":null
     },
     {
         "code":"CSCE A401",
@@ -2853,7 +3089,9 @@
         "arimax_val_preds":null,
         "sarimax_val_terms":null,
         "sarimax_val_preds":null,
-        "yearly_course":null
+        "yearly_course":null,
+        "best_accuracy":null,
+        "yearly_totals":null
     },
     {
         "code":"CSCE A401",
@@ -2877,7 +3115,9 @@
         "arimax_val_preds":null,
         "sarimax_val_terms":null,
         "sarimax_val_preds":null,
-        "yearly_course":null
+        "yearly_course":null,
+        "best_accuracy":null,
+        "yearly_totals":null
     },
     {
         "code":"CSCE A401",
@@ -2901,7 +3141,9 @@
         "arimax_val_preds":null,
         "sarimax_val_terms":null,
         "sarimax_val_preds":null,
-        "yearly_course":null
+        "yearly_course":null,
+        "best_accuracy":null,
+        "yearly_totals":null
     },
     {
         "code":"CSCE A401",
@@ -2925,7 +3167,9 @@
         "arimax_val_preds":null,
         "sarimax_val_terms":null,
         "sarimax_val_preds":null,
-        "yearly_course":null
+        "yearly_course":null,
+        "best_accuracy":null,
+        "yearly_totals":null
     },
     {
         "code":"CSCE A405",
@@ -2949,7 +3193,9 @@
         "arimax_val_preds":null,
         "sarimax_val_terms":null,
         "sarimax_val_preds":null,
-        "yearly_course":null
+        "yearly_course":null,
+        "best_accuracy":null,
+        "yearly_totals":null
     },
     {
         "code":"CSCE A405",
@@ -2973,7 +3219,9 @@
         "arimax_val_preds":null,
         "sarimax_val_terms":null,
         "sarimax_val_preds":null,
-        "yearly_course":null
+        "yearly_course":null,
+        "best_accuracy":null,
+        "yearly_totals":null
     },
     {
         "code":"CSCE A405",
@@ -2997,7 +3245,9 @@
         "arimax_val_preds":null,
         "sarimax_val_terms":null,
         "sarimax_val_preds":null,
-        "yearly_course":null
+        "yearly_course":null,
+        "best_accuracy":null,
+        "yearly_totals":null
     },
     {
         "code":"CSCE A405",
@@ -3021,7 +3271,9 @@
         "arimax_val_preds":null,
         "sarimax_val_terms":null,
         "sarimax_val_preds":null,
-        "yearly_course":null
+        "yearly_course":null,
+        "best_accuracy":null,
+        "yearly_totals":null
     },
     {
         "code":"CSCE A405",
@@ -3045,7 +3297,9 @@
         "arimax_val_preds":null,
         "sarimax_val_terms":null,
         "sarimax_val_preds":null,
-        "yearly_course":null
+        "yearly_course":null,
+        "best_accuracy":null,
+        "yearly_totals":null
     },
     {
         "code":"CSCE A412",
@@ -3069,7 +3323,9 @@
         "arimax_val_preds":null,
         "sarimax_val_terms":null,
         "sarimax_val_preds":null,
-        "yearly_course":null
+        "yearly_course":null,
+        "best_accuracy":null,
+        "yearly_totals":null
     },
     {
         "code":"CSCE A412",
@@ -3093,7 +3349,9 @@
         "arimax_val_preds":null,
         "sarimax_val_terms":null,
         "sarimax_val_preds":null,
-        "yearly_course":null
+        "yearly_course":null,
+        "best_accuracy":null,
+        "yearly_totals":null
     },
     {
         "code":"CSCE A415",
@@ -3117,7 +3375,9 @@
         "arimax_val_preds":null,
         "sarimax_val_terms":null,
         "sarimax_val_preds":null,
-        "yearly_course":null
+        "yearly_course":null,
+        "best_accuracy":null,
+        "yearly_totals":null
     },
     {
         "code":"CSCE A415",
@@ -3141,7 +3401,9 @@
         "arimax_val_preds":null,
         "sarimax_val_terms":null,
         "sarimax_val_preds":null,
-        "yearly_course":null
+        "yearly_course":null,
+        "best_accuracy":null,
+        "yearly_totals":null
     },
     {
         "code":"CSCE A415",
@@ -3165,7 +3427,9 @@
         "arimax_val_preds":null,
         "sarimax_val_terms":null,
         "sarimax_val_preds":null,
-        "yearly_course":null
+        "yearly_course":null,
+        "best_accuracy":null,
+        "yearly_totals":null
     },
     {
         "code":"CSCE A415",
@@ -3189,7 +3453,9 @@
         "arimax_val_preds":null,
         "sarimax_val_terms":null,
         "sarimax_val_preds":null,
-        "yearly_course":null
+        "yearly_course":null,
+        "best_accuracy":null,
+        "yearly_totals":null
     },
     {
         "code":"CSCE A415",
@@ -3213,7 +3479,9 @@
         "arimax_val_preds":null,
         "sarimax_val_terms":null,
         "sarimax_val_preds":null,
-        "yearly_course":null
+        "yearly_course":null,
+        "best_accuracy":null,
+        "yearly_totals":null
     },
     {
         "code":"CSCE A448",
@@ -3237,7 +3505,9 @@
         "arimax_val_preds":null,
         "sarimax_val_terms":null,
         "sarimax_val_preds":null,
-        "yearly_course":null
+        "yearly_course":null,
+        "best_accuracy":null,
+        "yearly_totals":null
     },
     {
         "code":"CSCE A448",
@@ -3261,7 +3531,9 @@
         "arimax_val_preds":null,
         "sarimax_val_terms":null,
         "sarimax_val_preds":null,
-        "yearly_course":null
+        "yearly_course":null,
+        "best_accuracy":null,
+        "yearly_totals":null
     },
     {
         "code":"CSCE A448",
@@ -3285,7 +3557,9 @@
         "arimax_val_preds":null,
         "sarimax_val_terms":null,
         "sarimax_val_preds":null,
-        "yearly_course":null
+        "yearly_course":null,
+        "best_accuracy":null,
+        "yearly_totals":null
     },
     {
         "code":"CSCE A448",
@@ -3309,7 +3583,9 @@
         "arimax_val_preds":null,
         "sarimax_val_terms":null,
         "sarimax_val_preds":null,
-        "yearly_course":null
+        "yearly_course":null,
+        "best_accuracy":null,
+        "yearly_totals":null
     },
     {
         "code":"CSCE A448",
@@ -3333,7 +3609,9 @@
         "arimax_val_preds":null,
         "sarimax_val_terms":null,
         "sarimax_val_preds":null,
-        "yearly_course":null
+        "yearly_course":null,
+        "best_accuracy":null,
+        "yearly_totals":null
     },
     {
         "code":"CSCE A462",
@@ -3357,7 +3635,9 @@
         "arimax_val_preds":null,
         "sarimax_val_terms":null,
         "sarimax_val_preds":null,
-        "yearly_course":null
+        "yearly_course":null,
+        "best_accuracy":null,
+        "yearly_totals":null
     },
     {
         "code":"CSCE A465",
@@ -3381,7 +3661,9 @@
         "arimax_val_preds":null,
         "sarimax_val_terms":null,
         "sarimax_val_preds":null,
-        "yearly_course":null
+        "yearly_course":null,
+        "best_accuracy":null,
+        "yearly_totals":null
     },
     {
         "code":"CSCE A465",
@@ -3405,7 +3687,9 @@
         "arimax_val_preds":null,
         "sarimax_val_terms":null,
         "sarimax_val_preds":null,
-        "yearly_course":null
+        "yearly_course":null,
+        "best_accuracy":null,
+        "yearly_totals":null
     },
     {
         "code":"CSCE A465",
@@ -3429,7 +3713,9 @@
         "arimax_val_preds":null,
         "sarimax_val_terms":null,
         "sarimax_val_preds":null,
-        "yearly_course":null
+        "yearly_course":null,
+        "best_accuracy":null,
+        "yearly_totals":null
     },
     {
         "code":"CSCE A465",
@@ -3453,7 +3739,9 @@
         "arimax_val_preds":null,
         "sarimax_val_terms":null,
         "sarimax_val_preds":null,
-        "yearly_course":null
+        "yearly_course":null,
+        "best_accuracy":null,
+        "yearly_totals":null
     },
     {
         "code":"CSCE A465",
@@ -3477,7 +3765,9 @@
         "arimax_val_preds":null,
         "sarimax_val_terms":null,
         "sarimax_val_preds":null,
-        "yearly_course":null
+        "yearly_course":null,
+        "best_accuracy":null,
+        "yearly_totals":null
     },
     {
         "code":"CSCE A470",
@@ -3501,7 +3791,9 @@
         "arimax_val_preds":null,
         "sarimax_val_terms":null,
         "sarimax_val_preds":null,
-        "yearly_course":null
+        "yearly_course":null,
+        "best_accuracy":null,
+        "yearly_totals":null
     },
     {
         "code":"CSCE A470",
@@ -3525,7 +3817,9 @@
         "arimax_val_preds":null,
         "sarimax_val_terms":null,
         "sarimax_val_preds":null,
-        "yearly_course":null
+        "yearly_course":null,
+        "best_accuracy":null,
+        "yearly_totals":null
     },
     {
         "code":"CSCE A470",
@@ -3549,7 +3843,9 @@
         "arimax_val_preds":null,
         "sarimax_val_terms":null,
         "sarimax_val_preds":null,
-        "yearly_course":null
+        "yearly_course":null,
+        "best_accuracy":null,
+        "yearly_totals":null
     },
     {
         "code":"CSCE A470",
@@ -3573,7 +3869,9 @@
         "arimax_val_preds":null,
         "sarimax_val_terms":null,
         "sarimax_val_preds":null,
-        "yearly_course":null
+        "yearly_course":null,
+        "best_accuracy":null,
+        "yearly_totals":null
     },
     {
         "code":"CSCE A470",
@@ -3597,7 +3895,9 @@
         "arimax_val_preds":null,
         "sarimax_val_terms":null,
         "sarimax_val_preds":null,
-        "yearly_course":null
+        "yearly_course":null,
+        "best_accuracy":null,
+        "yearly_totals":null
     },
     {
         "code":"CSCE A470",
@@ -3621,7 +3921,9 @@
         "arimax_val_preds":null,
         "sarimax_val_terms":null,
         "sarimax_val_preds":null,
-        "yearly_course":null
+        "yearly_course":null,
+        "best_accuracy":null,
+        "yearly_totals":null
     },
     {
         "code":"CSCE A470",
@@ -3645,7 +3947,9 @@
         "arimax_val_preds":null,
         "sarimax_val_terms":null,
         "sarimax_val_preds":null,
-        "yearly_course":null
+        "yearly_course":null,
+        "best_accuracy":null,
+        "yearly_totals":null
     },
     {
         "code":"CSCE A470",
@@ -3669,7 +3973,9 @@
         "arimax_val_preds":null,
         "sarimax_val_terms":null,
         "sarimax_val_preds":null,
-        "yearly_course":null
+        "yearly_course":null,
+        "best_accuracy":null,
+        "yearly_totals":null
     },
     {
         "code":"CSCE A470",
@@ -3693,7 +3999,9 @@
         "arimax_val_preds":null,
         "sarimax_val_terms":null,
         "sarimax_val_preds":null,
-        "yearly_course":null
+        "yearly_course":null,
+        "best_accuracy":null,
+        "yearly_totals":null
     },
     {
         "code":"CSCE A470",
@@ -3717,7 +4025,9 @@
         "arimax_val_preds":null,
         "sarimax_val_terms":null,
         "sarimax_val_preds":null,
-        "yearly_course":null
+        "yearly_course":null,
+        "best_accuracy":null,
+        "yearly_totals":null
     },
     {
         "code":"CSCE A485",
@@ -3741,7 +4051,9 @@
         "arimax_val_preds":null,
         "sarimax_val_terms":null,
         "sarimax_val_preds":null,
-        "yearly_course":null
+        "yearly_course":null,
+        "best_accuracy":null,
+        "yearly_totals":null
     },
     {
         "code":"CSCE A485",
@@ -3765,7 +4077,9 @@
         "arimax_val_preds":null,
         "sarimax_val_terms":null,
         "sarimax_val_preds":null,
-        "yearly_course":null
+        "yearly_course":null,
+        "best_accuracy":null,
+        "yearly_totals":null
     },
     {
         "code":"CSCE A485",
@@ -3789,7 +4103,9 @@
         "arimax_val_preds":null,
         "sarimax_val_terms":null,
         "sarimax_val_preds":null,
-        "yearly_course":null
+        "yearly_course":null,
+        "best_accuracy":null,
+        "yearly_totals":null
     },
     {
         "code":"CSCE A490",
@@ -3813,7 +4129,9 @@
         "arimax_val_preds":null,
         "sarimax_val_terms":null,
         "sarimax_val_preds":null,
-        "yearly_course":null
+        "yearly_course":null,
+        "best_accuracy":null,
+        "yearly_totals":null
     },
     {
         "code":"CSCE A490",
@@ -3837,7 +4155,9 @@
         "arimax_val_preds":null,
         "sarimax_val_terms":null,
         "sarimax_val_preds":null,
-        "yearly_course":null
+        "yearly_course":null,
+        "best_accuracy":null,
+        "yearly_totals":null
     },
     {
         "code":"CSCE A490",
@@ -3861,7 +4181,9 @@
         "arimax_val_preds":null,
         "sarimax_val_terms":null,
         "sarimax_val_preds":null,
-        "yearly_course":null
+        "yearly_course":null,
+        "best_accuracy":null,
+        "yearly_totals":null
     },
     {
         "code":"CSCE A490",
@@ -3885,7 +4207,9 @@
         "arimax_val_preds":null,
         "sarimax_val_terms":null,
         "sarimax_val_preds":null,
-        "yearly_course":null
+        "yearly_course":null,
+        "best_accuracy":null,
+        "yearly_totals":null
     },
     {
         "code":"CSCE A490",
@@ -3909,7 +4233,9 @@
         "arimax_val_preds":null,
         "sarimax_val_terms":null,
         "sarimax_val_preds":null,
-        "yearly_course":null
+        "yearly_course":null,
+        "best_accuracy":null,
+        "yearly_totals":null
     },
     {
         "code":"CSCE A490",
@@ -3933,7 +4259,9 @@
         "arimax_val_preds":null,
         "sarimax_val_terms":null,
         "sarimax_val_preds":null,
-        "yearly_course":null
+        "yearly_course":null,
+        "best_accuracy":null,
+        "yearly_totals":null
     },
     {
         "code":"CSCE A490",
@@ -3957,7 +4285,9 @@
         "arimax_val_preds":null,
         "sarimax_val_terms":null,
         "sarimax_val_preds":null,
-        "yearly_course":null
+        "yearly_course":null,
+        "best_accuracy":null,
+        "yearly_totals":null
     },
     {
         "code":"CSCE A490",
@@ -3981,7 +4311,9 @@
         "arimax_val_preds":null,
         "sarimax_val_terms":null,
         "sarimax_val_preds":null,
-        "yearly_course":null
+        "yearly_course":null,
+        "best_accuracy":null,
+        "yearly_totals":null
     },
     {
         "code":"CSCE A495",
@@ -4005,7 +4337,9 @@
         "arimax_val_preds":null,
         "sarimax_val_terms":null,
         "sarimax_val_preds":null,
-        "yearly_course":null
+        "yearly_course":null,
+        "best_accuracy":null,
+        "yearly_totals":null
     },
     {
         "code":"CSCE A495",
@@ -4029,7 +4363,9 @@
         "arimax_val_preds":null,
         "sarimax_val_terms":null,
         "sarimax_val_preds":null,
-        "yearly_course":null
+        "yearly_course":null,
+        "best_accuracy":null,
+        "yearly_totals":null
     },
     {
         "code":"CSCE A495",
@@ -4053,7 +4389,9 @@
         "arimax_val_preds":null,
         "sarimax_val_terms":null,
         "sarimax_val_preds":null,
-        "yearly_course":null
+        "yearly_course":null,
+        "best_accuracy":null,
+        "yearly_totals":null
     },
     {
         "code":"CSCE A495",
@@ -4077,7 +4415,9 @@
         "arimax_val_preds":null,
         "sarimax_val_terms":null,
         "sarimax_val_preds":null,
-        "yearly_course":null
+        "yearly_course":null,
+        "best_accuracy":null,
+        "yearly_totals":null
     },
     {
         "code":"CSCE A498",
@@ -4101,7 +4441,9 @@
         "arimax_val_preds":null,
         "sarimax_val_terms":null,
         "sarimax_val_preds":null,
-        "yearly_course":null
+        "yearly_course":null,
+        "best_accuracy":null,
+        "yearly_totals":null
     },
     {
         "code":"CSCE A498",
@@ -4125,7 +4467,9 @@
         "arimax_val_preds":null,
         "sarimax_val_terms":null,
         "sarimax_val_preds":null,
-        "yearly_course":null
+        "yearly_course":null,
+        "best_accuracy":null,
+        "yearly_totals":null
     },
     {
         "code":"CSCE A498",
@@ -4149,7 +4493,9 @@
         "arimax_val_preds":null,
         "sarimax_val_terms":null,
         "sarimax_val_preds":null,
-        "yearly_course":null
+        "yearly_course":null,
+        "best_accuracy":null,
+        "yearly_totals":null
     },
     {
         "code":"CSCE A498",
@@ -4173,7 +4519,9 @@
         "arimax_val_preds":null,
         "sarimax_val_terms":null,
         "sarimax_val_preds":null,
-        "yearly_course":null
+        "yearly_course":null,
+        "best_accuracy":null,
+        "yearly_totals":null
     },
     {
         "code":"CSCE A498",
@@ -4197,7 +4545,9 @@
         "arimax_val_preds":null,
         "sarimax_val_terms":null,
         "sarimax_val_preds":null,
-        "yearly_course":null
+        "yearly_course":null,
+        "best_accuracy":null,
+        "yearly_totals":null
     },
     {
         "code":"CSCE A101",
@@ -4245,7 +4595,15 @@
             18.0,
             95.0
         ],
-        "yearly_course":false
+        "yearly_course":false,
+        "best_accuracy":45.9341733818,
+        "yearly_totals":{
+            "2021":202,
+            "2022":216,
+            "2023":204,
+            "2024":172,
+            "2025":139
+        }
     },
     {
         "code":"CSCE A115",
@@ -4269,7 +4627,9 @@
         "arimax_val_preds":null,
         "sarimax_val_terms":null,
         "sarimax_val_preds":null,
-        "yearly_course":null
+        "yearly_course":null,
+        "best_accuracy":null,
+        "yearly_totals":null
     },
     {
         "code":"CSCE A201",
@@ -4317,7 +4677,15 @@
             20.0,
             21.0
         ],
-        "yearly_course":false
+        "yearly_course":false,
+        "best_accuracy":83.1407367127,
+        "yearly_totals":{
+            "2021":111,
+            "2022":112,
+            "2023":79,
+            "2024":110,
+            "2025":84
+        }
     },
     {
         "code":"CSCE A211",
@@ -4365,7 +4733,15 @@
             45.0,
             50.0
         ],
-        "yearly_course":false
+        "yearly_course":false,
+        "best_accuracy":90.6628230406,
+        "yearly_totals":{
+            "2021":55,
+            "2022":66,
+            "2023":66,
+            "2024":75,
+            "2025":59
+        }
     },
     {
         "code":"CSCE A241",
@@ -4413,7 +4789,15 @@
             34.0,
             30.0
         ],
-        "yearly_course":false
+        "yearly_course":false,
+        "best_accuracy":92.5755999589,
+        "yearly_totals":{
+            "2021":64,
+            "2022":62,
+            "2023":53,
+            "2024":60,
+            "2025":64
+        }
     },
     {
         "code":"CSCE A248",
@@ -4461,7 +4845,15 @@
             37.0,
             48.0
         ],
-        "yearly_course":false
+        "yearly_course":false,
+        "best_accuracy":87.1762811969,
+        "yearly_totals":{
+            "2021":48,
+            "2022":60,
+            "2023":78,
+            "2024":66,
+            "2025":70
+        }
     },
     {
         "code":"CSCE A311",
@@ -4509,7 +4901,15 @@
             19.0,
             12.0
         ],
-        "yearly_course":false
+        "yearly_course":false,
+        "best_accuracy":77.9536729551,
+        "yearly_totals":{
+            "2021":47,
+            "2022":60,
+            "2023":62,
+            "2024":50,
+            "2025":57
+        }
     },
     {
         "code":"CSCE A321",
@@ -4557,7 +4957,11 @@
             34.0,
             38.0
         ],
-        "yearly_course":true
+        "yearly_course":true,
+        "best_accuracy":87.8048780488,
+        "yearly_totals":{
+
+        }
     },
     {
         "code":"CSCE A331",
@@ -4605,7 +5009,11 @@
             24.0,
             34.0
         ],
-        "yearly_course":true
+        "yearly_course":true,
+        "best_accuracy":72.9340737347,
+        "yearly_totals":{
+
+        }
     },
     {
         "code":"CSCE A342",
@@ -4653,7 +5061,11 @@
             29.0,
             27.0
         ],
-        "yearly_course":true
+        "yearly_course":true,
+        "best_accuracy":70.0031781859,
+        "yearly_totals":{
+
+        }
     },
     {
         "code":"CSCE A351",
@@ -4701,7 +5113,11 @@
             48.0,
             51.0
         ],
-        "yearly_course":true
+        "yearly_course":true,
+        "best_accuracy":87.1339840284,
+        "yearly_totals":{
+
+        }
     },
     {
         "code":"CSCE A360",
@@ -4749,7 +5165,15 @@
             14.0,
             32.0
         ],
-        "yearly_course":false
+        "yearly_course":false,
+        "best_accuracy":85.3996235035,
+        "yearly_totals":{
+            "2021":35,
+            "2022":43,
+            "2023":49,
+            "2024":45,
+            "2025":61
+        }
     },
     {
         "code":"CSCE A365",
@@ -4797,7 +5221,11 @@
             43.0,
             46.0
         ],
-        "yearly_course":true
+        "yearly_course":true,
+        "best_accuracy":89.0,
+        "yearly_totals":{
+
+        }
     },
     {
         "code":"CSCE A375",
@@ -4821,7 +5249,9 @@
         "arimax_val_preds":null,
         "sarimax_val_terms":null,
         "sarimax_val_preds":null,
-        "yearly_course":null
+        "yearly_course":null,
+        "best_accuracy":null,
+        "yearly_totals":null
     },
     {
         "code":"CSCE A381",
@@ -4845,7 +5275,9 @@
         "arimax_val_preds":null,
         "sarimax_val_terms":null,
         "sarimax_val_preds":null,
-        "yearly_course":null
+        "yearly_course":null,
+        "best_accuracy":null,
+        "yearly_totals":null
     },
     {
         "code":"CSCE A395",
@@ -4893,7 +5325,13 @@
             0,
             1.0
         ],
-        "yearly_course":false
+        "yearly_course":false,
+        "best_accuracy":50.0,
+        "yearly_totals":{
+            "2021":6,
+            "2024":2,
+            "2025":4
+        }
     },
     {
         "code":"CSCE A401",
@@ -4941,7 +5379,11 @@
             21.0,
             26.0
         ],
-        "yearly_course":true
+        "yearly_course":true,
+        "best_accuracy":86.9368515098,
+        "yearly_totals":{
+
+        }
     },
     {
         "code":"CSCE A405",
@@ -4989,7 +5431,11 @@
             34.0,
             37.0
         ],
-        "yearly_course":true
+        "yearly_course":true,
+        "best_accuracy":94.9915431054,
+        "yearly_totals":{
+
+        }
     },
     {
         "code":"CSCE A412",
@@ -5013,7 +5459,9 @@
         "arimax_val_preds":null,
         "sarimax_val_terms":null,
         "sarimax_val_preds":null,
-        "yearly_course":null
+        "yearly_course":null,
+        "best_accuracy":null,
+        "yearly_totals":null
     },
     {
         "code":"CSCE A415",
@@ -5061,7 +5509,11 @@
             20.0,
             18.0
         ],
-        "yearly_course":true
+        "yearly_course":true,
+        "best_accuracy":88.3720930233,
+        "yearly_totals":{
+
+        }
     },
     {
         "code":"CSCE A448",
@@ -5109,7 +5561,11 @@
             18.0,
             26.0
         ],
-        "yearly_course":true
+        "yearly_course":true,
+        "best_accuracy":94.1176470321,
+        "yearly_totals":{
+
+        }
     },
     {
         "code":"CSCE A462",
@@ -5133,7 +5589,9 @@
         "arimax_val_preds":null,
         "sarimax_val_terms":null,
         "sarimax_val_preds":null,
-        "yearly_course":null
+        "yearly_course":null,
+        "best_accuracy":null,
+        "yearly_totals":null
     },
     {
         "code":"CSCE A465",
@@ -5181,7 +5639,11 @@
             34.0,
             41.0
         ],
-        "yearly_course":true
+        "yearly_course":true,
+        "best_accuracy":88.1578947368,
+        "yearly_totals":{
+
+        }
     },
     {
         "code":"CSCE A470",
@@ -5229,7 +5691,15 @@
             18.0,
             15.0
         ],
-        "yearly_course":false
+        "yearly_course":false,
+        "best_accuracy":93.4183186159,
+        "yearly_totals":{
+            "2021":29,
+            "2022":26,
+            "2023":32,
+            "2024":30,
+            "2025":32
+        }
     },
     {
         "code":"CSCE A485",
@@ -5253,7 +5723,9 @@
         "arimax_val_preds":null,
         "sarimax_val_terms":null,
         "sarimax_val_preds":null,
-        "yearly_course":null
+        "yearly_course":null,
+        "best_accuracy":null,
+        "yearly_totals":null
     },
     {
         "code":"CSCE A490",
@@ -5301,7 +5773,13 @@
             41.0,
             34.0
         ],
-        "yearly_course":false
+        "yearly_course":false,
+        "best_accuracy":80.3754166825,
+        "yearly_totals":{
+            "2021":30,
+            "2023":29,
+            "2024":24
+        }
     },
     {
         "code":"CSCE A498",
@@ -5349,6 +5827,10 @@
             2.0,
             3.0
         ],
-        "yearly_course":false
+        "yearly_course":false,
+        "best_accuracy":66.6666666667,
+        "yearly_totals":{
+            "2025":3
+        }
     }
 ]

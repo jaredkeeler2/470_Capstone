@@ -13,12 +13,10 @@
             margin: 0;
         }
 
-        /*For Firefox*/
         input[type=number] {
             -moz-appearance: textfield;
         }
 
-        Optional styling for cleaner table/form appearance */
         body {
             font-family: Arial, sans-serif;
             margin: 20px;
@@ -43,17 +41,53 @@
         h1, h2, h3 {
             color: #333;
         }
+
+        /* Simple popup modal*/
+        #passwordModal {
+            display: none;
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: rgba(0,0,0,0.3);
+        }
+
+        #passwordBox {
+            background: white;
+            padding: 20px;
+            width: 300px;
+            margin: 200px auto;
+            border-radius: 5px;
+            text-align: center;
+        }
     </style>
 
     <script>
-        function promptGraduatePassword(event) {
-            const password = prompt("Enter graduate submission password:");
-            if (password === null) {
-                // User cancelled the prompt
-                event.preventDefault();
-                return false;
+        function showPasswordBox(event) {
+            event.preventDefault(); // stop normal submit
+
+            document.getElementById("passwordModal").style.display = "block";
+        }
+
+        function submitPassword() {
+            const pwd = document.getElementById("passwordInput").value;
+
+            if (!pwd) {
+                alert("Password required");
+                return;
             }
-            document.getElementById('graduate_password').value = password;
+
+            // put password into hidden field (same as your old system)
+            document.getElementById("graduate_password").value = pwd;
+
+            // hide modal
+            document.getElementById("passwordModal").style.display = "none";
+
+            // submit form normally
+            document.getElementById("gradForm").submit();
+        }
+
+        function cancelPassword() {
+            document.getElementById("passwordModal").style.display = "none";
         }
     </script>
 </head>
@@ -69,10 +103,14 @@
 
     <h2>High School Graduation Numbers</h2>
 
-    <form method="POST" onsubmit="promptGraduatePassword(event)">
+    <!-- Keep your exact form -->
+    <form method="POST" id="gradForm" onsubmit="showPasswordBox(event)">
         {% csrf_token %}
         {{ form.as_p }}
+
+        <!-- hidden field used by your views.py -->
         <input type="hidden" name="graduate_password" id="graduate_password">
+
         <button type="submit">Submit</button>
     </form>
 
@@ -83,25 +121,46 @@
     <hr>
 
     <h3>Existing Data</h3>
+
     <table>
         <tr>
             <th>Year</th>
             <th>Graduates</th>
         </tr>
+
         {% for entry in data %}
-            <tr>
-                <td>{{ entry.year }}</td>
-                <td>{{ entry.graduates }}</td>
-            </tr>
+        <tr>
+            <td>{{ entry.year }}</td>
+            <td>{{ entry.graduates }}</td>
+        </tr>
         {% empty %}
-            <tr>
-                <td colspan="2">No data yet.</td>
-            </tr>
+        <tr>
+            <td colspan="2">No data yet.</td>
+        </tr>
         {% endfor %}
     </table>
-    
-    <h4> Anchorage School District Graduation Rates: <a href="https://public.tableau.com/app/profile/asdk12/viz/GraduationRate_16370266007000/ASDGradRateoverview" target="_blank">https://public.tableau.com/app/profile/asdk12/viz/GraduationRate_16370266007000/ASDGradRateoverview</a>
-    <span style="font-size: 12px; color: #777"><br>ℹ️ Click the link above and select the second tab "ASD GradRate by year".
-    Then hover over the bars for the graduation count.</span></h4>
+
+    <h4>
+        Anchorage School District Graduation Rates:
+        <a href="https://public.tableau.com/app/profile/asdk12/viz/GraduationRate_16370266007000/ASDGradRateoverview" target="_blank">
+            https://public.tableau.com/app/profile/asdk12/viz/GraduationRate_16370266007000/ASDGradRateoverview
+        </a>
+
+        <span style="font-size:12px;color:#777;">
+            <br>ℹ️ Click the link above → second tab → hover bars.
+        </span>
+    </h4>
+
+    <!-- Password modal (hidden until submit) -->
+    <div id="passwordModal">
+        <div id="passwordBox">
+            <p><strong>Enter password</strong></p>
+            <input type="password" id="passwordInput" style="width:90%; padding:5px;">
+            <br><br>
+            <button onclick="submitPassword()">OK</button>
+            <button onclick="cancelPassword()">Cancel</button>
+        </div>
+    </div>
+
 </body>
 </html>
