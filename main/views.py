@@ -53,12 +53,16 @@ def rescrape_data(request):
 
         password = request.POST.get('rescrape_password', '').strip()
 
-        # Validate password using hashed password from settings
+        # Validate hashed password
         if not check_password(password, settings.UPLOAD_PASSWORD_HASH):
-            messages.error(request, "Invalid password.")
-            return redirect('data')   # or whichever page contains the button
 
-        # Password correct → proceed
+            # Store error message for the template
+            messages.error(request, "Invalid password for rescraping.")
+
+            # Redirect back to data page (where the form is)
+            return redirect('data')
+
+        # Password correct → continue normally
         Course.objects.all().delete()
 
         all_terms = [term for term, label in build_term_codes_past_years(years=5)]
@@ -73,7 +77,6 @@ def rescrape_data(request):
         )
 
     return redirect('home')
-
 
 
 def graduate_data(request):

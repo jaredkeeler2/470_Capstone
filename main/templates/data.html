@@ -40,6 +40,13 @@
     <!-- Messages -->
     {% if message %}<div class="msg">{{ message }}</div>{% endif %}
     {% if error %}<div class="error">{{ error }}</div>{% endif %}
+    {% if messages %}
+        {% for msg in messages %}
+            <div class="{% if msg.tags == 'error' %}error{% else %}msg{% endif %}">
+                {{ msg }}
+            </div>
+        {% endfor %}
+    {% endif %}
 
     <hr>
 
