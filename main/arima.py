@@ -104,7 +104,7 @@ prereq_df = pd.DataFrame(prereq_qs)
 #clean + sort chronologically
 df['term'] = df['term'].astype(int)
 df['term_name'] = df['term'].apply(term_name_from_code)
-# Add numeric course number column
+#Add numeric course number column
 df['course_num'] = df['code'].str.extract(r'A(\d+)').astype(int)
 
 #Remove Summer terms for upper-level courses (A211+)
