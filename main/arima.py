@@ -243,6 +243,10 @@ for code, group in df.groupby('code'):
             yearly_course = False
         next_term = next_term_code(course_num, spring_count, summer_count, fall_count, yearly_course)
 
+        if code == "CSCE A115" and (next_term % 100) == 2:
+            year = next_term // 100
+            next_term = year * 100 + 3
+
         models_accuracy = []
 
         #ARIMA forecast
